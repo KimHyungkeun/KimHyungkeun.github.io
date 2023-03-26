@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Child1
-parent: Menu3
-nav_order: 1
+title: Ni-Fi
+parent: bigdata
+nav_order: 6
 ---
 
 # Child
