@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 빅데이터
+title: BigData
 nav_order: 3
 has_children: true
 permalink: /docs/bigdata

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Hadoop
-parent: bigdata
+parent: BigData
 nav_order: 1
 ---
 

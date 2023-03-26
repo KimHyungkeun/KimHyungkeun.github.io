@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Spark
-parent: bigdata
+parent: BigData
 nav_order: 2
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: BigTop
-parent: bigdata
+parent: BigData
 nav_order: 7
 ---
 

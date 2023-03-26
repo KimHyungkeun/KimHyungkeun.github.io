@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Kafka
-parent: bigdata
+parent: BigData
 nav_order: 5
 ---
 

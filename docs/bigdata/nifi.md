@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Ni-Fi
-parent: bigdata
+parent: BigData
 nav_order: 6
 ---
 

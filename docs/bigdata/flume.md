@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Flume
-parent: bigdata
+parent: BigData
 nav_order: 3
 ---
 

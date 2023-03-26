@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Airflow
-parent: bigdata
+parent: BigData
 nav_order: 4
 ---
 
