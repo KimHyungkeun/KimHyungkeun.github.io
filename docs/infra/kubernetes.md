@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Kubernetes
-parent: infra
+parent: Infra
 nav_order: 2
 ---
 

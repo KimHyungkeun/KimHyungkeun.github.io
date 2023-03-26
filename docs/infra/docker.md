@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Docker
-parent: infra
+parent: Infra
 nav_order: 1
 ---
 

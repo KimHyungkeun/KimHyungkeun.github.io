@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 인프라
+title: Infra
 nav_order: 3
 has_children: true
 permalink: /docs/infra
