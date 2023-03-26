@@ -6,6 +6,6 @@ has_children: true
 permalink: /docs/infra
 ---
 
-# BigData
+# Infra
 
 Infra Page
