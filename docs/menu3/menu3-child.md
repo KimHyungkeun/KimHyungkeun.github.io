@@ -5,10 +5,10 @@ parent: Menu3
 nav_order: 1
 ---
 
-# Menu2
+# Child
 
 { : .no_tac }
 
-## Menu2 Test
+## Table of contents
 
 {: .no_toc .text-delta}
