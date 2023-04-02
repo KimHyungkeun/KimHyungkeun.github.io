@@ -46,13 +46,13 @@ $ docker ps (or) $ docker container ls
 $ docker ps —format 'table{{.Names}}\table{{.Image}}’ (테이블 형태처럼 상태확인이 가능하다)
 ```
 
-![Untitled](Docker%20Container(5%204)%205c72df48cf2b47088c94e0ab3a3ae3bd/Untitled.png)
+![image](https://user-images.githubusercontent.com/12759500/229355898-5e898fd2-bcb3-45bb-b290-757c911138b2.png)
 
 ```bash
 (옵션) -a : 실행 중인 것, 중지된 컨테이너 모두를 다 보여준다
 ```
 
-![Untitled](Docker%20Container(5%204)%205c72df48cf2b47088c94e0ab3a3ae3bd/Untitled%201.png)
+![image](https://user-images.githubusercontent.com/12759500/229355904-738c71ff-c123-48f9-8d3a-ebc67701602f.png)
 
 # 4. Docker Stop
 
@@ -60,7 +60,7 @@ $ docker ps —format 'table{{.Names}}\table{{.Image}}’ (테이블 형태처�
 ($ docker kill : stop은 gracefully 하게 작업이 끝날 때 까지를 기다려주지만, 
 kill은 현재 상태 여부 상관없이 강제 종료 시킨다)
 
-![Untitled](Docker%20Container(5%204)%205c72df48cf2b47088c94e0ab3a3ae3bd/Untitled%202.png)
+![image](https://user-images.githubusercontent.com/12759500/229355914-c0782453-ba19-4a16-8582-577e48b1ecdb.png)
 
 - $ docker stop {컨테이너 ID}/{컨테이너이름}
 - $ docker kill {컨테이너ID}/{컨테이너이름}
@@ -74,14 +74,14 @@ $ docker start {컨테이너 ID}/{컨테이너이름}
 
 ```
 
-![Untitled](Docker%20Container(5%204)%205c72df48cf2b47088c94e0ab3a3ae3bd/Untitled%203.png)
+![image](https://user-images.githubusercontent.com/12759500/229355923-21508ad2-5d08-4172-a751-b0c6c040b08c.png)
 
 ```bash
 $ docker attach {컨테이너 ID}/{컨테이너이름} : 동작하는 해당 컨테이너에 접속한다
 (docker create 시 -i, -t 옵션이 붙어야 가능하다)
 ```
 
-![Untitled](Docker%20Container(5%204)%205c72df48cf2b47088c94e0ab3a3ae3bd/Untitled%204.png)
+![image](https://user-images.githubusercontent.com/12759500/229355930-dba47195-5334-4e96-8488-a6abdf2b1674.png)
 
 # 6. Docker Restart
 
@@ -99,7 +99,7 @@ $ docker restart {컨테이너 ID}/{컨테이너이름}
 $ docker logs {컨테이너ID}/{컨테이너이름}
 ```
 
-![Untitled](Docker%20Container(5%204)%205c72df48cf2b47088c94e0ab3a3ae3bd/Untitled%205.png)
+![image](https://user-images.githubusercontent.com/12759500/229355942-ca609f1e-0854-45db-8bef-7a1fed168165.png)
 
 # 8. Docker rm
 
