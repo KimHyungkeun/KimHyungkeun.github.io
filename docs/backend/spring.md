@@ -1,9 +1,8 @@
 ---
 layout: default
-title: Java
-nav_order: 3
-has_children: true
-permalink: /docs/backend/java
+title: Spring
+parent: BackEnd
+nav_order: 1
 ---
 
 # Child
