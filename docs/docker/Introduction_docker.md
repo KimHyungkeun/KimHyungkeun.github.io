@@ -32,7 +32,7 @@ Installer 다운 → Installer 실행 → 프로그램 설치 완료
 - 리눅스와 윈도우 기반 애플리케이션 모두에서 사용할 수 있는 컨테이너화된 소프트웨어는 인프라에 관계없이 동일하게 작동한다. 
 (소프트웨어를 환경으로부터 격리시키고 개발과 스테이징의 차이에도 불구하고 균일 작동하도록 보장)
 
-![Untitled](Introduction%20Docker%20e4a10023884942138e94acdf1f82afbc/Untitled.png)
+![Untitled](./Introduction%20Docker%20e4a10023884942138e94acdf1f82afbc/Untitled.png)
 
 3) Docker Container 란?
 - 다양한 프로그램, 실행환경 등을 추상화 하여 동일한 인터페이스 제공하여 프로그램 배포 및 관리를 간단히 해주는 것이 Container 이다.
@@ -44,9 +44,9 @@ Installer 다운 → Installer 실행 → 프로그램 설치 완료
 1. 도커 사용시에는 도커 CLI에 커맨드 입력
 2. 그러면 도커 서버(도커 Daemon)이 커맨드를 받아서 실행
 
-![Untitled](Introduction%20Docker%20e4a10023884942138e94acdf1f82afbc/Untitled%201.png)
+![Untitled](./Introduction%20Docker%20e4a10023884942138e94acdf1f82afbc/Untitled%201.png)
 
-![Untitled](Introduction%20Docker%20e4a10023884942138e94acdf1f82afbc/Untitled%202.png)
+![Untitled](./Introduction%20Docker%20e4a10023884942138e94acdf1f82afbc/Untitled%202.png)
 
 설명
 ($ docker run hello)
@@ -60,7 +60,7 @@ hello-world : hello-world라는 이름을 가진 이미지
 4) Docker hub이라는 이미지가 저장되어 있는 곳에 가서 그 이미지를 가져오고 로컬에 Cache 보관
 5) 그 후 이제는 이미지가 있으니 그 이미지를 이용하여 컨테이너 생성
 
-![Untitled](Introduction%20Docker%20e4a10023884942138e94acdf1f82afbc/Untitled%203.png)
+![Untitled](./Introduction%20Docker%20e4a10023884942138e94acdf1f82afbc/Untitled%203.png)
 
 *** Docker 사용과 VM 사용시의 차이** 
 - 기존의 가상화 환경에서는 Hypervisor라는 통합관리 체계를 이용해, 각각의 Guest OS를 설정하였다. 
@@ -71,4 +71,4 @@ Guest OS를 탑재하고 있는 VM보다는 덜 부담스러운 프로그램 체
 - 도커 컨테이너에서 돌아가는 애플리케이션은 컨테이너가 제공하는 격리 기능 내부에 샌드박스가 있지만, 여전히 같은 호스트의 다른 컨테이너와 동일한 커널 공유
 (단, 한 호스트 위에서 올라가기 때문에 커널은 서로 공유하게 된다.)
 
-![Untitled](Introduction%20Docker%20e4a10023884942138e94acdf1f82afbc/Untitled%204.png)
+![Untitled](./Introduction%20Docker%20e4a10023884942138e94acdf1f82afbc/Untitled%204.png)
