@@ -13,7 +13,6 @@ nav_order: 2
 
 ```bash
 $ docker create <이미지이름>
-
 ```
 
 ![Untitled](Docker%20Image(5%203)%20fe5f269fa81c4264bf88e8a1834ef333/Untitled.png)
