@@ -5,10 +5,6 @@ parent: BigData
 nav_order: 6
 ---
 
-# Child
+# Ni-Fi
 
-{ : .no_tac }
-
-## Table of contents
-
-{: .no_toc .text-delta}
+Nifi Page

@@ -5,10 +5,6 @@ parent: BigData
 nav_order: 7
 ---
 
-# Child
+# BigTop
 
-{ : .no_tac }
-
-## Table of contents
-
-{: .no_toc .text-delta}
+BigTop Page
