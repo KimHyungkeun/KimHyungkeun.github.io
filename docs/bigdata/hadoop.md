@@ -16,9 +16,9 @@ nav_order: 1
 
 ## 2) HDFS - 데이터 분산 저장
 
-![Untitled](Hadoop%20f7abb5b9f1614a62822c6f98d2403128/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/12759500/229402430-c7f5c9db-ae83-43f1-8ecf-cf74762d738b.png)
 
-![Untitled](Hadoop%20f7abb5b9f1614a62822c6f98d2403128/Untitled%201.png)
+![Untitled 1](https://user-images.githubusercontent.com/12759500/229402450-7af8873d-b8ed-40fe-9a32-103b2e4f7e2f.png)
 
 - MasterNode
     - Namenode
@@ -34,7 +34,7 @@ nav_order: 1
         - 이러한 과정은 디스크 부족 문제 및 재구동 시간에 영향을 끼침
         - Secondary Namenode는 Fsimage와 editlog를 주기적으로 mege하여 최신 블록 상태의 파일을 생성
         
-        ![Untitled](Hadoop%20f7abb5b9f1614a62822c6f98d2403128/Untitled%202.png)
+        ![Untitled 2](https://user-images.githubusercontent.com/12759500/229402472-35c24c17-97ce-417d-9b81-81d942fcd21c.png)
         
 - SlaveNode
     - Datanode
@@ -64,7 +64,7 @@ nav_order: 1
     3),4),5) 각 데이터 노드에 파일 블록을 요청
     (만약, 노드 블록이 손상되었다면 Namenode에 이를 통지하고 다른 블록 확인)
     
-    ![Untitled](Hadoop%20f7abb5b9f1614a62822c6f98d2403128/Untitled%203.png)
+    ![Untitled 3](https://user-images.githubusercontent.com/12759500/229402482-43e8eccd-9448-483e-8227-6b79b35e1dbb.png)
     
 - 파일 쓰기
     
@@ -80,7 +80,7 @@ nav_order: 1
     
     7) Datanode의 메타정보가 Namenode에게 전달되어 갱신
     
-    ![Untitled](Hadoop%20f7abb5b9f1614a62822c6f98d2403128/Untitled%204.png)
+    ![Untitled 4](https://user-images.githubusercontent.com/12759500/229402494-61d7eff0-0aba-4c89-abe0-9727a30d5ac9.png)
     
 
 *참고 : [https://wikidocs.net/23582](https://wikidocs.net/23582)*
@@ -91,7 +91,7 @@ nav_order: 1
     대기 중이던 Standby Namenode가 Active역할을 이어받는다**
     - Hadoop 3.x 이후부터는 Standby Namenode 다수 설정이 가능하다
     
-    ![Untitled](Hadoop%20f7abb5b9f1614a62822c6f98d2403128/Untitled%205.png)
+    ![Untitled 5](https://user-images.githubusercontent.com/12759500/229402514-dd0c1f6e-44d5-44c6-bb8d-41062eb96d03.png)
     
     1) JournalNode : 
     
@@ -130,7 +130,7 @@ nav_order: 1
 - SlaveNode
     - TaskTracker : JobTracker로부터 받은 Job을 실제로 수행하고, JobTracker와 통신하여 상태를알린다.
     
-    ![Untitled](Hadoop%20f7abb5b9f1614a62822c6f98d2403128/Untitled%206.png)
+    ![Untitled 6](https://user-images.githubusercontent.com/12759500/229402541-042242c7-0ad8-4cc6-b69b-195cb20d8af2.png)
     
 - MapReduce WordCount 예제
     - Input : 데이터를 삽입
@@ -139,7 +139,7 @@ nav_order: 1
     - Shuffling : 같은 Key별로 모음
     - Reducing : 최종적으로 해당 Key의 value들의 합(단어 빈도수)을 구한다
     
-    ![Untitled](Hadoop%20f7abb5b9f1614a62822c6f98d2403128/Untitled%207.png)
+    ![Untitled 7](https://user-images.githubusercontent.com/12759500/229402558-27003452-d0fc-42b4-bf8b-d17305e8b2e4.png)
     
 
 *참고 : [https://wikidocs.net/30235](https://wikidocs.net/30235)*
@@ -170,7 +170,7 @@ nav_order: 1
         - YARN에서 실행되는 하나의 Task를 관리하는 마스터 서버. App당 1개가 존재
         - Scheduler로 부터 적절한 Container를 할당 받고, 프로그램 실행 상태를 모니터링
 
-![Untitled](Hadoop%20f7abb5b9f1614a62822c6f98d2403128/Untitled%208.png)
+![Untitled 8](https://user-images.githubusercontent.com/12759500/229402572-5f04539c-f95f-4fa3-bfbf-88c4eae8dba3.png)
 
 1) YARN 클라이언트가 제출하는 Job App이 RM에게 제출이 된다
 
@@ -223,7 +223,7 @@ $ yum install java-1.8.0-openjdk-devel.x86_64 -y
 $ java -version
 ```
 
-![Untitled](Hadoop%20f7abb5b9f1614a62822c6f98d2403128/Untitled%209.png)
+![Untitled 9](https://user-images.githubusercontent.com/12759500/229402587-1a9a9efb-0354-452c-8d45-258802536caa.png)
 
 ### 환경변수 설정
 
@@ -234,7 +234,7 @@ $ readlink -f /usr/bin/java
 /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.312.b07-2.el8_5.x86_64/jre/bin/java
 ```
 
-![Untitled](Hadoop%20f7abb5b9f1614a62822c6f98d2403128/Untitled%2010.png)
+![Untitled 10](https://user-images.githubusercontent.com/12759500/229402616-1c48f3ba-293d-4ed7-a4cd-dba1d7334608.png)
 
 ```bash
 $ vim ~/.bashrc
@@ -289,7 +289,7 @@ $HADOOP_HOME/LICENSE.txt wordcount_output
 $ ls -l
 ```
 
-![Untitled](Hadoop%20f7abb5b9f1614a62822c6f98d2403128/Untitled%2011.png)
+![Untitled 11](https://user-images.githubusercontent.com/12759500/229402629-d0e0d815-87b2-4238-9bd6-63f6b8360e30.png)
 
 ```bash
 $ head -10 wordcount_output/part-r-00000
@@ -305,7 +305,7 @@ $ head -10 wordcount_output/part-r-00000
 "Not    1
 ```
 
-![Untitled](Hadoop%20f7abb5b9f1614a62822c6f98d2403128/Untitled%2012.png)
+![Untitled 12](https://user-images.githubusercontent.com/12759500/229402656-45a0fdb7-45d7-405f-9465-89788750f21c.png)
 
 *참고 : [https://mungiyo.tistory.com/16](https://mungiyo.tistory.com/16)*
 
@@ -382,9 +382,9 @@ volumes:
 
 ⇒ [localhost:9870](http://localhost:9870) (Namenode Web UI)
 
-![Untitled](Hadoop%20f7abb5b9f1614a62822c6f98d2403128/Untitled%2013.png)
+![Untitled 13](https://user-images.githubusercontent.com/12759500/229402667-36c9318f-6ed8-4993-9abd-ebb49d90f782.png)
 
-![Untitled](Hadoop%20f7abb5b9f1614a62822c6f98d2403128/Untitled%2014.png)
+![Untitled 14](https://user-images.githubusercontent.com/12759500/229402682-016a6cd5-25a5-4d99-b781-3137931c18f7.png)
 
 ## 3) Apache Bigtop
 
@@ -414,15 +414,15 @@ maven 설치 : [https://kabby91.tistory.com/8](https://kabby91.tistory.com/8)
 
 여전히, 진행률 71% (ambari-rpm) 이후로 20분, 30분이 경과해도 빌드 진행 중
 
-![Untitled](Hadoop%20f7abb5b9f1614a62822c6f98d2403128/Untitled%2015.png)
+![Untitled 15](https://user-images.githubusercontent.com/12759500/229402714-69489ef6-68a9-4a3f-b86c-e9323fee6e93.png)
 
 아래 화면에서 30분, 40분 경과해도 더 이상 진행이 안됨
 
-![Untitled](Hadoop%20f7abb5b9f1614a62822c6f98d2403128/Untitled%2016.png)
+![Untitled 16](https://user-images.githubusercontent.com/12759500/229402732-f9352051-c033-4ef5-b2dc-0e32f5b36a5b.png)
 
 그 외 : 해당 rpm 패키지도 존재하지 않음
 
-![Untitled](Hadoop%20f7abb5b9f1614a62822c6f98d2403128/Untitled%2017.png)
+![Untitled 17](https://user-images.githubusercontent.com/12759500/229402747-104a6b4d-d201-4c51-aa4f-2a7ce5357d93.png)
 
 ## 시도 3 :
 
@@ -437,7 +437,7 @@ maven 설치 : [https://kabby91.tistory.com/8](https://kabby91.tistory.com/8)
 $ hdfs dfs -ls /
 ```
 
-![Untitled](Hadoop%20f7abb5b9f1614a62822c6f98d2403128/Untitled%2018.png)
+![Untitled 18](https://user-images.githubusercontent.com/12759500/229402780-6776c8ab-7906-4f6a-8e0c-9466548041de.png)
 
 ## 2) 디렉터리 생성
 
@@ -446,7 +446,7 @@ $ hdfs dfs -ls /
 $ hdfs dfs -mkdir /mydir
 ```
 
-![Untitled](Hadoop%20f7abb5b9f1614a62822c6f98d2403128/Untitled%2019.png)
+![Untitled 19](https://user-images.githubusercontent.com/12759500/229402797-26f6e81b-1106-4251-bd78-109bda8fefdf.png)
 
 ## 3) hdfs put
 
@@ -457,7 +457,7 @@ $ hdfs dfs -put test.txt /mydir
 $ hdfs dfs -ls /mydir
 ```
 
-![Untitled](Hadoop%20f7abb5b9f1614a62822c6f98d2403128/Untitled%2020.png)
+![Untitled 20](https://user-images.githubusercontent.com/12759500/229402816-63e45fea-affb-4808-b9a9-24cdac86440e.png)
 
 ## 4) hdfs get
 
@@ -476,10 +476,10 @@ $ cat test.txt
 hello, world
 ```
 
-![Untitled](Hadoop%20f7abb5b9f1614a62822c6f98d2403128/Untitled%2021.png)
+![Untitled 21](https://user-images.githubusercontent.com/12759500/229402830-e1b44335-c5e2-4f09-9034-ff8c0fbcbc13.png)
 
 - 그 외의 dfs 명령어들
 
-![Untitled](Hadoop%20f7abb5b9f1614a62822c6f98d2403128/Untitled%2022.png)
+![Untitled 22](https://user-images.githubusercontent.com/12759500/229402841-f0c4759f-c274-4ad4-923e-e5f7963b62e8.png)
 
 [https://hadoop.apache.org/docs/r2.4.1/hadoop-project-dist/hadoop-common/FileSystemShell.html](https://hadoop.apache.org/docs/r2.4.1/hadoop-project-dist/hadoop-common/FileSystemShell.html)
