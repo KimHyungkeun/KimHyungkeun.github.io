@@ -10,7 +10,7 @@ nav_order: 3
 - 작업 흐름을 실행, 관리하는 오픈소스 플랫폼. 작업을 스케쥴링을 하는 역할을 한다.
 - DAG(Directed Acyclic Graph, 비순환 방향 그래프)로 각 배치 스케쥴이 관리되며, DAG 하위에는 고유한 여러 Task들이 존재한다.
 
-![Untitled](AirFlow%20fcacf04299a74216996b811cda7a0067/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/12759500/229404549-bef1fc63-66ed-468a-bdb8-5314bf7137e5.png)
 
 **1. Webserver**  
 - Web UI 제공  
@@ -43,7 +43,7 @@ ex) start_date = 2022/04/11 → 실제 실행은 2022/04/12. execution_date는 2
 **(start_date = execution_date이며, 실제 실행은 start_date + 1 이라고 할 수 있다. 
 daily라면 하루 뒤, hourly라면 1시간 뒤)**
 
-![Untitled](AirFlow%20fcacf04299a74216996b811cda7a0067/Untitled%201.png)
+![Untitled 1](https://user-images.githubusercontent.com/12759500/229404531-6d97f987-a316-4428-a93a-a41caf59ef6e.png)
 
 ### 예제
 
