@@ -23,7 +23,7 @@ nav_order: 4
 - Publisher : Producer로 데이터를 보내는 기능
 - Subscriber : Consumer로 메시지를 소비하는 기능
 
-![Untitled](Kafka%20647630923cf7432fbf20248490d73d45/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/12759500/229405826-79c7ba76-1166-4f33-8a69-7ad787d07bd6.png)
 
 ## 2) 왜 Kafka를 쓰는가?
 
@@ -38,7 +38,7 @@ nav_order: 4
 
 ## 3) Kafka의 구성요소
 
-![Untitled](Kafka%20647630923cf7432fbf20248490d73d45/Untitled%201.png)
+![Untitled 1](https://user-images.githubusercontent.com/12759500/229405841-32f1d399-48f9-47be-90ee-50d5060dab1c.png)
 
 - **Kafka cluster :** 카프카 서버로 이루어진 클러스터를 말함.
     - Broker : 카프카 서버를 의미
@@ -54,7 +54,7 @@ nav_order: 4
     
     → broker의 장애 발생 시 새 controller를 선출하는 역할을 하며, topic의 파티션 수, 특정 설정 등의 메타데이터 관리를 담당
     
-    ![Untitled](Kafka%20647630923cf7432fbf20248490d73d45/Untitled%202.png)
+    ![Untitled 2](https://user-images.githubusercontent.com/12759500/229405853-eb1bb6ba-58c8-4e82-b9c9-150f5e3768c4.png)
     
 - **Producer** : 데이터를 발생시키고 카프카 클러스터(Kafka Cluster)에 적재
     - Option → acks : Topic의 Leader에게 메시지를 보낸 후 요청을 완료하기 전 ack 갯수
@@ -73,31 +73,31 @@ nav_order: 4
     - **Case 1)**  Partition = 4, Consumer = 2
     - Consumer 하나가 처리해야 할 파티션 갯수가 2개 이상이다
     
-    ![Untitled](Kafka%20647630923cf7432fbf20248490d73d45/Untitled%203.png)
+    ![Untitled 3](https://user-images.githubusercontent.com/12759500/229405873-70214b34-26d6-4b6b-9ec5-aadf5bfe0f6f.png)
     
     - **Case 2)** **Partition = 4. Consumer = 4 (가장 이상적)**
     - Consumer와 Partition 갯수가 일치하여 서로 1:1 맵핑 된다
     
-    ![Untitled](Kafka%20647630923cf7432fbf20248490d73d45/Untitled%204.png)
+    ![Untitled 4](https://user-images.githubusercontent.com/12759500/229405896-bc586c7a-3fa5-4aa9-bcec-33064657b818.png)
     
     - **Case 3)** Partition = 4, Consumer = 5
     - Partition갯수 보다 Consumer가 더 많기에, 아무것도 하지 않는 Consumer가 발생한다.
     
-    ![Untitled](Kafka%20647630923cf7432fbf20248490d73d45/Untitled%205.png)
+    ![Untitled 5](https://user-images.githubusercontent.com/12759500/229405908-9ac0cd52-641e-406c-a74f-93197f51e533.png)
     
 
 # 3) 파티션 읽기, 쓰기
 
-![Untitled](Kafka%20647630923cf7432fbf20248490d73d45/Untitled%206.png)
+![Untitled 6](https://user-images.githubusercontent.com/12759500/229405924-79fa6ea7-8c76-4df0-a8f1-f961d7a79df8.png)
 
-![Untitled](Kafka%20647630923cf7432fbf20248490d73d45/Untitled%207.png)
+![Untitled 7](https://user-images.githubusercontent.com/12759500/229405941-a7f3d2b4-f3e7-47e8-add3-30e649cca197.png)
 
 - Apache Kafka에서의 Read, Write 연산은 카프카 클러스터 내의 Leader 파티션에게만 적용 된다.
 - 하늘색으로 칠해진 파티션이 Leader 파티션이며 이 파티션들에게 Producer가 Write를 진행한다.
 - Write가 진행되고 나면 업데이트 된 데이터는 각 파티션들의 replica에 복사된다.
 - Consumer Group은 서로 관여하지 않고, 본인 Group에 대해서만 처리한다.
 
-![Untitled](Kafka%20647630923cf7432fbf20248490d73d45/Untitled%208.png)
+![Untitled 8](https://user-images.githubusercontent.com/12759500/229405951-73f9e68c-a9e7-4847-964c-b5419803d64a.png)
 
 - 카프카는 데이터를 순차적으로 디스크에 저장
 - 따라서, Producer는 순차적으로 저장된 데이터 뒤에 부이는 append형식으로 write연산을 진행
@@ -203,7 +203,7 @@ $ bin/kafka-server-start.sh config/server.properties
 $ bin/kafka-topics.sh --list --bootstrap-server localhost:9092
 ```
 
-![Untitled](Kafka%20647630923cf7432fbf20248490d73d45/Untitled%209.png)
+![Untitled 9](https://user-images.githubusercontent.com/12759500/229405991-a2085525-b82c-46f9-9372-e9aa2f9b742d.png)
 
 **4) Kafka Topic Create**
 
@@ -220,7 +220,7 @@ Topic: quickstart-events        TopicId: OpKmM8fXSeGzUG3DCvasMQ PartitionCount: 
 
 ```
 
-![Untitled](Kafka%20647630923cf7432fbf20248490d73d45/Untitled%2010.png)
+![Untitled 10](https://user-images.githubusercontent.com/12759500/229406004-bc779f6b-c8f1-4397-82c3-f006b20c35f1.png)
 
 **5) Kafka Producer**
 
@@ -230,7 +230,7 @@ $ bin/kafka-console-producer.sh \
 --topic quickstart-events
 ```
 
-![Untitled](Kafka%20647630923cf7432fbf20248490d73d45/Untitled%2011.png)
+![Untitled 11](https://user-images.githubusercontent.com/12759500/229406028-6da2c372-d1ef-46ed-85f0-2afc41f84c49.png)
 
 **6) Kafka Consumer**
 
@@ -241,7 +241,7 @@ $ bin/kafka-console-consumer.sh \
 --group mygroup
 ```
 
-![Untitled](Kafka%20647630923cf7432fbf20248490d73d45/Untitled%2012.png)
+![Untitled 12](https://user-images.githubusercontent.com/12759500/229406039-d808cda3-25b5-4bd0-a881-09f6dea12786.png)
 
 **7) IMPORT/EXPORT DATA AS STREAMS OF EVENTS WITH KAFKA CONNECT**
 
@@ -260,20 +260,20 @@ foo
 bar
 ```
 
-![Untitled](Kafka%20647630923cf7432fbf20248490d73d45/Untitled%2013.png)
+![Untitled 13](https://user-images.githubusercontent.com/12759500/229406061-a18a7121-b93c-4983-aa22-983bf0c58b12.png)
 
 ```bash
 $ bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic connect-test --from-beginning
 ```
 
-![Untitled](Kafka%20647630923cf7432fbf20248490d73d45/Untitled%2014.png)
+![Untitled 14](https://user-images.githubusercontent.com/12759500/229406071-0bbd18f2-804b-4def-b373-516efaf002f5.png)
 
 ```bash
 $ echo team >> test.txt
 $ bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic connect-test --from-beginning
 ```
 
-![Untitled](Kafka%20647630923cf7432fbf20248490d73d45/Untitled%2015.png)
+![Untitled 15](https://user-images.githubusercontent.com/12759500/229406080-0e66ef02-b326-48b8-96cb-e7188a52c5ac.png)
 
 **8) PROCESS EVENTS WITH KAFKA STREAMS
 데모 :** [https://kafka.apache.org/documentation/streams/quickstart](https://kafka.apache.org/documentation/streams/quickstart)
@@ -305,7 +305,7 @@ Topic:streams-plaintext-input	PartitionCount:1	ReplicationFactor:1	Configs:segme
 	Topic: streams-plaintext-input	Partition: 0	Leader: 0	Replicas: 0	Isr: 0
 ```
 
-![Untitled](Kafka%20647630923cf7432fbf20248490d73d45/Untitled%2016.png)
+![Untitled 16](https://user-images.githubusercontent.com/12759500/229406095-7f5004ce-6464-4999-b445-ebba15b3a675.png)
 
 **(2) WordCountDemo 클래스를 실행시킨 후, producer와 consumer를 실행**
 **ex1) “**all streams lead to kafka**”** 문자열 추가
@@ -336,7 +336,7 @@ to      1
 kafka   1
 ```
 
-![Untitled](Kafka%20647630923cf7432fbf20248490d73d45/Untitled%2017.png)
+![Untitled 17](https://user-images.githubusercontent.com/12759500/229406104-9f30f4eb-4bf6-4191-b4a3-c72bd2bcb436.png)
 
 **ex2) “**hello kafka streams**”** 문자열 추가
 
@@ -356,7 +356,7 @@ kafka   2
 streams 2
 ```
 
-![Untitled](Kafka%20647630923cf7432fbf20248490d73d45/Untitled%2018.png)
+![Untitled 18](https://user-images.githubusercontent.com/12759500/229406123-c0b23acb-dcb6-4c3c-90db-716bf941541b.png)
 
 **ex3) “**join kafka summit” 문자열 추가
 
@@ -380,7 +380,7 @@ kafka   3
 summit  1
 ```
 
-![Untitled](Kafka%20647630923cf7432fbf20248490d73d45/Untitled%2019.png)
+![Untitled 19](https://user-images.githubusercontent.com/12759500/229406136-a2675311-ca66-4dfb-9535-0d77cf04594c.png)
 
 # 3. nifi에서 kafka에 메시지 보낸 후 확인
 
@@ -497,23 +497,23 @@ volumes :
 
 **2) nifi container와 kafka를 연결하여 진행**
 
-![Untitled](Kafka%20647630923cf7432fbf20248490d73d45/Untitled%2020.png)
+![Untitled 20](https://user-images.githubusercontent.com/12759500/229406164-a9c2615b-a4b4-4e8f-a8a5-a1e17e1e92ad.png)
 
-![Untitled](Kafka%20647630923cf7432fbf20248490d73d45/Untitled%2021.png)
+![Untitled 21](https://user-images.githubusercontent.com/12759500/229406171-ef1c443f-a271-4049-8a39-6bbc94d39ce9.png)
 
-![Untitled](Kafka%20647630923cf7432fbf20248490d73d45/Untitled%2022.png)
+![Untitled 22](https://user-images.githubusercontent.com/12759500/229406184-bbb774a6-a4c9-4841-863e-d635d530f5b9.png)
 
-![Untitled](Kafka%20647630923cf7432fbf20248490d73d45/Untitled%2023.png)
+![Untitled 23](https://user-images.githubusercontent.com/12759500/229406191-21f4c2f2-5198-41c2-86d8-811d85ba787f.png)
 
-![Untitled](Kafka%20647630923cf7432fbf20248490d73d45/Untitled%2024.png)
+![Untitled 24](https://user-images.githubusercontent.com/12759500/229406206-92f71d29-c6bf-4072-b4f8-0ece40b174c4.png)
 
 ```bash
 $ ls /home/nifi
 ```
 
-![Untitled](Kafka%20647630923cf7432fbf20248490d73d45/Untitled%2025.png)
+![Untitled 25](https://user-images.githubusercontent.com/12759500/229406216-d5f922a2-9393-4793-8167-a99c7cc44d0c.png)
 
-![Untitled](Kafka%20647630923cf7432fbf20248490d73d45/Untitled%2026.png)
+![Untitled 26](https://user-images.githubusercontent.com/12759500/229406226-265ddca1-9545-4dc1-9d0c-9ffbe56a2963.png)
 
 3**) 220531 이슈**
 
@@ -775,7 +775,7 @@ $ bin/kafka-topics.sh --describe \
 localhost:9092
 ```
 
-![Untitled](Kafka%20647630923cf7432fbf20248490d73d45/Untitled%2027.png)
+![Untitled 27](https://user-images.githubusercontent.com/12759500/229406257-b10fc0ce-d66c-4562-840a-9649b1126f29.png)
 
 - Consumer ID와 partition 갯수, CIient ID 확인 가능
 
@@ -786,21 +786,21 @@ $ bin/kafka-consumer-groups.sh \
 --group mygroup
 ```
 
-![Untitled](Kafka%20647630923cf7432fbf20248490d73d45/Untitled%2028.png)
+![Untitled 28](https://user-images.githubusercontent.com/12759500/229406269-bbe00dec-e008-49af-8edd-5302588472c3.png)
 
 - mygroup이라는 Consumer Group에 3개의 consumer를 배치
 (각 consumer가 각 파티션을 1:1 대응하여 처리)
 
-![Untitled](Kafka%20647630923cf7432fbf20248490d73d45/Untitled%2029.png)
+![Untitled 29](https://user-images.githubusercontent.com/12759500/229406280-5b828e85-4a47-4544-aecf-ae71c95ce33c.png)
 
-![Untitled](Kafka%20647630923cf7432fbf20248490d73d45/Untitled%2030.png)
+![Untitled 30](https://user-images.githubusercontent.com/12759500/229406286-a1c76ff9-ba52-41c1-9f28-e1195bcd7659.png)
 
 - mygroup이라는 Consumer Group에 2개의 consumer를 배치
 ( 한 consumer가 2개의 파티션을 처리)
 
-![Untitled](Kafka%20647630923cf7432fbf20248490d73d45/Untitled%2031.png)
+![Untitled 31](https://user-images.githubusercontent.com/12759500/229406291-aaec7a82-a163-4e3e-a2b7-d0252e56ef49.png)
 
-![Untitled](Kafka%20647630923cf7432fbf20248490d73d45/Untitled%2032.png)
+![Untitled 32](https://user-images.githubusercontent.com/12759500/229406299-de40cff9-2db4-43ef-aad4-97d8e7ac2167.png)
 
 - offset 초기화 하고 싶을 땐 아래 명령어
 
@@ -811,9 +811,9 @@ $ bin/kafka-consumer-groups.sh \
 --execute --group mygroup
 ```
 
-![Untitled](Kafka%20647630923cf7432fbf20248490d73d45/Untitled%2033.png)
+![Untitled 33](https://user-images.githubusercontent.com/12759500/229406325-5b5b2b1a-8205-43cb-9e4a-ff1b351f9d0c.png)
 
-![Untitled](Kafka%20647630923cf7432fbf20248490d73d45/Untitled%2034.png)
+![Untitled 34](https://user-images.githubusercontent.com/12759500/229406335-784d3245-e8ac-47b8-ad5c-126f764e4d84.png)
 
 - replica 3, partition 3을 준 topic의 모습
 - 각 kafka 브로커마다 replica가 일정한 것을 확인
@@ -831,7 +831,7 @@ $ bin/kafka-topics.sh --describe \
 --bootstrap-server localhost:9092
 ```
 
-![Untitled](Kafka%20647630923cf7432fbf20248490d73d45/Untitled%2035.png)
+![Untitled 35](https://user-images.githubusercontent.com/12759500/229406349-55d2e71b-5e0f-4d4e-b945-5d04e44223bc.png)
 
 - 토픽 삭제 방법
 
@@ -949,13 +949,13 @@ services:
       - kafka3
 ```
 
-![Untitled](Kafka%20647630923cf7432fbf20248490d73d45/Untitled%2036.png)
+![Untitled 36](https://user-images.githubusercontent.com/12759500/229406367-2577693f-1504-45ea-8de1-6c946bdb7169.png)
 
 - topic 생성하기
 
-![Untitled](Kafka%20647630923cf7432fbf20248490d73d45/Untitled%2037.png)
+![Untitled 37](https://user-images.githubusercontent.com/12759500/229406374-50a1644f-77f0-45cb-845d-21c9c5f5d2a2.png)
 
-![Untitled](Kafka%20647630923cf7432fbf20248490d73d45/Untitled%2038.png)
+![Untitled 38](https://user-images.githubusercontent.com/12759500/229406384-75824cf8-67d4-4d0b-93ce-cba035773443.png)
 
 → Topic name : topic 이름 
 
@@ -963,8 +963,8 @@ services:
 
 → Replication factor : 레플리카(복제본) 갯수 지정
 
-![Untitled](Kafka%20647630923cf7432fbf20248490d73d45/Untitled%2039.png)
+![Untitled 39](https://user-images.githubusercontent.com/12759500/229406393-4cf73e29-0cea-4dc4-a2be-3084bcf8b141.png)
 
 - topic 삭제하기
 
-![Untitled](Kafka%20647630923cf7432fbf20248490d73d45/Untitled%2040.png)
+![Untitled 40](https://user-images.githubusercontent.com/12759500/229406400-163a1c34-e282-4307-8b89-2a7de16f2bf4.png)
