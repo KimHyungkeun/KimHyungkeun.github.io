@@ -23,9 +23,9 @@ permalink: /docs/bigdata/nifi/overview/
 1) Attribute는 데이터에 대해 알려진 내용과 데이터를 Key-Value 형태로 저장
 2) Content는 데이터의 실제 내용을 반영
 
-![Untitled](Apache%20Nifi%20Overview%203ee6d4e684fa46da9fe2bec39ef1e0f2/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/12759500/229808426-9fbe689b-dd5b-4972-bfc5-261a1a69075b.png)
 
-![Untitled](Apache%20Nifi%20Overview%203ee6d4e684fa46da9fe2bec39ef1e0f2/Untitled%201.png)
+![Untitled 1](https://user-images.githubusercontent.com/12759500/229808455-f61b7ee7-b078-4f64-8259-3ac988c8a0cb.png)
 
 “i” : 클릭 → Attribute 탭에서 내용 확인 가능
 ”eye icon” : 파일에 담긴 content(내용) 확인 (아무것도 적혀있지 않으면 확인 불가)
@@ -40,7 +40,7 @@ permalink: /docs/bigdata/nifi/overview/
 
 # 2. Apache Nifi Architecture
 
-![Untitled](Apache%20Nifi%20Overview%203ee6d4e684fa46da9fe2bec39ef1e0f2/Untitled%202.png)
+![Untitled 2](https://user-images.githubusercontent.com/12759500/229808480-2dbf14f3-2c9e-4327-89fe-9144f686424a.png)
 
 - NiFi는 JVM 환경에서 실행되며, 위 그림과 같은 컴포넌트 들로 구성되어 있다.
 
