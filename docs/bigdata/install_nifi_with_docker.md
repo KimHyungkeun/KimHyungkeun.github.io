@@ -2,7 +2,7 @@
 layout: default
 title: Install NiFi with Docker
 parent: Ni-Fi
-nav_order: 2
+grand_parent: BigData
 permalink: /docs/bigdata/nifi/install/
 ---
 

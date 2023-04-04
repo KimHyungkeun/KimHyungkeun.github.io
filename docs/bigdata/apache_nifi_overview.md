@@ -2,7 +2,7 @@
 layout: default
 title: Apache NiFi Overview
 parent: Ni-Fi
-nav_order: 1
+grand_parent: BigData
 permalink: /docs/bigdata/nifi/overview/
 ---
 

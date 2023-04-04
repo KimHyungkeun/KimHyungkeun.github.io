@@ -2,7 +2,7 @@
 layout: default
 title: NiFi Scenario
 parent: Ni-Fi
-nav_order: 3
+grand_parent: BigData
 permalink: /docs/bigdata/nifi/scenario/
 ---
 
