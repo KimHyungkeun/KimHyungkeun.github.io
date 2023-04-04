@@ -59,11 +59,11 @@ volumes :
 $ docker-compose up -d
 ```
 
-![Untitled](Install%20Nifi%20with%20Docker%201f573306772f42b0ab1e4dee79b043c9/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/12759500/229808603-bea7b14a-1e82-4452-9b11-d8c29c93c42e.png)
 
 4) [localhost:8443/nifi](http://localhost:8443/nifi) 로 이동하여 Web UI 확인
 
-![Untitled](Install%20Nifi%20with%20Docker%201f573306772f42b0ab1e4dee79b043c9/Untitled%201.png)
+![Untitled 1](https://user-images.githubusercontent.com/12759500/229808627-3b459d9a-422e-4f24-91e4-5799654322e1.png)
 
 참고 : [https://www.youtube.com/watch?v=ArLijmbZUYk&ab_channel=TalkTechWithSantosh](https://www.youtube.com/watch?v=ArLijmbZUYk&ab_channel=TalkTechWithSantosh)
 
