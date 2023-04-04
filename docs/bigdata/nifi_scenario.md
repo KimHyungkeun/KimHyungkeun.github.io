@@ -3,7 +3,7 @@ layout: default
 title: NiFi Scenario
 parent: Ni-Fi
 nav_order: 3
-permalink: /docs/bigdata/nifi/scenario
+permalink: /docs/bigdata/nifi/scenario/
 ---
 
 # Nifi_Scenario(5/23)

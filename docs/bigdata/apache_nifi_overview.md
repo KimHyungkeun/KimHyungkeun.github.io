@@ -3,7 +3,7 @@ layout: default
 title: Apache NiFi Overview
 parent: Ni-Fi
 nav_order: 1
-permalink: /docs/bigdata/nifi/overview
+permalink: /docs/bigdata/nifi/overview/
 ---
 
 # Apache Nifi Overview
