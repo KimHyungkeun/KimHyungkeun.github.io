@@ -115,7 +115,7 @@ cd bigtop
 ./gradlew task --all
 ```
 
-![Untitled](<Bigtop%20Install%20-%2022%2006%2030%20(Standalone)%20bd624e1dabf34dc2b83cb40eac929c79/Untitled.png>)
+![Untitled](https://user-images.githubusercontent.com/12759500/230062964-ba01ee5c-9cfe-456c-b4f0-0aea627e300d.png)
 
 ## 3) Apache Bigtop을 이용한 빌드
 
@@ -137,7 +137,7 @@ cd bigtop
 
 - **./gradlew task ambari-pkg 빌드 성공 화면**
 
-![Untitled](<Bigtop%20Install%20-%2022%2006%2030%20(Standalone)%20bd624e1dabf34dc2b83cb40eac929c79/Untitled%201.png>)
+![Untitled 1](https://user-images.githubusercontent.com/12759500/230062999-ac82bff1-f573-4712-912a-3bb32058c1ca.png)
 
 ## 4) 빌드된 rpm 설치
 
@@ -289,41 +289,40 @@ hadoop 셋팅에서 hadoop.proxyuser.*이 필수 입력란인데, 일단 *로 �
 나머지는 지정된 셋팅 그대로 진행
 ```
 
-![Untitled](<Bigtop%20Install%20-%2022%2006%2030%20(Standalone)%20bd624e1dabf34dc2b83cb40eac929c79/Untitled%202.png>)
+![Untitled 2](https://user-images.githubusercontent.com/12759500/230063099-ce9ffd20-9488-46ff-9cc4-5a2d52e5cadb.png)
 
-![Untitled](<Bigtop%20Install%20-%2022%2006%2030%20(Standalone)%20bd624e1dabf34dc2b83cb40eac929c79/Untitled%203.png>)
+![Untitled 3](https://user-images.githubusercontent.com/12759500/230063127-2b7406f7-83e7-4456-94ba-cce9434bb85f.png)
 
-![Untitled](<Bigtop%20Install%20-%2022%2006%2030%20(Standalone)%20bd624e1dabf34dc2b83cb40eac929c79/Untitled%204.png>)
+![Untitled 4](https://user-images.githubusercontent.com/12759500/230063156-90e9d095-c47e-4fdd-936c-88eebe3e0c13.png)
 
-![Untitled](<Bigtop%20Install%20-%2022%2006%2030%20(Standalone)%20bd624e1dabf34dc2b83cb40eac929c79/Untitled%205.png>)
+![Untitled 5](https://user-images.githubusercontent.com/12759500/230063217-845ad27d-d2da-4ed9-9ee8-fa6e901f13e8.png)
 
-![Untitled](<Bigtop%20Install%20-%2022%2006%2030%20(Standalone)%20bd624e1dabf34dc2b83cb40eac929c79/Untitled%206.png>)
+![Untitled 6](https://user-images.githubusercontent.com/12759500/230063260-282d52be-2347-45f1-9f84-cb259343223a.png)
 
-![Untitled](<Bigtop%20Install%20-%2022%2006%2030%20(Standalone)%20bd624e1dabf34dc2b83cb40eac929c79/Untitled%207.png>)
+![Untitled 7](https://user-images.githubusercontent.com/12759500/230063282-28e3130c-140b-4653-a7bc-fdee8f53ef5c.png)
 
-![Untitled](<Bigtop%20Install%20-%2022%2006%2030%20(Standalone)%20bd624e1dabf34dc2b83cb40eac929c79/Untitled%208.png>)
+![Untitled 8](https://user-images.githubusercontent.com/12759500/230063308-c2979998-8a97-4bcf-ab2a-dcdd275eb982.png)
 
-![Untitled](<Bigtop%20Install%20-%2022%2006%2030%20(Standalone)%20bd624e1dabf34dc2b83cb40eac929c79/Untitled%209.png>)
+![Untitled 9](https://user-images.githubusercontent.com/12759500/230063399-66e31fda-dac5-460f-86b6-eaa0d052ee7a.png)
 
-![Untitled](<Bigtop%20Install%20-%2022%2006%2030%20(Standalone)%20bd624e1dabf34dc2b83cb40eac929c79/Untitled%2010.png>)
+![Untitled 10](https://user-images.githubusercontent.com/12759500/230063425-7ef8e876-0aca-4b5f-a7f2-720e9c48d1f5.png)
 
-![Untitled](<Bigtop%20Install%20-%2022%2006%2030%20(Standalone)%20bd624e1dabf34dc2b83cb40eac929c79/Untitled%2011.png>)
+![Untitled 11](https://user-images.githubusercontent.com/12759500/230063453-bf35ef28-27cb-44a2-ab5d-c898c383c4de.png)
 
-![Untitled](<Bigtop%20Install%20-%2022%2006%2030%20(Standalone)%20bd624e1dabf34dc2b83cb40eac929c79/Untitled%2012.png>)
+![Untitled 12](https://user-images.githubusercontent.com/12759500/230063469-fdd7ead4-f695-4cf7-a0f0-6e031b5e904e.png)
 
 ## 9) 설치 결과
 
 **(Ambari)**
 
-![Untitled](<Bigtop%20Install%20-%2022%2006%2030%20(Standalone)%20bd624e1dabf34dc2b83cb40eac929c79/Untitled%2013.png>)
+![Untitled 13](https://user-images.githubusercontent.com/12759500/230063507-98b3ca57-388e-413f-901e-87992e8b9c0e.png)
 
 **(ResourceManager)**
 
-![Untitled](<Bigtop%20Install%20-%2022%2006%2030%20(Standalone)%20bd624e1dabf34dc2b83cb40eac929c79/Untitled%2014.png>)
+![Untitled 14](https://user-images.githubusercontent.com/12759500/230063530-23d8b652-bc07-4c00-97bc-94ded3871cfd.png)
 
 **(Namenode)**
-
-![Untitled](<Bigtop%20Install%20-%2022%2006%2030%20(Standalone)%20bd624e1dabf34dc2b83cb40eac929c79/Untitled%2015.png>)
+![Untitled 15](https://user-images.githubusercontent.com/12759500/230063587-00718ec5-668e-492c-bf0e-ee3564a53605.png)022%2006%2030%20(Standalone)%20bd624e1dabf34dc2b83cb40eac929c79/Untitled%2015.png>)
 
 (**BGTP-1.0 스택)**
 
@@ -331,15 +330,15 @@ hadoop 셋팅에서 hadoop.proxyuser.*이 필수 입력란인데, 일단 *로 �
   Hortonworks에서 제공하는 하둡 에코시스템 모음을 “HDP”라고 하듯이,
   BigTop에 의해 설치된 Ambari에서 사용하는 설치 Stack은 “BGTP”라 부른다._
 
-![Untitled](<Bigtop%20Install%20-%2022%2006%2030%20(Standalone)%20bd624e1dabf34dc2b83cb40eac929c79/Untitled%2016.png>)
+![Untitled 16](https://user-images.githubusercontent.com/12759500/230063662-d0d7865c-6d56-46d8-9b05-d28d646641bf.png)
 
 - BGTP-1.0 스택
 
-![Untitled](<Bigtop%20Install%20-%2022%2006%2030%20(Standalone)%20bd624e1dabf34dc2b83cb40eac929c79/Untitled%2017.png>)
+![Untitled 17](https://user-images.githubusercontent.com/12759500/230063688-63f3848f-6a36-42e5-89a4-671aa414728b.png)
 
 - HDP 3.1 스택 (110.xx 서버)
 
-![Untitled](<Bigtop%20Install%20-%2022%2006%2030%20(Standalone)%20bd624e1dabf34dc2b83cb40eac929c79/Untitled%2018.png>)
+![Untitled 18](https://user-images.githubusercontent.com/12759500/230063727-b10ebd63-635e-4f47-89c1-e078704765e7.png)
 
 **\***Bigtop 3.1.0 (latest) 기준으로 BGTP-1.0 밖에 존재하지 않고, 포함된 에코시스템 또한
 (HDFS, YARN, Zookeeper 밖에 존재하지 않는다)\*
@@ -352,7 +351,7 @@ hadoop 셋팅에서 hadoop.proxyuser.*이 필수 입력란인데, 일단 *로 �
 
 **BGTP-1.0의 Hadoop ecosystem 서비스 추가 가능 여부**
 
-![Untitled](<Bigtop%20Install%20-%2022%2006%2030%20(Standalone)%20bd624e1dabf34dc2b83cb40eac929c79/Untitled%2019.png>)
+![Untitled 19](https://user-images.githubusercontent.com/12759500/230063774-6b8eb1d5-1a7f-4ed0-a3fb-9ffd740f82ec.png)
 
 # 3. Bigtop BGTP에 Hive 설치
 
@@ -394,11 +393,11 @@ vi metainfo.xml
 # webhcat은 사용 X
 ```
 
-![Untitled](<Bigtop%20Install%20-%2022%2006%2030%20(Standalone)%20bd624e1dabf34dc2b83cb40eac929c79/Untitled%2020.png>)
+![Untitled 20](https://user-images.githubusercontent.com/12759500/230063812-a79dce28-15b3-4a74-8e44-880aec46a469.png)
 
-![Untitled](<Bigtop%20Install%20-%2022%2006%2030%20(Standalone)%20bd624e1dabf34dc2b83cb40eac929c79/Untitled%2021.png>)
+![Untitled 21](https://user-images.githubusercontent.com/12759500/230063849-570caa57-a2a3-4eef-875c-be2d24376337.png)
 
-![Untitled](<Bigtop%20Install%20-%2022%2006%2030%20(Standalone)%20bd624e1dabf34dc2b83cb40eac929c79/Untitled%2022.png>)
+![Untitled 22](https://user-images.githubusercontent.com/12759500/230063876-81019ee5-9e59-4824-ab77-d81a88279caa.png)
 
 **5) 아래 내용의 hiverserver2-site.xml 추가**
 (참고 : [https://github.com/snowturtle93/bgtp-mpack/blob/main/bgtp-ambari-mpack-1.0.0.0-SNAPSHOT/stacks/BGTP/1.0/services/HIVE/configuration/hiveserver2-site.xml](https://github.com/snowturtle93/bgtp-mpack/blob/main/bgtp-ambari-mpack-1.0.0.0-SNAPSHOT/stacks/BGTP/1.0/services/HIVE/configuration/hiveserver2-site.xml))
@@ -565,13 +564,13 @@ hive_var_lib = '/var/lib/hive'
 hive_user_home_dir = "/home/hive"
 ```
 
-![Untitled](<Bigtop%20Install%20-%2022%2006%2030%20(Standalone)%20bd624e1dabf34dc2b83cb40eac929c79/Untitled%2023.png>)
+![Untitled 23](https://user-images.githubusercontent.com/12759500/230063920-c00a099a-6152-4a87-a772-492805a266cb.png)
 
 7**) 설치완료**
 
-![Untitled](<Bigtop%20Install%20-%2022%2006%2030%20(Standalone)%20bd624e1dabf34dc2b83cb40eac929c79/Untitled%2024.png>)
+![Untitled 24](https://user-images.githubusercontent.com/12759500/230063948-90d06c31-2509-4877-bde3-960d4d4c6323.png)
 
-![Untitled](<Bigtop%20Install%20-%2022%2006%2030%20(Standalone)%20bd624e1dabf34dc2b83cb40eac929c79/Untitled%2025.png>)
+![Untitled 25](https://user-images.githubusercontent.com/12759500/230063973-501143f6-060f-4358-bd17-35475de357c2.png)
 
 # 4. 발생한 이슈
 
@@ -610,9 +609,9 @@ URLError: <urlopen error [Errno 111] 연결이 거부됨>
 
 ⇒ **20220608 기준 설치 상태 (192.168.56.102 master) - YARN 미작동**
 
-![Untitled](<Bigtop%20Install%20-%2022%2006%2030%20(Standalone)%20bd624e1dabf34dc2b83cb40eac929c79/Untitled%2026.png>)
+![Untitled 26](https://user-images.githubusercontent.com/12759500/230064027-3c026bf7-401b-4e9e-a5e6-2e8818da7d84.png)
 
-![Untitled](<Bigtop%20Install%20-%2022%2006%2030%20(Standalone)%20bd624e1dabf34dc2b83cb40eac929c79/Untitled%2027.png>)
+![Untitled 27](https://user-images.githubusercontent.com/12759500/230064094-7fd3edf3-300b-4b66-a1af-6fc108304277.png)
 
 ## 3) 20220609
 
@@ -692,7 +691,7 @@ Fail: The stack packages are not defined on the command. Unable to load packages
 - BigTop git clone
 - Ambari Pub repo releases 1.1.0
 
-![Untitled](<Bigtop%20Install%20-%2022%2006%2030%20(Standalone)%20bd624e1dabf34dc2b83cb40eac929c79/Untitled%2026.png>)
+![Untitled 26](https://user-images.githubusercontent.com/12759500/230064245-f2fde837-1ddd-4c9a-ad94-9bd0fcf62662.png)
 
 **Case 3)** 설치 실패 (유효하지 않은 Phoenix 설치 경로로 인한 빌드 실패)
 
@@ -779,8 +778,8 @@ Case 4) 설치 진행 중 (/sbin/ambari-server ${BuildNumber} 미지정 되었�
 
 - bigtop-3.1.0
 
-![Untitled](<Bigtop%20Install%20-%2022%2006%2030%20(Standalone)%20bd624e1dabf34dc2b83cb40eac929c79/Untitled%2028.png>)
+![Untitled 28](https://user-images.githubusercontent.com/12759500/230064298-2cb1f88a-99bf-43ae-9498-cfaf70a42cfe.png)
 
-![Untitled](<Bigtop%20Install%20-%2022%2006%2030%20(Standalone)%20bd624e1dabf34dc2b83cb40eac929c79/Untitled%2029.png>)
+![Untitled 29](https://user-images.githubusercontent.com/12759500/230064311-ab500ae4-720c-402c-b355-64ecb08cb20a.png)
 
 ⇒ 다른 설치된 Ambari쪽의 HASH값을 넣어보면, 설치 실패
