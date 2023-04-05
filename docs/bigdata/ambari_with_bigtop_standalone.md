@@ -1,6 +1,6 @@
 ---
 layout: default
-title: BigData
+title: Ambari with BigTop (Standalone)
 nav_order: 1
 has_children: true
 parent: BigTop
@@ -617,7 +617,7 @@ URLError: <urlopen error [Errno 111] 연결이 거부됨>
 
 - _YARN 재설치 시도하고 진행한 결과 새로운 내용의 에러 발견_
   (historyserver 실행, resourcemanager 실행 실패)
-      *에러  : classpath building에 있어 올바른 spark 버전에 대해 query를 할 수 없다는 내용*
+  _에러 : classpath building에 있어 올바른 spark 버전에 대해 query를 할 수 없다는 내용_
 
 ```bash
 Traceback (most recent call last):
