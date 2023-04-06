@@ -42,13 +42,11 @@ permalink: /docs/bigdata/bigtop/ambari_with_bigtop_cluster
 [root@node] $ sudo vi /etc/hosts
 ```
 
-![→ data 노드들에도 똑같은 설정을 해준다.](BigTop%20Install%20-%2022%2012%2004%20(%E1%84%8E%E1%85%AC%E1%84%8C%E1%85%A9%E1%86%BC,%20Cluster,%20CentOs7%20182bf06ed2654a1882e57ba365d4b84d/Untitled.png)
-
-→ data 노드들에도 똑같은 설정을 해준다.
+![→ data 노드들에도 똑같은 설정을 해준다.]→ data 노드들에도 똑같은 설정을 해준다.
 
 - 저장한 뒤 reboot 를 통해 시스템을 재시작한 뒤에 변경된 내역 확인
 
-![Untitled](BigTop%20Install%20-%2022%2012%2004%20(%E1%84%8E%E1%85%AC%E1%84%8C%E1%85%A9%E1%86%BC,%20Cluster,%20CentOs7%20182bf06ed2654a1882e57ba365d4b84d/Untitled%201.png)
+![Untitled 1](https://user-images.githubusercontent.com/12759500/230364402-cdf9fc28-2287-4933-a33a-e72d453c1ca4.png)
 
 ### 2. passwordless ssl (namenode만 진행)
 
@@ -60,7 +58,7 @@ permalink: /docs/bigdata/bigtop/ambari_with_bigtop_cluster
 
 **Step 2. Key 저장 위치, passphrase 입력(key 저장 위치 -> 기본값, passphrase -> 없으므로 엔터)**
 
-![Untitled](BigTop%20Install%20-%2022%2012%2004%20(%E1%84%8E%E1%85%AC%E1%84%8C%E1%85%A9%E1%86%BC,%20Cluster,%20CentOs7%20182bf06ed2654a1882e57ba365d4b84d/Untitled%202.png)
+![Untitled 2](https://user-images.githubusercontent.com/12759500/230364439-5119d13c-180d-4497-901b-f55926636686.png)
 
 **Step 3. 다른 host들에 SSH Public Key 복사. (Stand alone의 경우 생략)**
 
@@ -70,13 +68,13 @@ permalink: /docs/bigdata/bigtop/ambari_with_bigtop_cluster
 [root@node] $ ssh-copy-id -i /root/.ssh/id_rsa.pub <remote_username>@<server_ip_address>
 ```
 
-![Untitled](BigTop%20Install%20-%2022%2012%2004%20(%E1%84%8E%E1%85%AC%E1%84%8C%E1%85%A9%E1%86%BC,%20Cluster,%20CentOs7%20182bf06ed2654a1882e57ba365d4b84d/Untitled%203.png)
+![Untitled 3](https://user-images.githubusercontent.com/12759500/230364484-e2d268a0-2de1-4279-8a87-d6d96bed9ee8.png)
 
 **Step 4. SSH 접속**
 
 - 접속 후 비밀번호 없이 다른노드에 접속이 가능한 것을 확인.
 
-![Untitled](BigTop%20Install%20-%2022%2012%2004%20(%E1%84%8E%E1%85%AC%E1%84%8C%E1%85%A9%E1%86%BC,%20Cluster,%20CentOs7%20182bf06ed2654a1882e57ba365d4b84d/Untitled%204.png)
+![Untitled 4](https://user-images.githubusercontent.com/12759500/230364551-cc603071-0af5-4e65-ac7a-1d6a538eb08e.png)
 
 ### 3. 방화벽 해제 - 만약에 이미 해제되어 있다면 4번으로 넘어갈 것 (공통)
 
@@ -113,7 +111,6 @@ permalink: /docs/bigdata/bigtop/ambari_with_bigtop_cluster
 
 **Step 4. SELINUX=enforcing을 SELINUX=permissive로 수정 후 저장, 닫기.**
 
-![Untitled](BigTop%20Install%20-%2022%2012%2004%20(%E1%84%8E%E1%85%AC%E1%84%8C%E1%85%A9%E1%86%BC,%20Cluster,%20CentOs7%20182bf06ed2654a1882e57ba365d4b84d/Untitled%205.png)
 
 **Step 5. SELinux 비활성화**
 
@@ -142,7 +139,6 @@ server 2.pool.ntp.org
 
 ```
 
-![Untitled](BigTop%20Install%20-%2022%2012%2004%20(%E1%84%8E%E1%85%AC%E1%84%8C%E1%85%A9%E1%86%BC,%20Cluster,%20CentOs7%20182bf06ed2654a1882e57ba365d4b84d/Untitled%206.png)
 
 **Step 3. ntpd service 실행**
 
@@ -162,7 +158,6 @@ server 2.pool.ntp.org
 [root@node] $ sudo systemctl status ntpd
 ```
 
-![Untitled](BigTop%20Install%20-%2022%2012%2004%20(%E1%84%8E%E1%85%AC%E1%84%8C%E1%85%A9%E1%86%BC,%20Cluster,%20CentOs7%20182bf06ed2654a1882e57ba365d4b84d/Untitled%207.png)
 
 **Step 6. NTP 서버와 시스템 시간 동기화**
 
@@ -265,7 +260,6 @@ export PATH=$PATH:$MAVEN_HOME/bin
 
 - mvn -version 으로 설치 여부 및 버전 확인
 
-![Untitled](BigTop%20Install%20-%2022%2012%2004%20(%E1%84%8E%E1%85%AC%E1%84%8C%E1%85%A9%E1%86%BC,%20Cluster,%20CentOs7%20182bf06ed2654a1882e57ba365d4b84d/Untitled%208.png)
 
 **Step 3. Database 설치 - mysql ( namenode 01 에서 진행)**
 
@@ -429,9 +423,9 @@ cd bigtop
 - ambari-pkg 설치 시 HBase 에서 진도가 넘어가지 않을 수 있는데, 에러가 난 것이 아니라 오래걸리는 것이라 기다린다.
 - 위 작업이 모두 완료되었을 시 아래와 같이 생성
   - **name node**
-    ![Untitled](BigTop%20Install%20-%2022%2012%2004%20(%E1%84%8E%E1%85%AC%E1%84%8C%E1%85%A9%E1%86%BC,%20Cluster,%20CentOs7%20182bf06ed2654a1882e57ba365d4b84d/Untitled%209.png)
+  ![Uploading Untitled 9.png…]()
   - data node
-    ![Untitled](BigTop%20Install%20-%2022%2012%2004%20(%E1%84%8E%E1%85%AC%E1%84%8C%E1%85%A9%E1%86%BC,%20Cluster,%20CentOs7%20182bf06ed2654a1882e57ba365d4b84d/Untitled%2010.png)
+   ![Uploading Untitled 10.png…]()
 
 **Step 3. 아래 경로에 들어가서 yum install 실시**
 
@@ -492,7 +486,7 @@ exit;
 
 - 성공하면 아래와 같이 나온다.
 
-![Untitled](BigTop%20Install%20-%2022%2012%2004%20(%E1%84%8E%E1%85%AC%E1%84%8C%E1%85%A9%E1%86%BC,%20Cluster,%20CentOs7%20182bf06ed2654a1882e57ba365d4b84d/Untitled%2011.png)
+![Untitled 11](https://user-images.githubusercontent.com/12759500/230364872-d80eba14-c302-4205-a04b-d809f9eebe60.png)
 
 ## 4. Ambari UI 기반 설치
 
@@ -506,25 +500,25 @@ pw : admin
 -> 설치된 하둡 관리시 해당 아이디와 비번을 사용하니 잃어버리지 않도록 주의!
 ```
 
-![Untitled](BigTop%20Install%20-%2022%2012%2004%20(%E1%84%8E%E1%85%AC%E1%84%8C%E1%85%A9%E1%86%BC,%20Cluster,%20CentOs7%20182bf06ed2654a1882e57ba365d4b84d/Untitled%2012.png)
+![Untitled 12](https://user-images.githubusercontent.com/12759500/230364901-18e5fe31-f65c-47a2-8e40-158a0967eedf.png)
 
 **Step 2. Launch install wizard**
 
 - 로그인이 완료되면 LAUNCH INSTALL WIZARD 버튼을 클릭해 다음 단계로 넘어간다
 
-![Untitled](BigTop%20Install%20-%2022%2012%2004%20(%E1%84%8E%E1%85%AC%E1%84%8C%E1%85%A9%E1%86%BC,%20Cluster,%20CentOs7%20182bf06ed2654a1882e57ba365d4b84d/Untitled%2013.png)
+![Untitled 13](https://user-images.githubusercontent.com/12759500/230364923-fed8c09f-01bf-4acc-9325-dd1c517545d3.png)
 
 **Step 3. Get Started**
 
 - 클러스터 이름을 입력한다
 
-![Untitled](BigTop%20Install%20-%2022%2012%2004%20(%E1%84%8E%E1%85%AC%E1%84%8C%E1%85%A9%E1%86%BC,%20Cluster,%20CentOs7%20182bf06ed2654a1882e57ba365d4b84d/Untitled%2014.png)
+![Untitled 14](https://user-images.githubusercontent.com/12759500/230364952-fd19046d-bd22-493d-a994-9da9e85c66ee.png)
 
 **Step 4. Select Version**
 
 - 설치하고자 하는 패키지들이 있는지 확인하고 next 클릭
 
-![Untitled](BigTop%20Install%20-%2022%2012%2004%20(%E1%84%8E%E1%85%AC%E1%84%8C%E1%85%A9%E1%86%BC,%20Cluster,%20CentOs7%20182bf06ed2654a1882e57ba365d4b84d/Untitled%2015.png)
+![Untitled 15](https://user-images.githubusercontent.com/12759500/230364977-59065cce-4e6e-410f-a31c-59f59d0cec15.png)
 
 - base URL 에서 버전을 최신 버전(아래와 같이)으로 해주어야 한다.
 
@@ -543,48 +537,47 @@ http://repos.bigtop.apache.org/releases/3.2.0/centos/7/$basearch
 - Target Hosts 에 연결하려는 hosts name 입력(FQDN 방식으로)
 
 ```bash
-namenode01.dtonic.io
-datanode01.dtonic.io
-datanode02.dtonic.io
+name01.xxx.io
+data01.xxx.io
+data02.xxx.io
 ```
 
 - /root/.ssh/ 내의 id_rsa 파일의 내용을 Host Registration Information 에 붙여 넣는다
 - 마지막으로 User 는 root 로 지정하고 Register And Confirm 버튼을 눌러 다음으로 넘어간다
 
-![Untitled](BigTop%20Install%20-%2022%2012%2004%20(%E1%84%8E%E1%85%AC%E1%84%8C%E1%85%A9%E1%86%BC,%20Cluster,%20CentOs7%20182bf06ed2654a1882e57ba365d4b84d/Untitled%2016.png)
+![Untitled 16](https://user-images.githubusercontent.com/12759500/230365093-24856da7-7c4e-4480-823b-51b30536ea52.png)
 
 **Step 6. Confirm Hosts**
 
 - 호스트들에 success 가 뜨면 성공이며 잘 연결된 것이다.
 
-![Untitled](BigTop%20Install%20-%2022%2012%2004%20(%E1%84%8E%E1%85%AC%E1%84%8C%E1%85%A9%E1%86%BC,%20Cluster,%20CentOs7%20182bf06ed2654a1882e57ba365d4b84d/Untitled%2017.png)
+![Untitled 17](https://user-images.githubusercontent.com/12759500/230365120-c74154f8-48a8-4b58-80cb-9da37909e8ff.png)
 
 **Step 7. Choose Services**
 
 - 원하는 에코 시스템을 체크하고 넘어간다
   **(HDFS, YARN, Hive, Zookeeper, Ambari Metrics만 일단 선택 할 것)**
 
-![Untitled](BigTop%20Install%20-%2022%2012%2004%20(%E1%84%8E%E1%85%AC%E1%84%8C%E1%85%A9%E1%86%BC,%20Cluster,%20CentOs7%20182bf06ed2654a1882e57ba365d4b84d/Untitled%2018.png)
+![Untitled 18](https://user-images.githubusercontent.com/12759500/230365147-700bef13-ff6e-412e-90a8-dd941ccd1d18.png)
 
 ⇒ 추가 설치 시, 유의점
 
 - HBase 설치 시에 아래와 같이 지정할 것
   - Advanced hbase-site에서 Znode Parent를 “hbase”로 지정
-    ![Untitled](BigTop%20Install%20-%2022%2012%2004%20(%E1%84%8E%E1%85%AC%E1%84%8C%E1%85%A9%E1%86%BC,%20Cluster,%20CentOs7%20182bf06ed2654a1882e57ba365d4b84d/Untitled%2019.png)
+    ![Untitled 19](https://user-images.githubusercontent.com/12759500/230365178-19f10e64-307d-4d23-8a60-aa9db287d202.png)
 
 **Step 8. Assign Master / Assign Slaves and Clients**
 
 - 다음 두 단계에서 각 패키지가 어느 노드에 설치될지 결정한다.
 
-![Untitled](BigTop%20Install%20-%2022%2012%2004%20(%E1%84%8E%E1%85%AC%E1%84%8C%E1%85%A9%E1%86%BC,%20Cluster,%20CentOs7%20182bf06ed2654a1882e57ba365d4b84d/Untitled%2020.png)
-
-![Untitled](BigTop%20Install%20-%2022%2012%2004%20(%E1%84%8E%E1%85%AC%E1%84%8C%E1%85%A9%E1%86%BC,%20Cluster,%20CentOs7%20182bf06ed2654a1882e57ba365d4b84d/Untitled%2021.png)
+![Untitled 20](https://user-images.githubusercontent.com/12759500/230365211-cc47cab6-c56e-4879-a88a-d9c4f9f158fd.png)
+![Untitled 21](https://user-images.githubusercontent.com/12759500/230365727-308f1728-136e-4f7f-8587-e84c8aa56c53.png)
 
 **Step 9. Customize Services**
 
 - DB 와 각 에코시스템의 설정을 설정한다. DB 를 제외하고는 디폴트로 진행
 
-![Untitled](BigTop%20Install%20-%2022%2012%2004%20(%E1%84%8E%E1%85%AC%E1%84%8C%E1%85%A9%E1%86%BC,%20Cluster,%20CentOs7%20182bf06ed2654a1882e57ba365d4b84d/Untitled%2022.png)
+![Untitled 22](https://user-images.githubusercontent.com/12759500/230365728-9db62293-f159-4a34-a47b-8163155a8c39.png)
 
 ```bash
 username : hive
@@ -608,32 +601,29 @@ com.mysql.jdbc.Driver
 root / root
 ```
 
-![Untitled](BigTop%20Install%20-%2022%2012%2004%20(%E1%84%8E%E1%85%AC%E1%84%8C%E1%85%A9%E1%86%BC,%20Cluster,%20CentOs7%20182bf06ed2654a1882e57ba365d4b84d/Untitled%2023.png)
+![Untitled 23](https://user-images.githubusercontent.com/12759500/230365769-576c6465-644e-4801-a310-69f94c25aabb.png)
 
 - 아래에서는 디렉토리 및 서비스들의 환경설정 할수 있음
 
-![Untitled](BigTop%20Install%20-%2022%2012%2004%20(%E1%84%8E%E1%85%AC%E1%84%8C%E1%85%A9%E1%86%BC,%20Cluster,%20CentOs7%20182bf06ed2654a1882e57ba365d4b84d/Untitled%2024.png)
+![Untitled 24](https://user-images.githubusercontent.com/12759500/230365792-d433eb55-d966-49ff-a05a-4cc456a7f4aa.png)
 
-![Untitled](BigTop%20Install%20-%2022%2012%2004%20(%E1%84%8E%E1%85%AC%E1%84%8C%E1%85%A9%E1%86%BC,%20Cluster,%20CentOs7%20182bf06ed2654a1882e57ba365d4b84d/Untitled%2025.png)
+![Untitled 25](https://user-images.githubusercontent.com/12759500/230365804-893c9f9f-e5fb-4efc-9639-c03ee0f1caf7.png)
 
 - hadoop.proxyuser._ 에는 ‘ _ ‘ 를 입력할 것
 
-![Untitled](BigTop%20Install%20-%2022%2012%2004%20(%E1%84%8E%E1%85%AC%E1%84%8C%E1%85%A9%E1%86%BC,%20Cluster,%20CentOs7%20182bf06ed2654a1882e57ba365d4b84d/Untitled%2026.png)
+![Untitled 26](https://user-images.githubusercontent.com/12759500/230365827-68319a17-1435-4376-b788-f7ed0e3f304f.png)
 
 **Step 10. Review**
 
 - 마지막으로 설정을 확인하고 설치 시작
 
-![Untitled](BigTop%20Install%20-%2022%2012%2004%20(%E1%84%8E%E1%85%AC%E1%84%8C%E1%85%A9%E1%86%BC,%20Cluster,%20CentOs7%20182bf06ed2654a1882e57ba365d4b84d/Untitled%2027.png)
+![Untitled 27](https://user-images.githubusercontent.com/12759500/230365990-6e3cb58b-929f-49d8-9c8a-acd37f186801.png)
 
 **Step 11. Install, Start and Test**
 
-- 잠시 뒤 확인해보면 설치가 완료된 것을 확인할 수 있다
-
-![Untitled](BigTop%20Install%20-%2022%2012%2004%20(%E1%84%8E%E1%85%AC%E1%84%8C%E1%85%A9%E1%86%BC,%20Cluster,%20CentOs7%20182bf06ed2654a1882e57ba365d4b84d/Untitled%2028.png)
 
 1. 다시 들어가면 아래와 같이 모니터링을 할 수 있는 페이지로 변함 - > `**완료**`
 
-![Untitled](BigTop%20Install%20-%2022%2012%2004%20(%E1%84%8E%E1%85%AC%E1%84%8C%E1%85%A9%E1%86%BC,%20Cluster,%20CentOs7%20182bf06ed2654a1882e57ba365d4b84d/Untitled%2029.png)
+![Untitled 29](https://user-images.githubusercontent.com/12759500/230366088-2ebc9acb-4542-4f16-ac8b-5ecf43640be6.png)
 
-[BigTop 설치 중 특이 사항 (CentOS7, 20221129)](https://www.notion.so/BigTop-CentOS7-20221129-7d26cf7d22554ae99c2077ab02d940cf)
+
