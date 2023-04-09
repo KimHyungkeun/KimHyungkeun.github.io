@@ -30,7 +30,7 @@ ex) 마스터노드 기준
 - 프록시 (kube-proxy)
 - 네트워크 플러그인 (calico, flannel)
 
-![Untitled](1)%20Kubernetes%20%E1%84%80%E1%85%AE%E1%84%89%E1%85%A5%E1%86%BC%20%E1%84%8B%E1%85%AD%E1%84%89%E1%85%A9%20ed727c8dd45f4cb1831fe31a8f87309e/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/12759500/230754708-52bd21a7-1a09-4d05-a821-86995b6049ba.png)
 
 - kubenetes 클러스터에서는 kubelet이라는 agent가 모든 노드에서 실행된다
 - 컨테이너의 생성, 삭제 뿐만 아니라 master와 worker 노드 간의 통신 역할을 함께 담당
