@@ -12,4 +12,4 @@ nav_order: 1
 
 참조1 : [https://iingang.github.io/posts/windows-github-set/](https://iingang.github.io/posts/windows-github-set/)
 
-참조2 : [https://100sang.net/292](https://iingang.github.io/posts/windows-github-set/)
+참조2 : [https://100sang.net/292](https://100sang.net/292)

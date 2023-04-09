@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Java
+title: Java (추가 예정)
 nav_order: 5
 has_children: true
 permalink: /docs/java

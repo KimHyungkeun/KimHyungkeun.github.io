@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Kubernetes
+title: Kubernetes (추가 예정)
 nav_order: 4
 has_children: true
 permalink: /docs/kubernetes
