@@ -4,9 +4,6 @@ title: Install k8s Cluster
 nav_order: 1
 parent: Kubernetes
 ---
-
-# 1. 설치과정
-
 # 0. 설치환경
 
 - VirtualBox 3대
