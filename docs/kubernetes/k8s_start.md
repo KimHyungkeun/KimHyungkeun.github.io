@@ -1,9 +1,9 @@
 ---
 layout: default
 title: Kubernetes 시작하기
-nav_order: 2
 parent: Kubertnetes
-has_children : true
+has_children: true
+nav_order: 2
 ---
 
 # Kubernetes Start
