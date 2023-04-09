@@ -114,7 +114,7 @@ disabled_plugins = ["cri"] # 주석처리
 
 (미 설정 시 아래와 같은 에러 발생)
 
-![Untitled](1%20%E1%84%89%E1%85%A5%E1%86%AF%E1%84%8E%E1%85%B5%E1%84%80%E1%85%AA%E1%84%8C%E1%85%A5%E1%86%BC%20eb6924c93f104da0ade6249ab758d93b/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/12759500/230753939-5de6c9f0-5cd7-4595-af20-b0ab46a522c7.png)
 
 13) k8s 설치
 
@@ -179,7 +179,7 @@ k8s-worker2
 --pod-network-cidr=192.168.0.0/16
 ```
 
-![Untitled](1%20%E1%84%89%E1%85%A5%E1%86%AF%E1%84%8E%E1%85%B5%E1%84%80%E1%85%AA%E1%84%8C%E1%85%A5%E1%86%BC%20eb6924c93f104da0ade6249ab758d93b/Untitled%201.png)
+![Untitled 1](https://user-images.githubusercontent.com/12759500/230753948-54a57537-8e9e-4e7d-8fc2-66997cb36248.png)
 
 4) 환경변수 설정
 
@@ -215,7 +215,7 @@ k8s-worker2
 
 (아래와 같이 에러가 발생해서, --discovery-token-unsafe-skip-ca-verification 옵션 추가 )
 
-![Untitled](1%20%E1%84%89%E1%85%A5%E1%86%AF%E1%84%8E%E1%85%B5%E1%84%80%E1%85%AA%E1%84%8C%E1%85%A5%E1%86%BC%20eb6924c93f104da0ade6249ab758d93b/Untitled%202.png)
+![Untitled 2](https://user-images.githubusercontent.com/12759500/230753952-b1150551-983e-438e-9860-1c90e2e023a0.png)
 
 4) kubernetes 노드 상태 확인
 
@@ -223,7 +223,7 @@ k8s-worker2
 [root@k8s-master] kubectl get nodes
 ```
 
-![Untitled](1%20%E1%84%89%E1%85%A5%E1%86%AF%E1%84%8E%E1%85%B5%E1%84%80%E1%85%AA%E1%84%8C%E1%85%A5%E1%86%BC%20eb6924c93f104da0ade6249ab758d93b/Untitled%203.png)
+![Untitled 3](https://user-images.githubusercontent.com/12759500/230753953-5580611b-ada1-4a41-8b87-44cbfc6001ff.png)
 
 5) kubernetes에 대한 네트워크 상태 확인
 
@@ -231,7 +231,7 @@ k8s-worker2
 [root@k8s-master] kubectl get pods --all-namespaces
 ```
 
-![Untitled](1%20%E1%84%89%E1%85%A5%E1%86%AF%E1%84%8E%E1%85%B5%E1%84%80%E1%85%AA%E1%84%8C%E1%85%A5%E1%86%BC%20eb6924c93f104da0ade6249ab758d93b/Untitled%204.png)
+![Untitled 4](https://user-images.githubusercontent.com/12759500/230753957-72a433ef-52fc-4de2-879c-a19e3b6c7cf4.png)
 
 # 4. 네트워크 설정
 
@@ -248,19 +248,19 @@ k8s-worker2
 
 ⇒ 재설치 후, 정상 작동. (kubernetes 버전을 1.15.1로 다운그레이드 하고 진행 시도)
 
-![Untitled](1%20%E1%84%89%E1%85%A5%E1%86%AF%E1%84%8E%E1%85%B5%E1%84%80%E1%85%AA%E1%84%8C%E1%85%A5%E1%86%BC%20eb6924c93f104da0ade6249ab758d93b/Untitled%205.png)
+![Untitled 5](https://user-images.githubusercontent.com/12759500/230753958-df92d5f0-367c-45df-9cae-4691bbdf5388.png)
 
 ```bash
 [root@k8s-master ~] kubectl get pods --namespace kube-system
 ```
 
-![Untitled](1%20%E1%84%89%E1%85%A5%E1%86%AF%E1%84%8E%E1%85%B5%E1%84%80%E1%85%AA%E1%84%8C%E1%85%A5%E1%86%BC%20eb6924c93f104da0ade6249ab758d93b/Untitled%206.png)
+![Untitled 6](https://user-images.githubusercontent.com/12759500/230753959-eb926c24-1a07-4d2b-8698-790bf9365931.png)
 
 ```bash
 [root@k8s-master ~] kubectl get nodes
 ```
 
-![Untitled](1%20%E1%84%89%E1%85%A5%E1%86%AF%E1%84%8E%E1%85%B5%E1%84%80%E1%85%AA%E1%84%8C%E1%85%A5%E1%86%BC%20eb6924c93f104da0ade6249ab758d93b/Untitled%207.png)
+![Untitled 7](https://user-images.githubusercontent.com/12759500/230753963-fb4ea43d-2861-4480-a6ca-b34e9237932f.png)
 
 출처 : [https://zunoxi.tistory.com/42?category=950191](https://zunoxi.tistory.com/42?category=950191)
 
@@ -272,7 +272,7 @@ Worker Node에서 kubectl get node 사용 시
 
 “The connection to the server localhost:8080 was refused - did you specify the right host or port?”
 
-![Untitled](1%20%E1%84%89%E1%85%A5%E1%86%AF%E1%84%8E%E1%85%B5%E1%84%80%E1%85%AA%E1%84%8C%E1%85%A5%E1%86%BC%20eb6924c93f104da0ade6249ab758d93b/Untitled%208.png)
+![Untitled 8](https://user-images.githubusercontent.com/12759500/230753965-c6ae0d79-35d2-4a0a-8f8a-68584cb9d467.png)
 
 - 조치
 
@@ -281,4 +281,4 @@ Worker Node에서 kubectl get node 사용 시
 [root@k8s-worker ~] scp root@k8s-master1:/etc/kubernetes/admin.conf $HOME/.kube/config
 ```
 
-![Untitled](1%20%E1%84%89%E1%85%A5%E1%86%AF%E1%84%8E%E1%85%B5%E1%84%80%E1%85%AA%E1%84%8C%E1%85%A5%E1%86%BC%20eb6924c93f104da0ade6249ab758d93b/Untitled%209.png)
+![Untitled 9](https://user-images.githubusercontent.com/12759500/230753969-c30f1d94-416b-47d0-95a5-c4680d9ae19d.png)
