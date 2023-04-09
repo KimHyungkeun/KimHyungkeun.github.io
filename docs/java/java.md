@@ -8,4 +8,4 @@ permalink: /docs/java
 
 # Java Page
 
-Java 관련 페이지입니다.
+Java 관련 페이지입니다. (추가 예정)

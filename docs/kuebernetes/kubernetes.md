@@ -6,6 +6,6 @@ has_children: true
 permalink: /docs/kubernetes
 ---
 
-# k8s
+# Kubernetes Page
 
-k8s Page
+Kubernetes 관련 페이지입니다. (추가 예정)
