@@ -13,7 +13,7 @@ permalink: /docs/kubernetes/k8s_start/k8s_replica_set/
     
     ex) Nginx Pod 삭제
     
-    ![Untitled](3)%20Replica%20Set%E1%84%8B%E1%85%A6%20%E1%84%83%E1%85%A2%E1%84%92%E1%85%A2%2070c2b1d252fb4f61855722cefad56629/Untitled.png)
+    ![Untitled](https://user-images.githubusercontent.com/12759500/230754766-ae8a8c64-5558-42e7-93c1-eb55fe7cebe2.png)
     
     - k8s에서는 기본 단위가 pod이므로 동일한 여러 개의 pod를 생성해 외부 요청을 각 pod에 분배하는 방식을 사용.
         
@@ -50,7 +50,7 @@ permalink: /docs/kubernetes/k8s_start/k8s_replica_set/
           protocol: TCP
     ```
     
-    ![Untitled](3)%20Replica%20Set%E1%84%8B%E1%85%A6%20%E1%84%83%E1%85%A2%E1%84%92%E1%85%A2%2070c2b1d252fb4f61855722cefad56629/Untitled%201.png)
+    ![Untitled 1](https://user-images.githubusercontent.com/12759500/230754770-03925990-dcbd-479b-bd2d-fcda9efc0d27.png)
     
     그러나, Pod만 YAML 파일에 정의해 사용하는 방식은 여러가지 한계점이 존재.
     따라서, k8s에서 pod만 정의해 사용하는 경우는 거의 없고, ReplicaSet라는 오브젝트를 사용.
@@ -85,9 +85,9 @@ permalink: /docs/kubernetes/k8s_start/k8s_replica_set/
             - containerPort : 80
     ```
     
-    ![Untitled](3)%20Replica%20Set%E1%84%8B%E1%85%A6%20%E1%84%83%E1%85%A2%E1%84%92%E1%85%A2%2070c2b1d252fb4f61855722cefad56629/Untitled%202.png)
+    ![Untitled 2](https://user-images.githubusercontent.com/12759500/230754773-8736ca18-50a7-4d73-a25b-d04369a2c125.png)
     
-    ![Untitled](3)%20Replica%20Set%E1%84%8B%E1%85%A6%20%E1%84%83%E1%85%A2%E1%84%92%E1%85%A2%2070c2b1d252fb4f61855722cefad56629/Untitled%203.png)
+    ![Untitled 3](https://user-images.githubusercontent.com/12759500/230754779-6acb7d99-2482-473b-b72c-dfe33f680a13.png)
     
     4) Replica Set 사용 예시 : app Label을 미리 생성해 놓을 경우
     
@@ -106,24 +106,24 @@ permalink: /docs/kubernetes/k8s_start/k8s_replica_set/
         - containerPort : 80
     ```
     
-    ![Untitled](3)%20Replica%20Set%E1%84%8B%E1%85%A6%20%E1%84%83%E1%85%A2%E1%84%92%E1%85%A2%2070c2b1d252fb4f61855722cefad56629/Untitled%204.png)
+    ![Untitled 4](https://user-images.githubusercontent.com/12759500/230754783-d6aba891-fefe-4d24-ac8b-05ed97238173.png)
     
     - 생성 화면
     
-    ![Untitled](3)%20Replica%20Set%E1%84%8B%E1%85%A6%20%E1%84%83%E1%85%A2%E1%84%92%E1%85%A2%2070c2b1d252fb4f61855722cefad56629/Untitled%205.png)
+    ![Untitled 5](https://user-images.githubusercontent.com/12759500/230754788-913ee0a3-1885-4aed-8a9b-9a742b6eda1e.png)
     
     ⇒ replicaset-nginx.yaml에서 replica갯수가 3개이고, 
     selector.matchLabel에 app:my-nginx-pods-label 라벨을 가지는 포드가 이미 1개 미리 존재하기 때문에, 실제로는 2개가 만들어 졌다
     
-    ![Untitled](3)%20Replica%20Set%E1%84%8B%E1%85%A6%20%E1%84%83%E1%85%A2%E1%84%92%E1%85%A2%2070c2b1d252fb4f61855722cefad56629/Untitled%206.png)
+    ![Untitled 6](https://user-images.githubusercontent.com/12759500/230754796-2283fd5f-2272-464c-a020-61dcac4f5177.png)
     
     ⇒ 수동으로 pod를 삭제하고 나면, 위와 같이 새 pod를 생성한다
     
-    ![Untitled](3)%20Replica%20Set%E1%84%8B%E1%85%A6%20%E1%84%83%E1%85%A2%E1%84%92%E1%85%A2%2070c2b1d252fb4f61855722cefad56629/Untitled%207.png)
+    ![Untitled 7](https://user-images.githubusercontent.com/12759500/230754798-bba1cb2f-7987-43a4-a99c-e821b0ac66fe.png)
     
     ⇒ 만약 label을 하나 지운다면, replica 갯수 3개 설정에 의해서 새로운 pod를 생성한다.
     
-    ![Untitled](3)%20Replica%20Set%E1%84%8B%E1%85%A6%20%E1%84%83%E1%85%A2%E1%84%92%E1%85%A2%2070c2b1d252fb4f61855722cefad56629/Untitled%208.png)
+    ![Untitled 8](https://user-images.githubusercontent.com/12759500/230754804-651fa5d3-7d2d-41d0-b5ba-4a5abc60413c.png)
     
     ⇒ 따라서, <LABELS>가 none인 pod는 수동으로 삭제 해야 한다
     
