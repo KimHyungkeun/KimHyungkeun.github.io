@@ -170,7 +170,7 @@ spec:
 service/hostname-svc-nodeport created
 ```
 
-![Untitled](3)%20NodePort%20%E1%84%90%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%B8%2097514df216054d79aeb8530921428574/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/12759500/231146577-27784ed2-145c-4448-a79c-a5756d9c35e3.png)
 
 - 노드 확인
 
@@ -178,9 +178,9 @@ service/hostname-svc-nodeport created
 [root@k8s-master] kubectl get nodes -o wide
 ```
 
-![Untitled](3)%20NodePort%20%E1%84%90%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%B8%2097514df216054d79aeb8530921428574/Untitled%201.png)
+![Untitled 1](https://user-images.githubusercontent.com/12759500/231146618-6be1bb21-a16a-4354-a18d-635d64ed111f.png)
 
-![Untitled](3)%20NodePort%20%E1%84%90%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%B8%2097514df216054d79aeb8530921428574/Untitled%202.png)
+![Untitled 2](https://user-images.githubusercontent.com/12759500/231146676-b6a6b49b-c64d-4043-afd4-b6f3052f920a.png)
 
 - 주목할 점
   - NodePort 타입의 서비스인데도 kubectl get service 명령어에서는 CLUSTER-IP에 내부 IP가 할당
@@ -196,14 +196,14 @@ root@debug:/ curl hostname-svc-nodeport:8080 --silent | grep Hello
 	<p>Hello,  hostname-deployment-6cd58767b4-vx5jd</p>     </blockquote>
 ```
 
-![Untitled](3)%20NodePort%20%E1%84%90%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%B8%2097514df216054d79aeb8530921428574/Untitled%203.png)
+![Untitled 3](https://user-images.githubusercontent.com/12759500/231146734-e5e174bd-0e0a-4158-9fa1-b5bd65cf5e4e.png)
 
 - NodePort 구조
   - 외부에서 pod에 접근하기 위해 각 node에 개방된 포트로 요청을 전송
   - 예를 들어, 32168 port로 들어온 요청은 서비스와 연결된 pod 중 하나로 라우팅
   - 클러스터 내부에서는 ClusterIP 타입의 서비스와 동일하게 접근
 
-![NodePort.jpg](3)%20NodePort%20%E1%84%90%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%B8%2097514df216054d79aeb8530921428574/NodePort.jpg)
+![NodePort](https://user-images.githubusercontent.com/12759500/231146774-be7f4b29-2914-4c61-ae24-02a798cfb2ec.jpg)
 
 - 유의점
   - 실제 운영환경에서 NodePort로 서비스를 외부에 제공하는 경우는 많지 않음
