@@ -209,3 +209,13 @@ root@debug:/ curl hostname-svc-nodeport:8080 --silent | grep Hello
   - 실제 운영환경에서 NodePort로 서비스를 외부에 제공하는 경우는 많지 않음
   - NodePort에서 80 또는 443으로 설정하기는 적절치 않으며, SSL 인증서 적용, 라우팅 등과 같은 복잡한 설정을 서비스에 적용하기가 어렵기 때문
   - 따라서, NodePort 서비스 자체보다는 **인그레스(Ingress)**라고 부르는 오브젝트 사용
+
+# 4) LoadBalancer 타입 (추후진행)
+
+- 서비스 생성과 동시에 로드 밸런서를 새롭게 생성해 pod와 연결
+- NodePort와 LoadBalancer 타입의 차이
+  - NodePort는 각 노드의 IP를 알아야만 pod에 접근
+  - LoadBalancer 타입의 서비스는 클라우드 플랫폼으로부터 도메인 이름과 IP를 할당 받기 때문에 NodePort보다 더욱 쉽게 pod 접근 가능
+- 단, LoadBalancer 타입의 서비스는 로드 밸런서를 동적으로 생성하는 기능을 제공하는 환경에서만 사용 가능
+  - 일반적으로 AWS, GCP 등과 같은 클라우드 플랫폼 환경에서만 LoadBalancer 타입 사용이 가능하며, 가상머신이나 On-premise 환경에서는 사용하기 어려울 수 있다
+- (추후 AWS 설치를 통해 다시 확인 예정)
