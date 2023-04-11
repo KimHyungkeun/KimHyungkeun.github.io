@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Kubernetes Service (추가 예정)
+title: Kubernetes Service
 nav_order: 5
 parent: Kubernetes 시작하기
 grand_parent: Kubernetes
@@ -142,3 +142,70 @@ service/hostname-svc-clusterip created
 - ClusterIP 타입 서비스 구조
 
 ![ClusterIP](https://user-images.githubusercontent.com/12759500/231144730-f6092a1f-d142-49d4-8465-7409cb2e1b01.jpg)
+
+# 3) NodePort 타입
+
+- ClusterIP 타입의 서비스는 내부에서만 접근 가능하나, NodePort 타입의 서비스는 클러스터 외부에서 접근 가능
+
+```yaml
+# hostname-svc-nodeport.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: hostname-svc-nodeport
+spec:
+  ports:
+    - name: web-port
+      port: 8080
+      targetPort: 80
+  selector:
+    app: webserver
+  type: NodePort
+```
+
+- 아래와 같이 YAML 파일을 이용해 NodePort 타입의 서비스를 생성
+
+```yaml
+[root@k8s-master] kubectl apply -f k8s_workspace/chapter6/hostname-svc-nodeport.yaml
+service/hostname-svc-nodeport created
+```
+
+![Untitled](3)%20NodePort%20%E1%84%90%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%B8%2097514df216054d79aeb8530921428574/Untitled.png)
+
+- 노드 확인
+
+```bash
+[root@k8s-master] kubectl get nodes -o wide
+```
+
+![Untitled](3)%20NodePort%20%E1%84%90%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%B8%2097514df216054d79aeb8530921428574/Untitled%201.png)
+
+![Untitled](3)%20NodePort%20%E1%84%90%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%B8%2097514df216054d79aeb8530921428574/Untitled%202.png)
+
+- 주목할 점
+  - NodePort 타입의 서비스인데도 kubectl get service 명령어에서는 CLUSTER-IP에 내부 IP가 할당
+  - NodePort 타입의 서비스가 ClusterIP의 기능을 포함하고 있기 때문
+  - NodePort 타입의 서비스를 생성하면 자동으로 ClusterIP의 기능 사용이 가능하므로, k8s 클러스터에서 서비스의 내부 IP와 DNS 이름을 사용해 접근 가능
+
+```bash
+# 아래와 같이 임시 pod를 만들고 curl 적용
+[root@k8s-master chapter6] kubectl run -i --tty --rm debug --image=alicek106/ubuntu:curl --restart=Never -- bash
+root@debug:/ curl 10.105.219.92:8080 --silent | grep Hello
+	<p>Hello,  hostname-deployment-6cd58767b4-vx5jd</p>     </blockquote>
+root@debug:/ curl hostname-svc-nodeport:8080 --silent | grep Hello
+	<p>Hello,  hostname-deployment-6cd58767b4-vx5jd</p>     </blockquote>
+```
+
+![Untitled](3)%20NodePort%20%E1%84%90%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%B8%2097514df216054d79aeb8530921428574/Untitled%203.png)
+
+- NodePort 구조
+  - 외부에서 pod에 접근하기 위해 각 node에 개방된 포트로 요청을 전송
+  - 예를 들어, 32168 port로 들어온 요청은 서비스와 연결된 pod 중 하나로 라우팅
+  - 클러스터 내부에서는 ClusterIP 타입의 서비스와 동일하게 접근
+
+![NodePort.jpg](3)%20NodePort%20%E1%84%90%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%B8%2097514df216054d79aeb8530921428574/NodePort.jpg)
+
+- 유의점
+  - 실제 운영환경에서 NodePort로 서비스를 외부에 제공하는 경우는 많지 않음
+  - NodePort에서 80 또는 443으로 설정하기는 적절치 않으며, SSL 인증서 적용, 라우팅 등과 같은 복잡한 설정을 서비스에 적용하기가 어렵기 때문
+  - 따라서, NodePort 서비스 자체보다는 **인그레스(Ingress)**라고 부르는 오브젝트 사용
