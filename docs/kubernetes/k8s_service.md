@@ -110,11 +110,11 @@ spec:
 service/hostname-svc-clusterip created
 ```
 
-![Untitled](2)%20ClusterIP%20%E1%84%90%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%B8%20892420151497465d98cc431fed87a7a3/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/12759500/231144462-1c021662-d2b3-465e-81f9-b58ee210afa0.png)
 
 - pod목록을 조회
 
-![Untitled](2)%20ClusterIP%20%E1%84%90%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%B8%20892420151497465d98cc431fed87a7a3/Untitled%201.png)
+![Untitled 1](https://user-images.githubusercontent.com/12759500/231144526-9dda432f-c5c0-4425-969a-3d0a45491ee0.png)
 
 - 임의로 pod를 하나 생성 후, service에 접근시도
 - {서비스IP}:{Port} 또는 {pod이름}:{Port}로 접근
@@ -124,13 +124,13 @@ service/hostname-svc-clusterip created
 [root@k8s-master chapter6] kubectl run -i --tty --rm debug --image=alicek106/ubuntu:curl --restart=Never -- bash
 ```
 
-![Untitled](2)%20ClusterIP%20%E1%84%90%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%B8%20892420151497465d98cc431fed87a7a3/Untitled%202.png)
+![Untitled 2](https://user-images.githubusercontent.com/12759500/231144589-3a580de1-446f-4f37-ac8a-ba8cfdae70c7.png)
 
-![Untitled](2)%20ClusterIP%20%E1%84%90%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%B8%20892420151497465d98cc431fed87a7a3/Untitled%203.png)
+![Untitled 3](https://user-images.githubusercontent.com/12759500/231144623-49682a04-057b-4355-a438-ae8d49296aee.png)
 
-![Untitled](2)%20ClusterIP%20%E1%84%90%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%B8%20892420151497465d98cc431fed87a7a3/Untitled%204.png)
+![Untitled 4](https://user-images.githubusercontent.com/12759500/231144653-ac45b1cd-f96e-4206-b6eb-a6d5d6c6f190.png)
 
-![Untitled](2)%20ClusterIP%20%E1%84%90%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%B8%20892420151497465d98cc431fed87a7a3/Untitled%205.png)
+![Untitled 5](https://user-images.githubusercontent.com/12759500/231144679-c00a89d9-6763-4f1d-a44e-a2f9ace9223e.png)
 
 - 삭제 시 에는 아래와 같이 진행
 
@@ -141,4 +141,4 @@ service/hostname-svc-clusterip created
 
 - ClusterIP 타입 서비스 구조
 
-![ClusterIP.jpg](2)%20ClusterIP%20%E1%84%90%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%B8%20892420151497465d98cc431fed87a7a3/ClusterIP.jpg)
+![ClusterIP](https://user-images.githubusercontent.com/12759500/231144730-f6092a1f-d142-49d4-8465-7409cb2e1b01.jpg)
