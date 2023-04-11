@@ -7,7 +7,7 @@ grand_parent: Kubernetes
 permalink: /docs/kubernetes/k8s_start/k8s_service/
 ---
 
-# 5) Service에 대해
+# 5. Service에 대해
 
 # 1) Service 란
 
@@ -28,7 +28,7 @@ permalink: /docs/kubernetes/k8s_start/k8s_service/
 - 여러 개의 pod에 접근할 때, 요청을 분산하는 load balancer 기능을 수행
 - 클라우드 플랫폼의 load balancer, 클러스터 노드 포트 등을 통해 pod를 외부로 노출
 
-3. Servie의 종류
+3. Service의 종류
 
 1. Cluster IP 타입
 

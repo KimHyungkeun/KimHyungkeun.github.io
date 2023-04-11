@@ -7,31 +7,31 @@ grand_parent: Kubernetes
 permalink: /docs/kubernetes/k8s_start/k8s_deployment/
 ---
 
-# 4) Deployment에 대해
+# 4. Deployment에 대해
 
 ## 1. Deployment 사용하기
 
 ```yaml
-addVersion : apps/v1
-kind : Deployment
-metadata :
-  name : my-nginx-deployment
-spec :
-  replicas : 3
-  selector :
-    matchLabels :
-      app : my-nginx
-  template :
-    metadata :
-      name : my-nginx-pod
-      labels :
-        app : my-nginx
-    spec :
-      containers :
-      - name : nginx
-        image : nginx:1.10
-        ports :
-        - containerPort : 80
+addVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-nginx-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: my-nginx
+  template:
+    metadata:
+      name: my-nginx-pod
+      labels:
+        app: my-nginx
+    spec:
+      containers:
+        - name: nginx
+          image: nginx:1.10
+          ports:
+            - containerPort: 80
 ```
 
 ![Untitled](https://user-images.githubusercontent.com/12759500/230754834-d3cb3fae-697f-4045-802f-b3386543ddc3.png)
