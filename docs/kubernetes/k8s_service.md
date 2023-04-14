@@ -329,7 +329,7 @@ root@debug:/ curl hostname-svc-nodeport:8080 --silent | grep Hello
   - 게다가 노드 간의 리다이렉트가 발생하여, 트래픽의 출발지 주소가 바뀌는 SNAT 발생
     ⇒ 클라이언트 IP 주소 또한 보존되지 않음
 
-![externalPolicy.jpg](5)%20externalTrafficPolicy%20%E1%84%90%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%B8%20398798a7c75e4431806b3ee276b85f31/externalPolicy.jpg)
+![externalPolicy](https://user-images.githubusercontent.com/12759500/232005475-ab0b32a7-de9f-45a1-9ff4-55a12b092d3d.jpg)
 
 - 아래 명령어를 통해 externalTrafficPolicy 상태 확인 : **Cluster 모드**
 
@@ -338,7 +338,7 @@ root@debug:/ curl hostname-svc-nodeport:8080 --silent | grep Hello
 -> externalTrafficPolicy가 Cluster로 되어있음
 ```
 
-![Untitled](5)%20externalTrafficPolicy%20%E1%84%90%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%B8%20398798a7c75e4431806b3ee276b85f31/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/12759500/232005590-d29ac86b-c9df-4a33-bcf2-0f65e118a6b1.png)
 
 - 아래 service를 띄운 후, externalTrafficPolicy를 Local로 변경
 
@@ -376,9 +376,9 @@ root@debug:/ curl hostname-svc-nodeport:8080 --silent | grep Hello
   => Node가 worker1에서만 서비스 중
   ```
 
-  ![Untitled](5)%20externalTrafficPolicy%20%E1%84%90%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%B8%20398798a7c75e4431806b3ee276b85f31/Untitled%201.png)
+  ![Untitled 1](https://user-images.githubusercontent.com/12759500/232005652-d4c9d868-8b3b-426a-b428-69ea601750e2.png)
 
-  ![Untitled](5)%20externalTrafficPolicy%20%E1%84%90%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%B8%20398798a7c75e4431806b3ee276b85f31/Untitled%202.png)
+  ![Untitled 2](https://user-images.githubusercontent.com/12759500/232005680-505c0625-a627-4543-a2d7-1fd662c3ca25.png)
 
   3. worker1에서 응답확인
 
@@ -393,17 +393,17 @@ root@debug:/ curl hostname-svc-nodeport:8080 --silent | grep Hello
   # worker1인 56.110에서만 응답 확인
   ```
 
-  ![Untitled](5)%20externalTrafficPolicy%20%E1%84%90%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%B8%20398798a7c75e4431806b3ee276b85f31/Untitled%203.png)
+  ![Untitled 3](https://user-images.githubusercontent.com/12759500/232005722-7779a577-9a85-4a93-9bad-91a29c3f6fb8.png)
 
 - ExternalTrafficPolicy 값에 따른 트래픽 흐름
 
-  ![externalPolicyFlow.jpg](5)%20externalTrafficPolicy%20%E1%84%90%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%B8%20398798a7c75e4431806b3ee276b85f31/externalPolicyFlow.jpg)
+  ![externalPolicyFlow](https://user-images.githubusercontent.com/12759500/232005815-ce21a789-402a-407a-a422-a9437e74b837.jpg)
 
 - 가정 : 그렇다면 Local 설정이 무조건 효율적인가?
 
   ⇒ 결론적으로는 pod가 고르지않게 스케쥴링 될 경우, 요청이 고르게 분산되지 않을 수 있음
 
-  ![externalPolicyLB.jpg](5)%20externalTrafficPolicy%20%E1%84%90%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%B8%20398798a7c75e4431806b3ee276b85f31/externalPolicyLB.jpg)
+  ![externalPolicyLB](https://user-images.githubusercontent.com/12759500/232005851-707f164b-ec97-4c24-8d7e-7555430366b0.jpg)
 
   - 위 그림에서는 로드밸런서가 2개의 노드에 대해 트래픽을 절반씩 분배
   - 그러나, 각 pod가 실제로 받는 부하의 양은 동일하지 않음
@@ -441,4 +441,4 @@ NAME                    TYPE           CLUSTER-IP      EXTERNAL-IP       PORT(S)
 externalname-svc        ExternalName   <none>          my.database.com   <none>           7s
 ```
 
-![Untitled](6)%20ExternalName%20%E1%84%90%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%B8%20ba997ce0cf4b4711adadfbd3c98f08b2/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/12759500/232005406-4cedbf5f-0be7-49a2-89a8-26a313fe5b38.png)
