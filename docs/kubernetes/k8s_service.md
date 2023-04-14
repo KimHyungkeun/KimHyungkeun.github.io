@@ -219,3 +219,226 @@ root@debug:/ curl hostname-svc-nodeport:8080 --silent | grep Hello
 - 단, LoadBalancer 타입의 서비스는 로드 밸런서를 동적으로 생성하는 기능을 제공하는 환경에서만 사용 가능
   - 일반적으로 AWS, GCP 등과 같은 클라우드 플랫폼 환경에서만 LoadBalancer 타입 사용이 가능하며, 가상머신이나 On-premise 환경에서는 사용하기 어려울 수 있다
 - (추후 AWS 설치를 통해 다시 확인 예정)
+
+# 5) externalTrafficPolicy 타입
+
+- LoadBalancer 타입의 서비스를 사용하면 외부로부터 들어온 요청은 각 노드 중 하나로 전송
+- 그 노드에서 다시 pod 중 하나로 전달된다
+- NodePort 타입 또한 각 Node로 들어오는 요청은 다시 pod 중 하나로 전달
+
+- 문제점
+  - 아래와 같이 Worker A로 들어오는 요청은 Pod a나 Pod b 둘 중 하나로 전달될 예정
+  - 그런데, A로 들어와도 Pod b로 전달되어 처리되면 불필요한 네트워크 hob이 발생
+  - 게다가 노드 간의 리다이렉트가 발생하여, 트래픽의 출발지 주소가 바뀌는 SNAT 발생
+    ⇒ 클라이언트 IP 주소 또한 보존되지 않음
+
+![externalPolicy.jpg](5)%20externalTrafficPolicy%20%E1%84%90%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%B8%20398798a7c75e4431806b3ee276b85f31/externalPolicy.jpg)
+
+- 아래 명령어를 통해 externalTrafficPolicy 상태 확인 : **Cluster 모드**
+
+```bash
+[root@k8s-master ~] kubectl get svc hostname-svc-nodeport -o yaml
+-> externalTrafficPolicy가 Cluster로 되어있음
+```
+
+![Untitled](5)%20externalTrafficPolicy%20%E1%84%90%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%B8%20398798a7c75e4431806b3ee276b85f31/Untitled.png)
+
+- 아래 service를 띄운 후, externalTrafficPolicy를 Local로 변경
+
+  1. service 실행
+
+  ```yaml
+  # hostname-svc-lb-local.yaml
+  apiVersion: v1
+  kind: Service
+  metadata:
+    name: hostname-svc-lb-local
+  spec:
+    externalTrafficPolicy: Local
+    ports:
+      - name: web-port
+        port: 80
+        targetPort: 80
+    selector:
+      app: webserver
+    type: LoadBalancer
+  ```
+
+  ```bash
+  # service 실행
+  [root@k8s-master ~] kubectl apply -f k8s_workspace/chapter6/hostname-svc-lb-local.yaml
+  service/hostname-svc-lb-local created
+  ```
+
+  2. hostname-deployment에서 pod 갯수를 1개로 감소 시킴
+
+  ```bash
+  [root@k8s-master ~] kubectl scale --replicas=1 deployment hostname-deployment
+  deployment.extensions/hostname-deployment scaled
+  [root@k8s-master ~] kubectl get pods -o wide
+  => Node가 worker1에서만 서비스 중
+  ```
+
+  ![Untitled](5)%20externalTrafficPolicy%20%E1%84%90%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%B8%20398798a7c75e4431806b3ee276b85f31/Untitled%201.png)
+
+  ![Untitled](5)%20externalTrafficPolicy%20%E1%84%90%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%B8%20398798a7c75e4431806b3ee276b85f31/Untitled%202.png)
+
+  3. worker1에서 응답확인
+
+  ```bash
+  [root@k8s-worker1 ~] curl 192.168.56.109:31875 --silent | grep Hello
+  ^C
+  [root@k8s-worker1 ~] curl 192.168.56.110:31875 --silent | grep Hello
+          <p>Hello,  hostname-deployment-6cd58767b4-5qztn</p>     </blockquote>
+  [root@k8s-worker1 ~] curl 192.168.56.111:31875 --silent | grep Hello
+  ^C
+
+  # worker1인 56.110에서만 응답 확인
+  ```
+
+  ![Untitled](5)%20externalTrafficPolicy%20%E1%84%90%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%B8%20398798a7c75e4431806b3ee276b85f31/Untitled%203.png)
+
+- ExternalTrafficPolicy 값에 따른 트래픽 흐름
+
+  ![externalPolicyFlow.jpg](5)%20externalTrafficPolicy%20%E1%84%90%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%B8%20398798a7c75e4431806b3ee276b85f31/externalPolicyFlow.jpg)
+
+- 가정 : 그렇다면 Local 설정이 무조건 효율적인가?
+
+  ⇒ 결론적으로는 pod가 고르지않게 스케쥴링 될 경우, 요청이 고르게 분산되지 않을 수 있음
+
+  ![externalPolicyLB.jpg](5)%20externalTrafficPolicy%20%E1%84%90%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%B8%20398798a7c75e4431806b3ee276b85f31/externalPolicyLB.jpg)
+
+  - 위 그림에서는 로드밸런서가 2개의 노드에 대해 트래픽을 절반씩 분배
+  - 그러나, 각 pod가 실제로 받는 부하의 양은 동일하지 않음
+  - 즉, 특정 노드의 pod에 부하가 집중되거나 적어질 수 있으며, 이는 곧 자원 활용(utilization) 측면에서 바람직하지 않을 수 있다.
+
+- 결론
+  - Cluster와 Local 둘 다 장단점이 있기 때문에 뚜렷한 정답은 없음
+  - 불필요한 네트워크 hob으로 인한 latency나 client의 IP 보존이 중요하지 않다면 Cluster 모드
+  - hob으로 인한 latency나 client IP 보존이 중요하다면 Local 모드
+
+# 5) externalTrafficPolicy 타입
+
+- LoadBalancer 타입의 서비스를 사용하면 외부로부터 들어온 요청은 각 노드 중 하나로 전송
+- 그 노드에서 다시 pod 중 하나로 전달된다
+- NodePort 타입 또한 각 Node로 들어오는 요청은 다시 pod 중 하나로 전달
+
+- 문제점
+  - 아래와 같이 Worker A로 들어오는 요청은 Pod a나 Pod b 둘 중 하나로 전달될 예정
+  - 그런데, A로 들어와도 Pod b로 전달되어 처리되면 불필요한 네트워크 hob이 발생
+  - 게다가 노드 간의 리다이렉트가 발생하여, 트래픽의 출발지 주소가 바뀌는 SNAT 발생
+    ⇒ 클라이언트 IP 주소 또한 보존되지 않음
+
+![externalPolicy.jpg](5)%20externalTrafficPolicy%20%E1%84%90%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%B8%20398798a7c75e4431806b3ee276b85f31/externalPolicy.jpg)
+
+- 아래 명령어를 통해 externalTrafficPolicy 상태 확인 : **Cluster 모드**
+
+```bash
+[root@k8s-master ~] kubectl get svc hostname-svc-nodeport -o yaml
+-> externalTrafficPolicy가 Cluster로 되어있음
+```
+
+![Untitled](5)%20externalTrafficPolicy%20%E1%84%90%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%B8%20398798a7c75e4431806b3ee276b85f31/Untitled.png)
+
+- 아래 service를 띄운 후, externalTrafficPolicy를 Local로 변경
+
+  1. service 실행
+
+  ```yaml
+  # hostname-svc-lb-local.yaml
+  apiVersion: v1
+  kind: Service
+  metadata:
+    name: hostname-svc-lb-local
+  spec:
+    externalTrafficPolicy: Local
+    ports:
+      - name: web-port
+        port: 80
+        targetPort: 80
+    selector:
+      app: webserver
+    type: LoadBalancer
+  ```
+
+  ```bash
+  # service 실행
+  [root@k8s-master ~] kubectl apply -f k8s_workspace/chapter6/hostname-svc-lb-local.yaml
+  service/hostname-svc-lb-local created
+  ```
+
+  2. hostname-deployment에서 pod 갯수를 1개로 감소 시킴
+
+  ```bash
+  [root@k8s-master ~] kubectl scale --replicas=1 deployment hostname-deployment
+  deployment.extensions/hostname-deployment scaled
+  [root@k8s-master ~] kubectl get pods -o wide
+  => Node가 worker1에서만 서비스 중
+  ```
+
+  ![Untitled](5)%20externalTrafficPolicy%20%E1%84%90%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%B8%20398798a7c75e4431806b3ee276b85f31/Untitled%201.png)
+
+  ![Untitled](5)%20externalTrafficPolicy%20%E1%84%90%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%B8%20398798a7c75e4431806b3ee276b85f31/Untitled%202.png)
+
+  3. worker1에서 응답확인
+
+  ```bash
+  [root@k8s-worker1 ~] curl 192.168.56.109:31875 --silent | grep Hello
+  ^C
+  [root@k8s-worker1 ~] curl 192.168.56.110:31875 --silent | grep Hello
+          <p>Hello,  hostname-deployment-6cd58767b4-5qztn</p>     </blockquote>
+  [root@k8s-worker1 ~] curl 192.168.56.111:31875 --silent | grep Hello
+  ^C
+
+  # worker1인 56.110에서만 응답 확인
+  ```
+
+  ![Untitled](5)%20externalTrafficPolicy%20%E1%84%90%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%B8%20398798a7c75e4431806b3ee276b85f31/Untitled%203.png)
+
+- ExternalTrafficPolicy 값에 따른 트래픽 흐름
+
+  ![externalPolicyFlow.jpg](5)%20externalTrafficPolicy%20%E1%84%90%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%B8%20398798a7c75e4431806b3ee276b85f31/externalPolicyFlow.jpg)
+
+- 가정 : 그렇다면 Local 설정이 무조건 효율적인가?
+
+  ⇒ 결론적으로는 pod가 고르지않게 스케쥴링 될 경우, 요청이 고르게 분산되지 않을 수 있음
+
+  ![externalPolicyLB.jpg](5)%20externalTrafficPolicy%20%E1%84%90%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%B8%20398798a7c75e4431806b3ee276b85f31/externalPolicyLB.jpg)
+
+  - 위 그림에서는 로드밸런서가 2개의 노드에 대해 트래픽을 절반씩 분배
+  - 그러나, 각 pod가 실제로 받는 부하의 양은 동일하지 않음
+  - 즉, 특정 노드의 pod에 부하가 집중되거나 적어질 수 있으며, 이는 곧 자원 활용(utilization) 측면에서 바람직하지 않을 수 있다.
+
+- 결론
+  - Cluster와 Local 둘 다 장단점이 있기 때문에 뚜렷한 정답은 없음
+  - 불필요한 네트워크 hob으로 인한 latency나 client의 IP 보존이 중요하지 않다면 Cluster 모드
+  - hob으로 인한 latency나 client IP 보존이 중요하다면 Local 모드
+
+# 6) ExternalName 타입
+
+- k8s를 외부 시스템과 연동할 경우 ExternalName 타입의 서비스 사용 가능
+- ExternalName 타입을 사용해 service를 생성하면 service가 외부 도메인을 가리키도록 함
+- 예시
+
+```yaml
+# external-svc.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: externalname-svc
+spec:
+  type: Externalname
+  externalname: my.database.com
+```
+
+- service 실행 후, 목록 확인
+
+```bash
+[root@k8s-master ~] kubectl apply -f k8s_workspace/chapter6/external-svc.yaml
+service/externalname-svc created
+[root@k8s-master ~] kubectl get svc
+NAME                    TYPE           CLUSTER-IP      EXTERNAL-IP       PORT(S)          AGE
+externalname-svc        ExternalName   <none>          my.database.com   <none>           7s
+```
+
+![Untitled](6)%20ExternalName%20%E1%84%90%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%B8%20ba997ce0cf4b4711adadfbd3c98f08b2/Untitled.png)
