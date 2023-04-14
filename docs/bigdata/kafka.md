@@ -11,14 +11,14 @@ nav_order: 5
 
 ## 0) MOM (Message Oriented Middleware)
 
-- 메세지를 통해 여러 분산되어 있는 시스템간의 Connector 역할을  진행하여, 
-서로 실시간 비동기식으로 데이터를 교환할 수 있도록 하는 소프트웨어이다.
+- 메세지를 통해 여러 분산되어 있는 시스템간의 Connector 역할을 진행하여,
+  서로 실시간 비동기식으로 데이터를 교환할 수 있도록 하는 소프트웨어이다.
 - Kafka는 이러한 MOM 소프트웨어 중 하나이며 원천 시스템으로부터 데이터가 발생했을 시 중간에 데이터를 버퍼링하면서 목적지에 안정적으로 전송해주도록 한다.
 
 ## 1) Kafka란?
 
 - Publish-Subscribe 모델로 구현한 분산 메시징 시스템
-(메시징 시스템은 중앙에 메시징 시스템 서버를 두고 메시지를 송수신하는 형태의 통신방식)
+  (메시징 시스템은 중앙에 메시징 시스템 서버를 두고 메시지를 송수신하는 형태의 통신방식)
 - 실시간으로 스트림을 게시, 구독, 저장 및 처리할 수 있는 분산 데이터 스트리밍 플랫폼
 - Publisher : Producer로 데이터를 보내는 기능
 - Subscriber : Consumer로 메시지를 소비하는 기능
@@ -27,13 +27,16 @@ nav_order: 5
 
 ## 2) 왜 Kafka를 쓰는가?
 
-(1) 데이터 유실 방지 
+(1) 데이터 유실 방지
+
 - disk에 적재되기 때문에, 불의의 사고로 서버가 다운되었어도 데이터 유실없이 재시작하여 기존 데이터를 안정적 처리 가능
 
-(2) 병렬처리에 의한 데이터 처리율 향상 
+(2) 병렬처리에 의한 데이터 처리율 향상
+
 - disk에 순차적으로 데이터를 적재하기 때문에 Random access 방식보다 훨씬 빠르게 데이터 처리
 
-(3) 클러스터링에 의한 고가용성 서비스 
+(3) 클러스터링에 의한 고가용성 서비스
+
 - Scale-out이 가능하여 시스템 확장이 용이. 어떤 하나 혹은 몇개의 서버가 다운되도 서비스 자체가 중단될 일 없이 시스템 운용 가능
 
 ## 3) Kafka의 구성요소
@@ -41,50 +44,45 @@ nav_order: 5
 ![Untitled 1](https://user-images.githubusercontent.com/12759500/229405841-32f1d399-48f9-47be-90ee-50d5060dab1c.png)
 
 - **Kafka cluster :** 카프카 서버로 이루어진 클러스터를 말함.
-    - Broker : 카프카 서버를 의미
-        - Controller : 파티션 관리를 책임지는 Broker.
-        만일, 한 Broker에 장애가 발생하였을 때, 그 Broker에 Leader급 파티션이 존재한다면,
-        다른 follower파티션들중 하나에게 Leader 역할을 재분배 한다.
-        - Coordinator : Consumer Group의 상태를 확인. Consumer Group내의 Consumer에 장애가 발생하여 매칭된 파티션 데이터를 읽지 못할 경우, 해당 파티션 데이터를 정상 작동하는 다른 Consumer에게 매칭시킨다.
-    - Topic : 카프카 클러스터에 데이터를 관리할 시 그 기준이 되는 개념.
+  - Broker : 카프카 서버를 의미
+    - Controller : 파티션 관리를 책임지는 Broker.
+      만일, 한 Broker에 장애가 발생하였을 때, 그 Broker에 Leader급 파티션이 존재한다면,
+      다른 follower파티션들중 하나에게 Leader 역할을 재분배 한다.
+    - Coordinator : Consumer Group의 상태를 확인. Consumer Group내의 Consumer에 장애가 발생하여 매칭된 파티션 데이터를 읽지 못할 경우, 해당 파티션 데이터를 정상 작동하는 다른 Consumer에게 매칭시킨다.
+  - Topic : 카프카 클러스터에 데이터를 관리할 시 그 기준이 되는 개념.
     토픽은 카프카 클러스터에 여러개를 만들 수 있으며 하나의 Topic은 1개 이상의 파티션(Partition)으로 구성
-    - Partition : 각 토픽 당 데이터를 분산 처리하는 단위. 카프카 에서는 토픽 안에 파티션을 나누어 그 수대로 데이터를 분산 처리. (replica 수 만큼 파티션이 각 서버들에게 복제된다)
-- **Zookeeper** : 분산 코디네이션 시스템. 카프카 브로커를 하나의 클러스터로 코디네이팅 하는 역할을 진행. 
-→ broker의 메타 데이터 관리, 장애 관리, partition leader 선출, broker leader 선출, 기록 등의 기능 진행
-    
-    → broker의 장애 발생 시 새 controller를 선출하는 역할을 하며, topic의 파티션 수, 특정 설정 등의 메타데이터 관리를 담당
-    
-    ![Untitled 2](https://user-images.githubusercontent.com/12759500/229405853-eb1bb6ba-58c8-4e82-b9c9-150f5e3768c4.png)
-    
+  - Partition : 각 토픽 당 데이터를 분산 처리하는 단위. 카프카 에서는 토픽 안에 파티션을 나누어 그 수대로 데이터를 분산 처리. (replica 수 만큼 파티션이 각 서버들에게 복제된다)
+- **Zookeeper** : 분산 코디네이션 시스템. 카프카 브로커를 하나의 클러스터로 코디네이팅 하는 역할을 진행.
+  → broker의 메타 데이터 관리, 장애 관리, partition leader 선출, broker leader 선출, 기록 등의 기능 진행
+  → broker의 장애 발생 시 새 controller를 선출하는 역할을 하며, topic의 파티션 수, 특정 설정 등의 메타데이터 관리를 담당
+
+      ![Untitled 2](https://user-images.githubusercontent.com/12759500/229405853-eb1bb6ba-58c8-4e82-b9c9-150f5e3768c4.png)
+
 - **Producer** : 데이터를 발생시키고 카프카 클러스터(Kafka Cluster)에 적재
-    - Option → acks : Topic의 Leader에게 메시지를 보낸 후 요청을 완료하기 전 ack 갯수
+
+  - Option → acks : Topic의 Leader에게 메시지를 보낸 후 요청을 완료하기 전 ack 갯수
     옵션의 수가 적으면 성능은 좋으나 메시지 손실률 증가
-    반대로, 옵션의 수가 많으면  메시지 손실 가능성은 적어지나 성능은 저하
-        
-        **acks = 0** :  자신이 보낸 메시지에 대한 ack를 기다리지 않고 전송
-        
+    반대로, 옵션의 수가 많으면 메시지 손실 가능성은 적어지나 성능은 저하
+    **acks = 0** : 자신이 보낸 메시지에 대한 ack를 기다리지 않고 전송
+
         **acks = 1** : 토픽 Leader로 부터 잘 받았는지 확인하고 전송
-        
+
         **acks = all** :  토픽 Leader와 follower로 부터 잘 받았는지 확인하고 전송
-        
-- **Consumer Group** : 컨슈머의 집합을 구성하는 단위. (group.id 라는 값으로 구분된다) 
-카프카에서는 컨슈머 그룹으로서 데이터를 처리하며 컨슈머 그룹 내의 컨슈머 수만큼 파티션의 데이터를 분산처리
-(참고 : [https://www.popit.kr/kafka-consumer-group/](https://www.popit.kr/kafka-consumer-group/))
-    - **Case 1)**  Partition = 4, Consumer = 2
-    - Consumer 하나가 처리해야 할 파티션 갯수가 2개 이상이다
-    
-    ![Untitled 3](https://user-images.githubusercontent.com/12759500/229405873-70214b34-26d6-4b6b-9ec5-aadf5bfe0f6f.png)
-    
-    - **Case 2)** **Partition = 4. Consumer = 4 (가장 이상적)**
-    - Consumer와 Partition 갯수가 일치하여 서로 1:1 맵핑 된다
-    
-    ![Untitled 4](https://user-images.githubusercontent.com/12759500/229405896-bc586c7a-3fa5-4aa9-bcec-33064657b818.png)
-    
-    - **Case 3)** Partition = 4, Consumer = 5
-    - Partition갯수 보다 Consumer가 더 많기에, 아무것도 하지 않는 Consumer가 발생한다.
-    
-    ![Untitled 5](https://user-images.githubusercontent.com/12759500/229405908-9ac0cd52-641e-406c-a74f-93197f51e533.png)
-    
+
+- **Consumer Group** : 컨슈머의 집합을 구성하는 단위. (group.id 라는 값으로 구분된다)
+  카프카에서는 컨슈머 그룹으로서 데이터를 처리하며 컨슈머 그룹 내의 컨슈머 수만큼 파티션의 데이터를 분산처리
+  (참고 : [https://www.popit.kr/kafka-consumer-group/](https://www.popit.kr/kafka-consumer-group/)) - **Case 1)** Partition = 4, Consumer = 2 - Consumer 하나가 처리해야 할 파티션 갯수가 2개 이상이다
+  ![Untitled 3](https://user-images.githubusercontent.com/12759500/229405873-70214b34-26d6-4b6b-9ec5-aadf5bfe0f6f.png)
+
+      - **Case 2)** **Partition = 4. Consumer = 4 (가장 이상적)**
+      - Consumer와 Partition 갯수가 일치하여 서로 1:1 맵핑 된다
+
+      ![Untitled 4](https://user-images.githubusercontent.com/12759500/229405896-bc586c7a-3fa5-4aa9-bcec-33064657b818.png)
+
+      - **Case 3)** Partition = 4, Consumer = 5
+      - Partition갯수 보다 Consumer가 더 많기에, 아무것도 하지 않는 Consumer가 발생한다.
+
+      ![Untitled 5](https://user-images.githubusercontent.com/12759500/229405908-9ac0cd52-641e-406c-a74f-93197f51e533.png)
 
 # 3) 파티션 읽기, 쓰기
 
@@ -104,7 +102,7 @@ nav_order: 5
 - 이 때, 파티션들은 각각의 데이터들의 순차적인 집합인 offset으로 구성
 - Log : Partition의 한 칸. Key, value, timestamp로 구성
 - Offset : Partition의 각 메시지를 식별할 수 있는 유니크 값
-(메시지를 소비하는 Consumer가 현재 어느 위치를 읽고 있는지에 대한 위치 값. 0부터 읽음)
+  (메시지를 소비하는 Consumer가 현재 어느 위치를 읽고 있는지에 대한 위치 값. 0부터 읽음)
 
 # 2. Kafka QuickStart
 
@@ -138,24 +136,24 @@ services:
       - "9092:9092"
     environment:
 		  # PLAINTEXT://{public ip혹은 hostname}(consumer나 producer에서 접속할 ip혹은 도메인):9092 kafka 브로커를 가리키는 사용 가능 주소로 초기연결시에 클라이언트에 전달되는 메타 데이터
-      KAFKA_ADVERTISED_LISTENERS: LISTENER_DOCKER_INTERNAL://kafka1:19092,LISTENER_DOCKER_EXTERNAL://nifi:8443 
+      KAFKA_ADVERTISED_LISTENERS: LISTENER_DOCKER_INTERNAL://kafka1:19092,LISTENER_DOCKER_EXTERNAL://nifi:8443
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: LISTENER_DOCKER_INTERNAL:PLAINTEXT,LISTENER_DOCKER_EXTERNAL:PLAINTEXT
       # 브로커 간 통신에 사용할 리스너를 정의. KAFKA_ADVERTISED_LISTENERS 가 여러개인 경우 꼭 사용해야함
-		  KAFKA_INTER_BROKER_LISTENER_NAME: LISTENER_DOCKER_INTERNAL 
+		  KAFKA_INTER_BROKER_LISTENER_NAME: LISTENER_DOCKER_INTERNAL
 		  # 브로커의 메타데이터를 주키퍼에 저장하기 위한 위치. 호스트에 이름을 추가하면 {호스트명}:{포트}로 작성. 주키퍼 여러개일때는 여러개 작성
-      KAFKA_ZOOKEEPER_CONNECT: "zoo:2181" 
+      KAFKA_ZOOKEEPER_CONNECT: "zoo:2181"
 		  # broker.id 에 설정되는 정수값(식별자).
-      KAFKA_BROKER_ID: 1 
+      KAFKA_BROKER_ID: 1
       # log 레벨 설정
       KAFKA_LOG4J_LOGGERS: "kafka.controller=INFO,kafka.producer.async.DefaultEventHandler=INFO,state.change.logger=INFO"
 		  # default 3. cluster 내 broker에 토픽이 분산되어 저장된다. 싱글노드에서 테스트 할 때는 1로 설정
-      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1 
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
 		  # 토픽이 몇 개의 파티션으로 생성되는지 설정. 기본 값은 1.
-      KAFKA_NUM_PARTITIONS: 1 
+      KAFKA_NUM_PARTITIONS: 1
 		  # 토픽 자동생성 설정. false로 지정
-		  KAFKA_AUTO_CREATE_TOPICS_ENABLE: "false" 
+		  KAFKA_AUTO_CREATE_TOPICS_ENABLE: "false"
 		  # log 저장 지속시간
-      KAFKA_LOG_RETENTION_HOURS: 24 
+      KAFKA_LOG_RETENTION_HOURS: 24
 		  # 오프셋을 포함한 토픽 정보가 저장되는 경로. docker volume으로 따로 잡아줘야 한다
 		  KAFKA_LOG_DIRS: /var/lib/kafka/data/kafka-logs
     volumes:
@@ -163,7 +161,7 @@ services:
       - kafka-secrets1:/etc/kafka/secrets
       - kafka-installed1:/home/appuser
     depends_on:
-      - zoo  
+      - zoo
 volumes :
   zoo_data :
     external : true
@@ -177,7 +175,7 @@ volumes :
     external : true
   kafka_installed1:
     external : true
-  
+
 ```
 
 **2) kafka download and Execute**
@@ -386,7 +384,7 @@ summit  1
 
 **(모든 Kafka 테스트는 standalone Kafka broker 환경에서 진행하였음)**
 
-1**)  confluentinc/cp-kafka 이미지를 이용하여 docker-compose.yml 작성**
+1**) confluentinc/cp-kafka 이미지를 이용하여 docker-compose.yml 작성**
 
 참고 : [https://hub.docker.com/r/confluentinc/cp-kafka](https://hub.docker.com/r/confluentinc/cp-kafka)
 
@@ -395,15 +393,15 @@ summit  1
 참고3 : [https://sejoung.github.io/2021/04/2021-04-14-kafka_docker/#카프카-kafka-도커로-설치](https://sejoung.github.io/2021/04/2021-04-14-kafka_docker/#%EC%B9%B4%ED%94%84%EC%B9%B4-kafka-%EB%8F%84%EC%BB%A4%EB%A1%9C-%EC%84%A4%EC%B9%98)
 
 - 카프카 브로커들은 주키퍼 안에 그들을 등록하고, listeners 설정을 사용하면서 서로 커뮤니케이션을 함. 그래서 본인이 세팅한 listeners 설정대로 모든 내부 클러스터 커뮤니케이션이 발생.
-- 그러나, 예를 들어서 내부 네트워크와 외부 IP를 가지는 클라우드에서 본인의 클러스터가 구성된 상황이라면,  advertised.listeners(confluent kafka에서는 KAFKA_ADVERTISED_LISTENERS)에 
-{외부IP}://{외부 전용 포트}를 세팅.
+- 그러나, 예를 들어서 내부 네트워크와 외부 IP를 가지는 클라우드에서 본인의 클러스터가 구성된 상황이라면, advertised.listeners(confluent kafka에서는 KAFKA_ADVERTISED_LISTENERS)에
+  {외부IP}://{외부 전용 포트}를 세팅.
 - ex) 내부 IP가 10.xxx.xx.xx이고 포트가 1111, 외부 IP가 10.101.xx.xx이고 포트가 3032이면
-KAFKA_ADVERTISED_LISTENERS:
-LISTENER_DOCKER_INTERNAL://10.xxx.xx.xx:1111,
-LISTENER_DOCKER_EXTERNAL://10.101.xx.xx:3032
+  KAFKA_ADVERTISED_LISTENERS:
+  LISTENER_DOCKER_INTERNAL://10.xxx.xx.xx:1111,
+  LISTENER_DOCKER_EXTERNAL://10.101.xx.xx:3032
 
 ```bash
-# nifi, kafka 컨테이너를 모두 올리는 docker-compose 
+# nifi, kafka 컨테이너를 모두 올리는 docker-compose
 version: "3.9"
 services:
   zoo:
@@ -447,12 +445,12 @@ services:
       - kafka_installed1:/home/appuser
 
     depends_on:
-      - zoo  
+      - zoo
   nifi:
     container_name : nifi
     hostname : nifi
     image : apache/nifi:latest
-    ports : 
+    ports :
       - "8443:8443"
     environment :
       - NIFI_WEB_HTTP_PORT=8443
@@ -518,9 +516,10 @@ $ ls /home/nifi
 3**) 220531 이슈**
 
 **wurstmeister kafka 이미지는 nifi 연결 시에**
-- ****No Resolvable Bootstrap Urls” Error in Kafka
-- org.apache.kafka.common.errors.TimeoutException: Topic quickstart-events not present in metadata after 5000 ms**** 등의 에러가 발생. 
-즉, 연결 자체에 이슈가 있지만 잠시 보류하고 다른 이미지 사용
+
+- \*\*\*\*No Resolvable Bootstrap Urls” Error in Kafka
+- org.apache.kafka.common.errors.TimeoutException: Topic quickstart-events not present in metadata after 5000 ms\*\*\*\* 등의 에러가 발생.
+  즉, 연결 자체에 이슈가 있지만 잠시 보류하고 다른 이미지 사용
 
 ```bash
 $ git clone [https://github.com/wurstmeister/kafka-docker.git](https://github.com/wurstmeister/kafka-docker.git)
@@ -553,7 +552,7 @@ services:
     container_name : local-nifi
     hostname : local-nifi
     image : apache/nifi:latest
-    ports : 
+    ports :
       - "8443:8443"
     environment :
       - NIFI_WEB_HTTP_PORT=8443
@@ -626,23 +625,23 @@ services:
       KAFKA_ADVERTISED_LISTENERS: LISTENER_DOCKER_INTERNAL://kafka1:19092,LISTENER_DOCKER_EXTERNAL://{docker_host_IP}:9092
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: LISTENER_DOCKER_INTERNAL:PLAINTEXT,LISTENER_DOCKER_EXTERNAL:PLAINTEXT
       #브로커 간 통신에 사용할 리스너를 정의. KAFKA_ADVERTISED_LISTENERS 가 여러개인 경우 꼭 사용해야함
-      KAFKA_INTER_BROKER_LISTENER_NAME: LISTENER_DOCKER_INTERNAL 
+      KAFKA_INTER_BROKER_LISTENER_NAME: LISTENER_DOCKER_INTERNAL
       #브로커의 메타데이터를 주키퍼에 저장하기 위한 위치. 호스트에 이름을 추가하면 {호스트명}:{포트}로 작성. 주키퍼 여러개일때는 여러개 작성
-      KAFKA_ZOOKEEPER_CONNECT: "zoo:2181" 
+      KAFKA_ZOOKEEPER_CONNECT: "zoo:2181"
       #broker.id 에 설정되는 정수값(식별자).
-      KAFKA_BROKER_ID: 1 
+      KAFKA_BROKER_ID: 1
       # log 레벨 설정
       KAFKA_LOG4J_LOGGERS: "kafka.controller=INFO,kafka.producer.async.DefaultEventHandler=INFO,state.change.logger=INFO"
       # default 3. cluster 내 broker에 토픽이 분산되어 저장된다. 싱글노드에서 테스트 할 때는 1로 설정
-      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 3 
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 3
       #토픽이 몇 개의 파티션으로 생성되는지 설정. 기본 값은 1.
-      KAFKA_NUM_PARTITIONS: 3 
+      KAFKA_NUM_PARTITIONS: 3
       # 토픽 자동생성 설정. false로 지정
-      KAFKA_AUTO_CREATE_TOPICS_ENABLE: "false" 
+      KAFKA_AUTO_CREATE_TOPICS_ENABLE: "false"
       # log 저장 지속시간
-      KAFKA_LOG_RETENTION_HOURS: 24 
+      KAFKA_LOG_RETENTION_HOURS: 24
       #오프셋을 포함한 토픽 정보가 저장되는 경로. docker volume으로 따로 잡아줘야 한다
-      KAFKA_LOG_DIRS: /var/lib/kafka/data/kafka-logs 
+      KAFKA_LOG_DIRS: /var/lib/kafka/data/kafka-logs
     volumes:
       - kafka_data1:/var/lib/kafka/data
       - kafka_secrets1:/etc/kafka/secrets
@@ -702,12 +701,12 @@ services:
       - kafka_installed3:/home/appuser
     depends_on:
       - zoo
-  
+
   nifi:
     container_name : nifi
     hostname : nifi
     image : apache/nifi:latest
-    ports : 
+    ports :
       - "8443:8443"
     environment :
       - NIFI_WEB_HTTP_PORT=8443
@@ -765,8 +764,8 @@ volumes :
 ```
 
 - partition 3개 설정 에서의 “quickstart-events” Topic
-(이슈 : KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR=3 인데, 복제 본이 1개밖에 없음)
-(직접 topic을 만들 시, —relplication-factor 옵션을 직접 주어서 만드는 것은 정상 작동)
+  (이슈 : KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR=3 인데, 복제 본이 1개밖에 없음)
+  (직접 topic을 만들 시, —relplication-factor 옵션을 직접 주어서 만드는 것은 정상 작동)
 
 ```bash
 $ bin/kafka-topics.sh --describe \
@@ -789,14 +788,14 @@ $ bin/kafka-consumer-groups.sh \
 ![Untitled 28](https://user-images.githubusercontent.com/12759500/229406269-bbe00dec-e008-49af-8edd-5302588472c3.png)
 
 - mygroup이라는 Consumer Group에 3개의 consumer를 배치
-(각 consumer가 각 파티션을 1:1 대응하여 처리)
+  (각 consumer가 각 파티션을 1:1 대응하여 처리)
 
 ![Untitled 29](https://user-images.githubusercontent.com/12759500/229406280-5b828e85-4a47-4544-aecf-ae71c95ce33c.png)
 
 ![Untitled 30](https://user-images.githubusercontent.com/12759500/229406286-a1c76ff9-ba52-41c1-9f28-e1195bcd7659.png)
 
 - mygroup이라는 Consumer Group에 2개의 consumer를 배치
-( 한 consumer가 2개의 파티션을 처리)
+  ( 한 consumer가 2개의 파티션을 처리)
 
 ![Untitled 31](https://user-images.githubusercontent.com/12759500/229406291-aaec7a82-a163-4e3e-a2b7-d0252e56ef49.png)
 
@@ -832,6 +831,20 @@ $ bin/kafka-topics.sh --describe \
 ```
 
 ![Untitled 35](https://user-images.githubusercontent.com/12759500/229406349-55d2e71b-5e0f-4d4e-b945-5d04e44223bc.png)
+**1) Topic** : 토픽 이름
+
+**2) Partition** : Topic에 대한 partition 번호.
+(현재 partition은 3개로 분할되어 있다. partition 0, partiton 1, partition 2)
+
+**3) Leader** : Partition의 Leader가 위치한 장소.
+(broker 1,2,3에 각각 위치해 있음)
+
+**4) Replica** : partition별 replica가 위치한 장소.
+(broker 1,2,3에 각각 위치해 있음. replica는 partition당 3개씩 되어 있다.)
+
+**5) IsR(In Sync Replica)** : partition replica들의 group
+(ex : part0의 replica 멤버 1,2 / part1의 replica 멤버 2,3/ part2의 replica 멤버 3,1)
+(다만, replicafactor가 3인데, Isr 2라서 재확인 필요)
 
 - 토픽 삭제 방법
 
@@ -858,11 +871,9 @@ $ deleteall /brokers/topics/{topic이름}
 ### 에러
 
 - KAFKA_LISTENER_SECURITY_PROTOCOL_MAP 미 지정시 하단 에러 발생 후 container 종료
-java.lang.IllegalArgumentException: Error creating broker listeners from 'LISTENER_DOCKER_INTERNAL://kafka1:19092,LISTENER_DOCKER_EXTERNAL://{docker_hostIP}:9092': No security protocol defined for listener LISTENER_DOCKER_INTERNAL
+  java.lang.IllegalArgumentException: Error creating broker listeners from 'LISTENER_DOCKER_INTERNAL://kafka1:19092,LISTENER_DOCKER_EXTERNAL://{docker_hostIP}:9092': No security protocol defined for listener LISTENER_DOCKER_INTERNAL
 - kafka 1,2,3에 대해서 LISTENER_DOCKER_EXTERNAL을 모두 nifi:8443으로 맞추면, 이미 해당 address가 bind되었다고 표기 후 container 종료
-    
-    Configured end points nifi:8443 in advertised listeners are already registered by broker 1
-    
+  Configured end points nifi:8443 in advertised listeners are already registered by broker 1
 
 ## 4. Kafdrop
 
@@ -957,7 +968,7 @@ services:
 
 ![Untitled 38](https://user-images.githubusercontent.com/12759500/229406384-75824cf8-67d4-4d0b-93ce-cba035773443.png)
 
-→ Topic name : topic 이름 
+→ Topic name : topic 이름
 
 → Number of partitions : 파티션 갯수 지정
 
