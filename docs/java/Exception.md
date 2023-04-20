@@ -35,7 +35,7 @@ finally {
 - catch : try 블록에서 발생한 예외코드나 예외 객체를 인수로 전달받아 그 처리르 담당
 - finally 블록: try블록에서 예외가 발생하건 안하건, 마지막에 무조건 처리
     
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/00c451ce-5fdb-4a83-b50d-b3f4dca7c4ed/Untitled.png)
+    ![Untitled](https://user-images.githubusercontent.com/12759500/233379595-a8d9b6ed-98c0-478e-8360-64bd269a5886.png)
     
     **1) 예외처리 코드** 
     
@@ -150,7 +150,7 @@ finally {
     
     ## 3. 예외 클래스
     
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c3b590e3-ff88-4913-a84c-0a648eec867f/Untitled.png)
+    ![Untitled 1](https://user-images.githubusercontent.com/12759500/233379639-b1664e09-bf7c-4884-858d-714e4e0a1361.png)
     
     ```
     ArithmeticException 
