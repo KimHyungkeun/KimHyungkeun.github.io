@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Java (추가 예정)
-nav_order: 5
+title: Java 
+nav_order: 1
 has_children: true
 permalink: /docs/java
 ---
 
 # Java Page
 
-Java 관련 페이지입니다. (추가 예정)
+Java 관련 페이지입니다. (추가 중)
