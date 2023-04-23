@@ -354,7 +354,7 @@ Third(1)
 
 **2) Thread의 라이프 사이클**
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f369bdab-013e-4b71-9787-20944cafbc44/Untitled.png)
+![image](https://user-images.githubusercontent.com/12759500/233837653-190da766-76cc-4e99-a943-4e17c893e627.png)
 
 - New
     - 쓰레드 클래스가 new를 통해 인스턴스화 된 상태
