@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Spring (추가 예정)
+title: Spring (추가 중)
 nav_order: 6
 has_children: true
 permalink: /docs/spring
