@@ -113,7 +113,7 @@ Spring Core는 Spring Container을 의미. core라는 말 그대로 Container�
 
 **2)** **Spring Context**
 
-Spring context는 Spring Framework의 context 정보들을 제공하는 설정 파일입니다. Spring Context에는 JNDI, EJB, Validation, Scheduiling, Internaliztaion 등 엔터프라이즈 서비스들을 포함하고 있다.
+Spring context는 Spring Framework의 context 정보들을 제공하는 설정 파일. Spring Context에는 JNDI, EJB, Validation, Scheduiling, Internaliztaion 등 엔터프라이즈 서비스들을 포함하고 있다.
 
 **3) Spring AOP**
 
