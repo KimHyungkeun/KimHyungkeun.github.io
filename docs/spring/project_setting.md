@@ -10,7 +10,7 @@ parent: Spring Lecture
 1)  스프링부트 프로젝트 생성
 https://start.spring.io/
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/daad6a35-69f9-48bc-8d63-89f316412e64/Untitled.png)
+![Untitled](https://github.com/KimHyungkeun/KimHyungkeun.github.io/assets/12759500/0efebbc2-5928-48a3-ad31-3a44d9ca9891)
 
 **Project** : Gradle Project
 
@@ -37,17 +37,15 @@ GENERATE 진행 후, zip파일을 압축 해제
 
 ## 2. IntelliJ에서 zip파일 압축 해제 폴더를 open
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5adc0c1f-1b49-4a1a-b829-06d4f90f894b/Untitled.png)
+![Untitled 1](https://github.com/KimHyungkeun/KimHyungkeun.github.io/assets/12759500/b52475b5-edbb-48a2-a1bd-b33f95ca84e6)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d6073e43-649b-4f7b-afd6-034c9cdcc13b/Untitled.png)
+![Untitled 2](https://github.com/KimHyungkeun/KimHyungkeun.github.io/assets/12759500/4649ddc0-f9a8-40d3-a1e4-98587112d924)
 
 - 막간의 IntelliJ Grade 빌드 시 설정
 - (Windows 기준) Ctrl + Alt + S ⇒ (File → Settings → Gradle(검색))
 - 하단의 **Build and run using**과 **Run tests using**을 “IntelliJ IDEA”로 설정
 - 그러면, Run 하기 전에 바로 IntelliJ 상에서 빌드 됨
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8873a7ad-a402-4623-8919-f59e274751ec/Untitled.png)
+![Untitled 3](https://github.com/KimHyungkeun/KimHyungkeun.github.io/assets/12759500/5d8ed473-05de-452b-bb4a-da41e17b4edf)
 
 - Default로 남겨두면 아래와 같이 Build폴더가 생성됨
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/cc211304-5f86-4f0b-85ad-fdf405e29885/Untitled.png)
+![Untitled 4](https://github.com/KimHyungkeun/KimHyungkeun.github.io/assets/12759500/2d8882b8-89ba-45d1-b5b8-83c3c36d1fc9)
