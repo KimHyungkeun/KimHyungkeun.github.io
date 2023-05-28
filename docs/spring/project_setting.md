@@ -1,8 +1,10 @@
 ---
 layout: default
-title: Spring
+title: 1. 프로젝트 환경 설정
 nav_order: 1
 parent: Spring Lecture
+grand_parent: Spring
+permalink: /docs/spring/spring_lecture/project_setting
 ---
 
 ## 1. 스프링 부트 설정
