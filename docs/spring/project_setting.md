@@ -49,3 +49,74 @@ GENERATE 진행 후, zip파일을 압축 해제
 
 - Default로 남겨두면 아래와 같이 Build폴더가 생성됨
 ![Untitled 4](https://github.com/KimHyungkeun/KimHyungkeun.github.io/assets/12759500/2d8882b8-89ba-45d1-b5b8-83c3c36d1fc9)
+
+## 3. 스프링 부트 라이브러리
+
+spring-boot-starter-web
+spring-boot-starter-tomcat: 톰캣 (웹서버)
+spring-webmvc: 스프링 웹 MVC
+spring-boot-starter-thymeleaf: 타임리프 템플릿 엔진(View)
+spring-boot-starter(공통): 스프링 부트 + 스프링 코어 + 로깅
+spring-boot
+spring-core
+spring-boot-starter-logging
+logback, slf4j
+
+## 4. 테스트 라이브러리
+
+spring-boot-starter-test
+junit: 테스트 프레임워크
+mockito: 목 라이브러리
+assertj: 테스트 코드를 좀 더 편하게 작성하게 도와주는 라이브러리
+spring-test: 스프링 통합 테스트 지원
+
+## 5. View 환경 설정
+
+```html
+<!-- src/main/java/resources/templates/hello.html -->
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Hello</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<p th:text="'안녕하세요. ' + ${data}">안녕하세요, 손님</p>
+</body>
+</html>
+```
+
+```java
+// src/main/java/hello/hellospring/controller
+package hello.hellospring.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
+public class HelloController {
+
+    @GetMapping("hello")
+    public String hello(Model model) {
+        model.addAttribute("data", "hello!!");
+        return "hello";
+    }
+}
+```
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f6a1fc21-0c5c-4d1f-b7f1-fbf10abff37f/Untitled.png)
+
+- 컨트롤러에서 리턴 값으로 문자를 반환하면 뷰 리졸버(”viewResolver”)가 화면을 찾아서 처리
+- 스프링 부터 템플릿엔진 기본 viewName 매핑
+- resources:/templates + {ViewName} + ‘.html’
+- 참고 : spring-boot-devtools 라이브러리를 추가하면, html 파일을 컴파일만 해주면 서버 재시작 없이 View 파일 변경이 가능하다.
+- 인텔리J 컴파일 방법: 메뉴 build Recompile
+
+## 6. build 하기
+
+```bash
+$ ./gradlew build
+$ cd build/libs
+$ java -jar hello-spring-0.0.1-SNAPSHOT.jar
+```
