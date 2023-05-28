@@ -105,7 +105,7 @@ public class HelloController {
 }
 ```
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f6a1fc21-0c5c-4d1f-b7f1-fbf10abff37f/Untitled.png)
+![Untitled](https://github.com/KimHyungkeun/KimHyungkeun.github.io/assets/12759500/fa675b67-3230-4c05-807b-4af3966841c7)
 
 - 컨트롤러에서 리턴 값으로 문자를 반환하면 뷰 리졸버(”viewResolver”)가 화면을 찾아서 처리
 - 스프링 부터 템플릿엔진 기본 viewName 매핑
