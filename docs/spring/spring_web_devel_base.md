@@ -31,7 +31,7 @@ permalink: /docs/spring/spring_lecture/spring_web_devel_base
 
 ex) localhost:8080/hello-static.html
 
-![Untitled](2%20%E1%84%89%E1%85%B3%E1%84%91%E1%85%B3%E1%84%85%E1%85%B5%E1%86%BC%20%E1%84%8B%E1%85%B0%E1%86%B8%20%E1%84%80%E1%85%A2%E1%84%87%E1%85%A1%E1%86%AF%20%E1%84%80%E1%85%B5%E1%84%8E%E1%85%A9%2084d96c00ad5042949ba73d45f46a1aaa/Untitled.png)
+![Untitled](https://github.com/KimHyungkeun/KimHyungkeun.github.io/assets/12759500/300641b5-a681-414e-a9be-94a01e1d8638)
 
 # 2. MVC와 템플릿 엔진
 
@@ -65,7 +65,7 @@ public class HelloController {
 
 ex) [http://localhost:8080/hello-mvc?name=](http://localhost:8080/hello-mvc?name=)spring
 
-![Untitled](2%20%E1%84%89%E1%85%B3%E1%84%91%E1%85%B3%E1%84%85%E1%85%B5%E1%86%BC%20%E1%84%8B%E1%85%B0%E1%86%B8%20%E1%84%80%E1%85%A2%E1%84%87%E1%85%A1%E1%86%AF%20%E1%84%80%E1%85%B5%E1%84%8E%E1%85%A9%2084d96c00ad5042949ba73d45f46a1aaa/Untitled%201.png)
+![Untitled 1](https://github.com/KimHyungkeun/KimHyungkeun.github.io/assets/12759500/4b26ea0f-80d2-41bb-ad64-55236097b094)
 
 # 3. API
 
@@ -95,7 +95,7 @@ public class HelloController {
 }
 ```
 
-![Untitled](2%20%E1%84%89%E1%85%B3%E1%84%91%E1%85%B3%E1%84%85%E1%85%B5%E1%86%BC%20%E1%84%8B%E1%85%B0%E1%86%B8%20%E1%84%80%E1%85%A2%E1%84%87%E1%85%A1%E1%86%AF%20%E1%84%80%E1%85%B5%E1%84%8E%E1%85%A9%2084d96c00ad5042949ba73d45f46a1aaa/Untitled%202.png)
+![Untitled 2](https://github.com/KimHyungkeun/KimHyungkeun.github.io/assets/12759500/94f479a7-816d-49c3-9023-a156a2c80233)
 
 - 참고 : 클라이언트의 HTTP Accept 헤더와 서버의 컨트롤러 반환 타입 정보 둘을 조합해서 ‘HttpMessageConverter’가 선택 된다.
 - Jackson : 
