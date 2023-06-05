@@ -46,7 +46,7 @@ your configuration.
 
 이유인 즉슨, memberService가 스프링 빈 으로 미등록 되어 있다.
 
-![Untitled](4%20%E1%84%89%E1%85%B3%E1%84%91%E1%85%B3%E1%84%85%E1%85%B5%E1%86%BC%20%E1%84%87%E1%85%B5%E1%86%AB%E1%84%80%E1%85%AA%20%E1%84%8B%E1%85%B4%E1%84%8C%E1%85%A9%E1%86%AB%E1%84%80%E1%85%AA%E1%86%AB%E1%84%80%E1%85%A8%20529bfa40ffa140e7b1ba36231a9364d9/Untitled.png)
+![image](https://github.com/KimHyungkeun/KimHyungkeun.github.io/assets/12759500/bdadb588-abf7-4d9c-b3c4-ac67ac961a50)
 
  **컴포넌트 스캔 원리**
 
@@ -83,7 +83,7 @@ public class MemoryMemberRepository implements MemberRepository {}
 
 ### 5) 스프링 빈 등록 이미지
 
-![Untitled](4%20%E1%84%89%E1%85%B3%E1%84%91%E1%85%B3%E1%84%85%E1%85%B5%E1%86%BC%20%E1%84%87%E1%85%B5%E1%86%AB%E1%84%80%E1%85%AA%20%E1%84%8B%E1%85%B4%E1%84%8C%E1%85%A9%E1%86%AB%E1%84%80%E1%85%AA%E1%86%AB%E1%84%80%E1%85%A8%20529bfa40ffa140e7b1ba36231a9364d9/Untitled%201.png)
+![image](https://github.com/KimHyungkeun/KimHyungkeun.github.io/assets/12759500/fc69fb2b-e8e5-45a2-b619-bb37aace1a2d)
 
 - memberService와 memberRepository가 스프링 컨테이너에 스프링 빈으로 등록
 - 참고 : 스프링은 스프링 컨테이너에 스프링 빈을 등록할 때, 기본으로 Singleton으로 등록한다(유일하게 하나만 등록해서 공유)
