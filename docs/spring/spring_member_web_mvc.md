@@ -1,10 +1,10 @@
 ---
 layout: default
-title: 5. 회원관리예제 - 웹 MVC 개발
+title: 5. 회원 관리 예제 - 웹 MVC 개발
 nav_order: 5
 parent: Spring Lecture
 grand_parent: Spring
-permalink: /docs/spring/spring_lecture/spring_member_managing_example
+permalink: /docs/spring/spring_lecture/spring_member_web_mvc
 ---
 
 # 5. 회원 관리 예제 - 웹 MVC 개발
