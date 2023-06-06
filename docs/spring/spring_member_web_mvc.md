@@ -161,12 +161,11 @@ public String list(Model model) {
 
 - 홈 화면
 
-![Untitled](5%20%E1%84%92%E1%85%AC%E1%84%8B%E1%85%AF%E1%86%AB%20%E1%84%80%E1%85%AA%E1%86%AB%E1%84%85%E1%85%B5%20%E1%84%8B%E1%85%A8%E1%84%8C%E1%85%A6%20-%20%E1%84%8B%E1%85%B0%E1%86%B8%20MVC%20%E1%84%80%E1%85%A2%E1%84%87%E1%85%A1%E1%86%AF%205d36beda5b594eacaf9acf805ef7d86e/Untitled.png)
+![image](https://github.com/KimHyungkeun/KimHyungkeun.github.io/assets/12759500/4ba3b684-1a12-4608-9b9e-f762c176df70)
 
 - 회원 가입 화면 ( “/members/new” )
 
-![Untitled](5%20%E1%84%92%E1%85%AC%E1%84%8B%E1%85%AF%E1%86%AB%20%E1%84%80%E1%85%AA%E1%86%AB%E1%84%85%E1%85%B5%20%E1%84%8B%E1%85%A8%E1%84%8C%E1%85%A6%20-%20%E1%84%8B%E1%85%B0%E1%86%B8%20MVC%20%E1%84%80%E1%85%A2%E1%84%87%E1%85%A1%E1%86%AF%205d36beda5b594eacaf9acf805ef7d86e/Untitled%201.png)
+![image](https://github.com/KimHyungkeun/KimHyungkeun.github.io/assets/12759500/ed1b14a6-31ab-4d7b-b719-c632cf702a88)
 
 - 회원 목록 화면 ( “/members” )
-
-![Untitled](5%20%E1%84%92%E1%85%AC%E1%84%8B%E1%85%AF%E1%86%AB%20%E1%84%80%E1%85%AA%E1%86%AB%E1%84%85%E1%85%B5%20%E1%84%8B%E1%85%A8%E1%84%8C%E1%85%A6%20-%20%E1%84%8B%E1%85%B0%E1%86%B8%20MVC%20%E1%84%80%E1%85%A2%E1%84%87%E1%85%A1%E1%86%AF%205d36beda5b594eacaf9acf805ef7d86e/Untitled%202.png)
+![image](https://github.com/KimHyungkeun/KimHyungkeun.github.io/assets/12759500/f2e77fda-75b9-4b57-8aee-eca69d34d197)
