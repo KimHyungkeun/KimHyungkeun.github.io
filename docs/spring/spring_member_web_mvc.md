@@ -160,7 +160,6 @@ public String list(Model model) {
 ```
 
 - 홈 화면
-
 ![image](https://github.com/KimHyungkeun/KimHyungkeun.github.io/assets/12759500/4ba3b684-1a12-4608-9b9e-f762c176df70)
 
 - 회원 가입 화면 ( “/members/new” )
