@@ -98,7 +98,7 @@ public class MemberService {
 - AOP: Aspect Oriented Programming
 - 공통 관심 사항(cross-cutting concern) vs 핵심 관심 사항(core concern) 분리
 
-![Untitled](7%20AOP%20(20221204%20~%2020221205)%20a4410ebefd094c51902b0fad93365e6c/Untitled.png)
+![image](https://github.com/KimHyungkeun/KimHyungkeun.github.io/assets/12759500/b81fa8ab-2c2b-451b-9a96-d9f82e2f8750)
 
 - AOP작성 (TimeTraceAop)
 
@@ -137,10 +137,10 @@ public class TimeTraceAop {
     - 변경이 필요하면 이 로직만 변경하면 된다.
     - 원하는 적용 대상을 선택할 수 있다.
 
-![Untitled](7%20AOP%20(20221204%20~%2020221205)%20a4410ebefd094c51902b0fad93365e6c/Untitled%201.png)
+![image](https://github.com/KimHyungkeun/KimHyungkeun.github.io/assets/12759500/595fef03-6acb-4851-9bcc-1150174f2baf)
 
-![Untitled](7%20AOP%20(20221204%20~%2020221205)%20a4410ebefd094c51902b0fad93365e6c/Untitled%202.png)
+![image](https://github.com/KimHyungkeun/KimHyungkeun.github.io/assets/12759500/4fa27708-2d43-45e5-9b94-ba0c4abb9c50)
 
 - 실제 Proxy가 주입되는지 콘솔에 출력해서 확인하기
 
-![Untitled](7%20AOP%20(20221204%20~%2020221205)%20a4410ebefd094c51902b0fad93365e6c/Untitled%203.png)
+![image](https://github.com/KimHyungkeun/KimHyungkeun.github.io/assets/12759500/4b1d9ba1-5e05-4684-bb0b-80296421ef84)
