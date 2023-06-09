@@ -207,9 +207,9 @@ public class JdbcMemberRepository implements MemberRepository{
 }
 ```
 
-![Untitled](6%20Spring%20DB%20%E1%84%8C%E1%85%A5%E1%86%B8%E1%84%80%E1%85%B3%E1%86%AB%20%E1%84%80%E1%85%B5%E1%84%89%E1%85%AE%E1%86%AF%2091f3fd99680d49eb8d062a4b77ff3ca7/Untitled.png)
+![image](https://github.com/KimHyungkeun/KimHyungkeun.github.io/assets/12759500/fb914e64-dbdb-4755-833d-e5db39f3edc5)
 
-![Untitled](6%20Spring%20DB%20%E1%84%8C%E1%85%A5%E1%86%B8%E1%84%80%E1%85%B3%E1%86%AB%20%E1%84%80%E1%85%B5%E1%84%89%E1%85%AE%E1%86%AF%2091f3fd99680d49eb8d062a4b77ff3ca7/Untitled%201.png)
+![image](https://github.com/KimHyungkeun/KimHyungkeun.github.io/assets/12759500/1a46951f-9c15-4dfe-8527-37732fea4d3c)
 
 ## 3. 스프링 통합 테스트
 
@@ -530,7 +530,7 @@ public class SpringConfig {
 
 - Spring JPA 흐름
 
-![Untitled](6%20Spring%20DB%20%E1%84%8C%E1%85%A5%E1%86%B8%E1%84%80%E1%85%B3%E1%86%AB%20%E1%84%80%E1%85%B5%E1%84%89%E1%85%AE%E1%86%AF%2091f3fd99680d49eb8d062a4b77ff3ca7/Untitled%202.png)
+![image](https://github.com/KimHyungkeun/KimHyungkeun.github.io/assets/12759500/1269e804-bd33-4020-8e70-45042dfbd24b)
 
 - 참고
     - 실무에서는 JPA와 스프링 데이터 JPA를 기본으로 사용하고, 복잡한 동적 쿼리는 Querydsl이라는 라이브러리를 사용하면 된다. Querydsl을 사용하면 쿼리도 자바 코드로 안전하게 작성할 수 있다.
