@@ -1,6 +1,6 @@
 ---
 title: Database 퀴즈
-date: YYYY-MM-DD HH:MM:SS+09:00
+date: YYYY-MM-DD HH:MM:SS +00:00
 categories: [CS, Database]
 tags:
   [
