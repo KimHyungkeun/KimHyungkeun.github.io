@@ -29,12 +29,12 @@ tags:
 
 
 **4. DNS Query 동작 과정**  
-ex) example.io를 방문한다고 가정했을 때
- **1)** 먼저 Local DNS를 확인
- **2)** 처음 방문시에 기록이 없을것이므로, Root DNS에 요청해 ".io"를 관리하는 Top Level DNS 위치를 받음
- **3)** Top Level DNS에게 example.io를 관리하는 DNS의 위치를 받아옴
- **4)** 원래라면 이 DNS에서 IP를 주겠지만 GSLB가 여러 IP의 Health Check, 거리비교, RTT 비교를 한 뒤 최적의 IP를 반환
- **5)** 마지막으로 Local DNS에 example.io의 IP를 저장 후, IP를 반환
+* ex) example.io를 방문한다고 가정했을 때
+  - **1)** 먼저 Local DNS를 확인
+  - **2)** 처음 방문시에 기록이 없을것이므로, Root DNS에 요청해 ".io"를 관리하는 Top Level DNS 위치를 받음
+  - **3)** Top Level DNS에게 example.io를 관리하는 DNS의 위치를 받아옴
+  - **4)** 원래라면 이 DNS에서 IP를 주겠지만 GSLB가 여러 IP의 Health Check, 거리비교, RTT 비교를 한 뒤 최적의 IP를 반환
+  - **5)** 마지막으로 Local DNS에 example.io의 IP를 저장 후, IP를 반환
 
 
 **5. 세션(Session)**
