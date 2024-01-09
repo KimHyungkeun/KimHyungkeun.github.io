@@ -1,5 +1,5 @@
 ---
-title: BigTop Cluster 작성중
+title: BigTop Cluster
 date: YYYY-MM-DD HH:MM:SS +00:00
 categories: [DataEngineering, BigTop]
 tags:
