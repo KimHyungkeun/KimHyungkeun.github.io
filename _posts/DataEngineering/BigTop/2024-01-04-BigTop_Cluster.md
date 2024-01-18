@@ -1,6 +1,6 @@
 ---
 title: BigTop Cluster
-date: YYYY-MM-DD HH:MM:SS +00:00
+date: 2024-01-04 00:0:00 +00:00
 categories: [DataEngineering, BigTop]
 tags:
   [
