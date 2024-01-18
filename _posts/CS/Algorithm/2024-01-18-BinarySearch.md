@@ -1,6 +1,6 @@
 ---
 title: 이진 탐색 (Binary Search)
-date: 2014-01-18 HH:MM:SS +00:00
+date: 2014-01-18 00:00:00 +00:00
 categories: [CS, Algorithm]
 tags:
   [
