@@ -1,5 +1,5 @@
 ---
-title: 클래스와 객체
+title: 다형성 (Polymorphism)
 date: 2024-01-04 00:00:00 +00:00
 categories: [BackEnd, Java]
 tags:

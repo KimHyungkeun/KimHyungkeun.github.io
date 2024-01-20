@@ -1,5 +1,5 @@
 ---
-title: 상속
+title: 상속 (Inheritance)
 date: 2024-01-04 00:00:00 +00:00
 categories: [BackEnd, Java]
 tags:
