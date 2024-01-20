@@ -71,7 +71,8 @@ public class Main {
 }
 ```
 
-<img width="140" alt="Untitled" src="https://github.com/KimHyungkeun/KimHyungkeun.github.io/assets/12759500/a0945160-ebe6-493e-8caa-c673298500f1">
+![image](https://github.com/KimHyungkeun/KimHyungkeun.github.io/assets/12759500/5ff350b8-7978-4918-ab52-f96b8b4075a2)
+
 
 
 **(실습2 : 다중상속처럼 사용)**
@@ -116,4 +117,5 @@ public class Main {
 }
 ```
 
-<img width="125" alt="Untitled 1" src="https://github.com/KimHyungkeun/KimHyungkeun.github.io/assets/12759500/fcf4e478-2023-413b-a67f-d1e96fecce3c">
+![image](https://github.com/KimHyungkeun/KimHyungkeun.github.io/assets/12759500/6edfed72-7bbb-43f7-ad1c-440dcf2ed6e8)
+
