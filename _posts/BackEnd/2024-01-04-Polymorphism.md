@@ -81,7 +81,8 @@ public class Main {
 }
 ```
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/97f8f071-477d-4db3-a9c0-4dad109b848c/dedcf376-3c7d-49ea-a763-3f00658de982/Untitled.png)
+<img width="148" alt="Untitled" src="https://github.com/KimHyungkeun/KimHyungkeun.github.io/assets/12759500/e21c8bde-0c14-4adc-91ea-7ec5ba8826e8">
+
 
 **(실습 2 : 캐스팅)**
 
@@ -168,4 +169,4 @@ public class Main {
 }
 ```
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/97f8f071-477d-4db3-a9c0-4dad109b848c/71db0cd2-b68c-43fd-a554-2ed12c21c468/Untitled.png)
+<img width="131" alt="Untitled 1" src="https://github.com/KimHyungkeun/KimHyungkeun.github.io/assets/12759500/a550eda6-f921-4a27-befd-dc9ba97f02a8">
