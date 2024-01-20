@@ -89,7 +89,8 @@ public static void main(String[] args) throws IOException {
 }
 ```
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/97f8f071-477d-4db3-a9c0-4dad109b848c/366f861d-6eb6-4b12-839e-3aea86231ef8/Untitled.png)
+![image](https://github.com/KimHyungkeun/KimHyungkeun.github.io/assets/12759500/c0abd040-bcd5-4f3c-ab07-723f5dd6efa1)
+
 
 ## 3. 파일 출력
 
@@ -145,7 +146,8 @@ public class Main {
 }
 ```
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/97f8f071-477d-4db3-a9c0-4dad109b848c/02152039-139d-428e-bd5f-b56168342782/Untitled.png)
+![image](https://github.com/KimHyungkeun/KimHyungkeun.github.io/assets/12759500/bcce7385-5b23-4c72-9746-88178ea7a79b)
+
 
 ## 4. 파일 입력
 
@@ -183,4 +185,4 @@ public class Main {
 }
 ```
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/97f8f071-477d-4db3-a9c0-4dad109b848c/ff60c861-5ba9-4a63-8173-e4b9898e30b3/Untitled.png)
+![image](https://github.com/KimHyungkeun/KimHyungkeun.github.io/assets/12759500/c92be1b8-fb01-464f-a12a-6501f90c7bfd)
