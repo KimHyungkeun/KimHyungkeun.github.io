@@ -20,7 +20,8 @@ tags:
 int a = 1 / 0
 ```
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/97f8f071-477d-4db3-a9c0-4dad109b848c/1fb17b7f-dece-4885-afc5-0b38cb0f1a02/Untitled.png)
+![image](https://github.com/KimHyungkeun/KimHyungkeun.github.io/assets/12759500/03532532-23c7-47b8-a81e-9945a9eab2dd)
+
 
 ## 2. 예외처리 (Exception Handling)
 
@@ -101,7 +102,8 @@ try{
 }
 ```
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/97f8f071-477d-4db3-a9c0-4dad109b848c/7aaa5952-c0c6-4204-ab6d-cec4d87d17e5/Untitled.png)
+![image](https://github.com/KimHyungkeun/KimHyungkeun.github.io/assets/12759500/f4f6d906-e10d-4c8c-8d9e-d4c2ecf95021)
+
 
 **(실습2: ArrayIndexOutOfBoundsException)**
 
@@ -132,7 +134,8 @@ try{
 }
 ```
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/97f8f071-477d-4db3-a9c0-4dad109b848c/b0f65b5c-9a42-44b6-999c-c5fa8a352043/Untitled.png)
+![image](https://github.com/KimHyungkeun/KimHyungkeun.github.io/assets/12759500/7c088bf9-9d48-4a43-b591-5600b572132e)
+
 
 **(실습3 : throw)**
 
@@ -185,7 +188,8 @@ public class Main {
 }
 ```
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/97f8f071-477d-4db3-a9c0-4dad109b848c/8975e213-041d-4656-9314-6bb6471a0a60/Untitled.png)
+![image](https://github.com/KimHyungkeun/KimHyungkeun.github.io/assets/12759500/1778d1da-0f7c-4871-8b68-c0e0edd98b20)
+
 
 **(실습4 : throws)**
 
@@ -223,5 +227,6 @@ public class Main {
 }
 ```
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/97f8f071-477d-4db3-a9c0-4dad109b848c/43f45988-4c0f-451e-b113-a8c5500ed732/Untitled.png)
+![image](https://github.com/KimHyungkeun/KimHyungkeun.github.io/assets/12759500/18ebf95d-4897-472d-a867-49fdb9187608)
+
 
