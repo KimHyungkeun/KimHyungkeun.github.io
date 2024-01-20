@@ -16,7 +16,8 @@ tags:
     - 자식 클래스 : 기존 클래스를 상속하는 클래스 (하위 클래스, 파생 클래스)
 - 부모 클래스의 필드와 메소드가 상속됨 (Generator, 초기화 블록은 상속이 안됨)
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/97f8f071-477d-4db3-a9c0-4dad109b848c/0bbfe4aa-9073-4fec-b35f-8e397f182d9e/Untitled.png)
+<img width="514" alt="Untitled" src="https://github.com/KimHyungkeun/KimHyungkeun.github.io/assets/12759500/4679e7d1-8ae4-49b6-b6c3-848820925f92">
+
 
 - 다중 상속은 불가능
 - private, default 멤버는 자식 클래스에서 접근 불가
@@ -24,7 +25,8 @@ tags:
     ⇒ default의 경우, 내부 패키지의 자식 클래스는 가능
     
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/97f8f071-477d-4db3-a9c0-4dad109b848c/f80e62f0-58ea-46f0-a77a-386dc25e5289/Untitled.png)
+<img width="464" alt="Untitled 1" src="https://github.com/KimHyungkeun/KimHyungkeun.github.io/assets/12759500/4524b8ad-dfd6-4ed3-89fa-7204e6d5c60e">
+
 
 ## 2. super, super()
 
@@ -111,7 +113,8 @@ public class Main {
 }
 ```
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/97f8f071-477d-4db3-a9c0-4dad109b848c/aa5027ec-e2f0-41aa-a33a-36b36a992fac/Untitled.png)
+<img width="137" alt="Untitled 2" src="https://github.com/KimHyungkeun/KimHyungkeun.github.io/assets/12759500/0b5a659b-9c6b-4812-a005-4fa32c9fca15">
+
 
 (실습 2 : Student2의 name이 null이 나오는 이유)
 
@@ -166,7 +169,8 @@ public class Main {
 }
 ```
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/97f8f071-477d-4db3-a9c0-4dad109b848c/3fb7a306-58cf-4f4c-b0a2-2f43a8f74887/Untitled.png)
+<img width="128" alt="Untitled 3" src="https://github.com/KimHyungkeun/KimHyungkeun.github.io/assets/12759500/080ba45c-8708-41b6-aaf9-af4888622a53">
+
 
 - Student2의 super(name, age)에 의해 Person(부모 클래스)의 name에 값이 들어간다
 - 이로 인해 Student2의 name은 따로 값이 들어가지 않았기에 null값이 나온다
