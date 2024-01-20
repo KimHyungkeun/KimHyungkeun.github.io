@@ -16,7 +16,8 @@ tags:
 - 대표 인터페이스
     - 리스트 인터페이스, Set 인터페이스 Map 인터페이스
     
-    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/97f8f071-477d-4db3-a9c0-4dad109b848c/c0645079-244d-4d10-aa05-e42ecfc17cb3/Untitled.png)
+    ![image](https://github.com/KimHyungkeun/KimHyungkeun.github.io/assets/12759500/a006cc1a-b16e-4d9f-ad93-c20eb4450846)
+
     
 
 ## 2. List 인터페이스
@@ -85,7 +86,8 @@ public class Main {
 }
 ```
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/97f8f071-477d-4db3-a9c0-4dad109b848c/688f2d29-8b1c-40eb-bc40-20e592824a0a/Untitled.png)
+![image](https://github.com/KimHyungkeun/KimHyungkeun.github.io/assets/12759500/7574c7d4-9a44-429a-abac-5fa4c3cc4305)
+
 
 ## 3. Set 인터페이스
 
@@ -152,7 +154,8 @@ public class Main {
 }
 ```
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/97f8f071-477d-4db3-a9c0-4dad109b848c/13139bac-1af3-4d66-98d4-e71e1fce37b1/Untitled.png)
+![image](https://github.com/KimHyungkeun/KimHyungkeun.github.io/assets/12759500/8643b997-8ff7-4459-8cd4-3c9211507fc7)
+
 
 ## 4. Map 인터페이스
 
@@ -210,4 +213,4 @@ public class Main {
 }
 ```
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/97f8f071-477d-4db3-a9c0-4dad109b848c/e9d5c874-478a-4173-8453-ebad0a7a0c91/Untitled.png)
+![image](https://github.com/KimHyungkeun/KimHyungkeun.github.io/assets/12759500/1a12c206-94d4-4036-b5a2-24b8348ff024)
