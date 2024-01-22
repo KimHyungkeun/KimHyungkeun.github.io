@@ -24,7 +24,8 @@ tags:
 - 해시 값 : 해시 테이블의 인덱스
 - 해시 테이블 : 키-값을 연관시켜 저장하는 데이터 구조
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/97f8f071-477d-4db3-a9c0-4dad109b848c/6daf644f-ab6d-4a13-8fc9-8ea692caef13/Untitled.png)
+![Untitled](https://github.com/KimHyungkeun/KimHyungkeun.github.io/assets/12759500/73aaaefb-b47a-43e4-9614-800f4d6883dc)
+
 
 ## 3. 해시 충돌
 
@@ -32,7 +33,8 @@ tags:
     - 서로 다른 키의 해시 함수를 통한 해시 값이 동일한 경우
 - 해시  충돌 해결 방법으로는 크게 **개방 주소법**과 **분리 연결법** 존재
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/97f8f071-477d-4db3-a9c0-4dad109b848c/d1d43ebd-1294-4a1f-8819-46e42f9bfcb9/Untitled.png)
+![Untitled 1](https://github.com/KimHyungkeun/KimHyungkeun.github.io/assets/12759500/37f742c1-16e1-4be7-9653-2c86243e2a53)
+
 
 **(실습 : HashTable)**
 
@@ -82,7 +84,8 @@ public class Main {
 }
 ```
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/97f8f071-477d-4db3-a9c0-4dad109b848c/3def9260-a450-4864-82e3-bea2aee24d0c/Untitled.png)
+![Untitled 2](https://github.com/KimHyungkeun/KimHyungkeun.github.io/assets/12759500/bb8dc98d-5860-40ed-a83a-5cce270706aa)
+
 
 ## 4. 해시 충돌 해결 방법 (1)
 
@@ -150,7 +153,8 @@ public class Practice2 {
 }
 ```
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/97f8f071-477d-4db3-a9c0-4dad109b848c/8d406fcb-aafc-439d-9816-49e21848e969/Untitled.png)
+![Untitled 3](https://github.com/KimHyungkeun/KimHyungkeun.github.io/assets/12759500/7aa7eb30-0fad-4e1d-bea1-f0039f92b76e)
+
 
 **2) 제곱 탐사법 (Quadratic Probing)**
 
@@ -213,7 +217,8 @@ public class Practice3 {
 }
 ```
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/97f8f071-477d-4db3-a9c0-4dad109b848c/cc7081f1-6f94-4e2b-808d-be7b6a321bec/Untitled.png)
+![Untitled 4](https://github.com/KimHyungkeun/KimHyungkeun.github.io/assets/12759500/79460435-7fe9-4fdd-b69b-e39ba4e1a4ad)
+
 
 **3) 이중 해싱 (Double Hashing)**
 
@@ -484,4 +489,5 @@ public class Practice5 {
 }
 ```
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/97f8f071-477d-4db3-a9c0-4dad109b848c/74235f10-08ed-4693-b7c4-0783c9e9148c/Untitled.png)
+![Untitled 5](https://github.com/KimHyungkeun/KimHyungkeun.github.io/assets/12759500/04f368cf-7ff4-445f-96ff-5033ea83cf97)
+
