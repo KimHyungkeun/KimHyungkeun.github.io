@@ -208,11 +208,6 @@ public class Practice3 {
 
         ht.setValue(1, 100);
         ht.printHashTable();
-
-        ht.setValue(1, 200);
-        ht.setValue(1, 300);
-        ht.setValue(1, 400);
-        ht.printHashTable();
     }
 }
 ```
@@ -473,16 +468,6 @@ public class Practice5 {
         ht.setValue(5, 1);
         ht.setValue(16, 2);
         ht.setValue(27, 3);
-        ht.printHashTable();
-
-        System.out.println("== key 값으로 해당 데이터 가져오기 ==");
-        System.out.println(ht.getValue(1));
-        System.out.println(ht.getValue(12));
-
-        System.out.println("== 데이터 삭제 ==");
-        ht.removeValue(1);
-        ht.removeValue(5);
-        ht.removeValue(16);
         ht.printHashTable();
 
     }
