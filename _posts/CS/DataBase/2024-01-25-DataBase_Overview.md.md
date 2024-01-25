@@ -174,12 +174,11 @@ tags:
 - 모든 속성에 반복되는 그룹이 나타나지 않는다.
 - 기본키를 사용하여 관련 데이터의 각 집합을 고유하게 식별할 수 있어야 한다.
 
-![Untitled](https://github.com/KimHyungkeun/KimHyungkeun.github.io/assets/12759500/2b56ad4d-9d94-4ab3-a31c-b2d6f1a3789d)
 
 
 현재 테이블은 전화번호를 여러개 가지고 있어 원자값이 아니다. 따라서 1NF에 맞추기 위해서는 아래와 같이 분리할 수 있다.
 
-!http://dl.dropbox.com/s/1rr8ofxuy46i61b/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202018-12-02%2018.00.52.png
+[blank1]
 
 ## 2) **제 2정규화(2NF)**
 
@@ -190,7 +189,7 @@ tags:
 > 기본키의 부분집합 키가 결정자가 되어선 안된다는 것
 > 
 
-!http://dl.dropbox.com/s/c2xfxdanbuiaw1l/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202018-12-03%2006.58.17.png
+[blank2]
 
 `Manufacture`과 `Model`이 키가 되어 `Model Full Name`을 알 수 있다.
 
@@ -214,7 +213,7 @@ tags:
 - 릴레이션이 2NF에 만족한다.
 - 기본키가 아닌 속성들은 기본키에 의존한다.
 
-!http://dl.dropbox.com/s/xtfoetv8hg6jn3f/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202018-12-03%2012.59.46.png
+[blank3]
 
 현재 테이블에서는 `Tournament`와 `Year`이 기본키다.
 
@@ -224,7 +223,7 @@ tags:
 
 따라서 이는 3NF를 위반하고 있으므로 아래와 같이 분리해야 한다.
 
-!http://dl.dropbox.com/s/ks03nkc26nsffin/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202018-12-04%2014.51.39.png
+[blank4]
 
 # 6. **인덱스(Index)**
 
