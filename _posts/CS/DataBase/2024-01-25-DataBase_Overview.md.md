@@ -1,5 +1,5 @@
 ---
-title: Database Overview (작성중)
+title: Database Overview
 date: 2024-01-25 00:00:00 +00:00
 categories: [CS, Database]
 tags:
