@@ -176,9 +176,10 @@ tags:
 
 
 
-현재 테이블은 전화번호를 여러개 가지고 있어 원자값이 아니다. 따라서 1NF에 맞추기 위해서는 아래와 같이 분리할 수 있다.
+현재 테이블은 한 학생 row에 과목을 여러개 가지고 있어 원자값이 아니다. 따라서 1NF에 맞추기 위해서는 아래와 같이 분리할 수 있다.
 
-[blank1]
+![image](https://github.com/KimHyungkeun/KimHyungkeun.github.io/assets/12759500/78930368-937b-43fd-b679-cf88cdf36ef3)
+
 
 ## 2) **제 2정규화(2NF)**
 
@@ -187,19 +188,22 @@ tags:
 조금 쉽게 말하면, 테이블에서 기본키가 복합키(키1, 키2)로 묶여있을 때, 두 키 중 하나의 키만으로 다른 컬럼을 결정지을 수 있으면 안된다.
 
 > 기본키의 부분집합 키가 결정자가 되어선 안된다는 것
-> 
+ 
+`과목`과 `학생번호`가 키가 되어 `성적`을 알 수 있다.
 
-[blank2]
+`지도교수`는 `과목`으로 인해 결정된다. (부분 함수 종속)
 
-`Manufacture`과 `Model`이 키가 되어 `Model Full Name`을 알 수 있다.
+하지만, `지도교수`는`학생번호`와 아무런 연관관계가 없는 상황이다.
 
-`Manufacturer Country`는 `Manufacturer`로 인해 결정된다. (부분 함수 종속)
+![image](https://github.com/KimHyungkeun/KimHyungkeun.github.io/assets/12759500/c73bf26a-94f0-4f7f-8f02-75c2c02e9783)
 
-따라서, `Model`과 `Manufacturer Country`는 아무런 연관관계가 없는 상황이다.
 
 결국 완전 함수적 종속을 충족시키지 못하고 있는 테이블이다. 부분 함수 종속을 해결하기 위해 테이블을 아래와 같이 나눠서 2NF를 만족할 수 있다.
 
-!http://dl.dropbox.com/s/x8481598dhnpzeg/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202018-12-03%2010.58.15.png
+![image](https://github.com/KimHyungkeun/KimHyungkeun.github.io/assets/12759500/f78003ab-add0-4f31-aecc-df34ed4c839c)
+
+![image](https://github.com/KimHyungkeun/KimHyungkeun.github.io/assets/12759500/1275ea3d-b937-44a8-9471-49ecb1bdc90a)
+
 
 ## 3) **제 3정규화(3NF)**
 
@@ -213,17 +217,17 @@ tags:
 - 릴레이션이 2NF에 만족한다.
 - 기본키가 아닌 속성들은 기본키에 의존한다.
 
-[blank3]
 
-현재 테이블에서는 `Tournament`와 `Year`이 기본키다.
+현재 테이블에서는 `Title`가 기본키다.
 
-`Winner`는 이 두 복합키를 통해 결정된다.
+`desc`, `created` , `author_id`는 `Title`에 종속적이다
 
-하지만 `Winner Date of Birth`는 기본키가 아닌 `Winner`에 의해 결정되고 있다.
+하지만, `author_name`은 기본키가 아닌 `author_id`에 의해 결정되고 있다.
 
 따라서 이는 3NF를 위반하고 있으므로 아래와 같이 분리해야 한다.
 
-[blank4]
+![image](https://github.com/KimHyungkeun/KimHyungkeun.github.io/assets/12759500/eaf73f44-4fd3-4bfe-b653-e7e8ef6f5c6a)
+
 
 # 6. **인덱스(Index)**
 
