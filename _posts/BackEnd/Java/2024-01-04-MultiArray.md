@@ -1,5 +1,5 @@
 ---
-title: Array (배열)
+title: MultiArray (다차원 배열)
 date: 2024-01-04 00:00:00 +00:00
 categories: [BackEnd, Java]
 tags:
