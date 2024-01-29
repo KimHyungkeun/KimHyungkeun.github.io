@@ -14,18 +14,21 @@ tags:
 - 서로 다른 n개 중에서 r개를 선택하는 경우의 수 (순서 X, 중복 X)
     - 예시) 서로 다른 4명 중 주번 2병 뽑기
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/97f8f071-477d-4db3-a9c0-4dad109b848c/c6be8ef2-2422-4d38-a0ed-23562a285bd6/Untitled.png)
+![Untitled](https://github.com/KimHyungkeun/KimHyungkeun.github.io/assets/12759500/43d9c5a0-5733-40aa-9f0e-d5f18a263d58)
+
 
 ## 2. 중복조합
 
 - 서로 다른 n개 중에서 r개를 선택하는 경우의 수 (순서 X, 중복 O)
     - 예시) 후보 2명, 유권자 3명일 때 무기명 투표 방법
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/97f8f071-477d-4db3-a9c0-4dad109b848c/ef10ed3a-05f7-49e0-aec4-32817d6c200a/Untitled.png)
+![Untitled 1](https://github.com/KimHyungkeun/KimHyungkeun.github.io/assets/12759500/0008813b-ea4e-4518-ac02-70f72d7a74da)
+
 
 **(실습 : 조합)**
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/97f8f071-477d-4db3-a9c0-4dad109b848c/4763bbee-7a4f-4919-b369-e20d993d92bd/Untitled.png)
+![Untitled 2](https://github.com/KimHyungkeun/KimHyungkeun.github.io/assets/12759500/fbfc7adb-73ce-4d54-88c2-35b98cc51925)
+
 
 ```java
 // Practice
