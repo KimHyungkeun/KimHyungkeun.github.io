@@ -31,7 +31,8 @@ tags:
 
 **(실습 : 점화식 및 재귀함수)**
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/97f8f071-477d-4db3-a9c0-4dad109b848c/d1590d3d-13ca-4a45-90de-0b9ec5af771b/Untitled.png)
+![image](https://github.com/KimHyungkeun/KimHyungkeun.github.io/assets/12759500/365263b7-2f76-4af4-baa4-a6338372d606)
+
 
 ```java
 // 기초 수학 - 점화식과 재귀함수
