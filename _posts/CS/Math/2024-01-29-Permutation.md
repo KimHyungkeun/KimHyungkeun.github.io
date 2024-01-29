@@ -26,7 +26,8 @@ n! = n(n-1)(n-2)(n-3)...
     - 예시1) 5명을 3줄로 세우는 방법
     - 예시2) 서로 다른 4명 중 반장, 부반장 뽑는 방법
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/97f8f071-477d-4db3-a9c0-4dad109b848c/b32e02af-0192-45bc-94f1-df2eb1750ace/Untitled.png)
+![Untitled](https://github.com/KimHyungkeun/KimHyungkeun.github.io/assets/12759500/6931fecf-9fd4-4522-9ee0-5d5ce233930b)
+
 
 ## 3. 중복 순열
 
@@ -34,18 +35,21 @@ n! = n(n-1)(n-2)(n-3)...
     - 예시) 서로 다른 4개의 수 중 2개를 뽑는 방법 (중복 허용)
     - 예시) 후보 2명, 유권자 3명일때 기명 투표 방법
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/97f8f071-477d-4db3-a9c0-4dad109b848c/5b321ab4-2843-4ad7-bfcb-522283e811be/Untitled.png)
+![Untitled 1](https://github.com/KimHyungkeun/KimHyungkeun.github.io/assets/12759500/e58b61c3-25f6-4cc4-a475-f6ea6f367f46)
+
 
 ## 4. 원 순열
 
 - 원 모양의 테이블에 n개의 원소를 나열하는 경우의 수
     - 예시) 원 모양의 테이블에 3명을 앉히는 경우
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/97f8f071-477d-4db3-a9c0-4dad109b848c/2659e0f1-4f8e-4a8f-83f7-91173b5d9574/Untitled.png)
+![Untitled 2](https://github.com/KimHyungkeun/KimHyungkeun.github.io/assets/12759500/0cda91e6-1c3f-4a1f-b4cf-da238b68e2e9)
+
 
 **(실습 : 순열)**
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/97f8f071-477d-4db3-a9c0-4dad109b848c/1a004728-a410-4d11-b322-87c525d98b11/Untitled.png)
+![Untitled 3](https://github.com/KimHyungkeun/KimHyungkeun.github.io/assets/12759500/30a1b4fd-b3d5-4735-b14b-0e43903a4d25)
+
 
 ```java
 // Practice2
