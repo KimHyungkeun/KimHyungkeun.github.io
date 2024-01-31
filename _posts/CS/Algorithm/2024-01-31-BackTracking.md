@@ -20,8 +20,10 @@ tags:
 
 ## 2. 백트래킹 예시
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/97f8f071-477d-4db3-a9c0-4dad109b848c/2784c7cb-50cb-4b85-be2c-667ffe0afbc6/Untitled.png)
+![Untitled](https://github.com/KimHyungkeun/KimHyungkeun.github.io/assets/12759500/733e9a5a-c2f0-40a2-98c9-8f5a716d6e7c)
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/97f8f071-477d-4db3-a9c0-4dad109b848c/8ebb28d3-0b1b-432f-b712-e84ed504b6bd/Untitled.png)
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/97f8f071-477d-4db3-a9c0-4dad109b848c/100520f1-8445-4851-91b0-8e7656b0bf9e/Untitled.png)
+![Untitled 1](https://github.com/KimHyungkeun/KimHyungkeun.github.io/assets/12759500/bdaf4e68-cb5f-4084-a5ce-b64edb488e00)
+
+
+![Untitled 2](https://github.com/KimHyungkeun/KimHyungkeun.github.io/assets/12759500/5ee69c38-4f6b-4e84-958c-7756dcd5b9ed)
