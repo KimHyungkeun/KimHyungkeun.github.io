@@ -31,6 +31,8 @@ tags:
 
 **(실습 : 백트래킹 예제 - nQueen)**
 
+![image](https://github.com/KimHyungkeun/KimHyungkeun.github.io/assets/12759500/53472731-3f40-4203-9e88-0b98f6db7e54)
+
 ```java
 // 알고리즘 - 백트래킹
 
