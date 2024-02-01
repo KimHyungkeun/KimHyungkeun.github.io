@@ -74,8 +74,8 @@ tags:
 기본 자료형을 이용하기 위해서는 wrapper 클래스를 활용해야한다.
 - 비슷한 기능을 지원하는 경우 코드의 재사용성이 높아진다.
 - Generic Type의 암묵적인 규칙이 있다.
-<T\> : Type
-<E\> : Element
-<K\> : Key
-<V\>: Value
-<N\> : Number
+  - <T\> : Type
+  - <E\> : Element
+  - <K\> : Key
+  - <V\>: Value
+  - <N\> : Number
