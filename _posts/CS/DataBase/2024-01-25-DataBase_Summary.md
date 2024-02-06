@@ -1,5 +1,5 @@
 ---
-title: Database Overview
+title: Database Summary
 date: 2024-01-25 00:00:00 +00:00
 categories: [CS, Database]
 tags:
