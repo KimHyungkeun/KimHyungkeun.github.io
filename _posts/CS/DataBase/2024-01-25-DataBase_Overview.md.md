@@ -284,7 +284,7 @@ tags:
 
 데이터베이스의 상태를 변화시키기 위해 수행하는 작업 단위
 
--> 상태 변화 : (SELECT,UPDATE,DELETE,UPDATE 같은 질의어로 DB 접근)
+-> 상태 변화 : (SELECT,INSERT,DELETE,UPDATE 같은 질의어로 DB 접근)
 
 -> 작업 단위 : (예시 : A가 B에게 n원을 송금한다 => A통장UPDATE + B통장UPDATE)
 
