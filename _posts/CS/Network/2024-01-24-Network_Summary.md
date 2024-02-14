@@ -208,25 +208,25 @@ HTTPS 요청이 아니므로 CA기업이 A서버의 정보를 CA 기업의 개�
 
 ### 1. 흐름제어/혼잡제어란?
 
-1) 흐름제어 : 송신측과 수신측의 데이터 속도 차이를 해결하기 위한 기법 
+**1) 흐름제어** : 송신측과 수신측의 데이터 속도 차이를 해결하기 위한 기법 
 
 - Flow Control은 receiver가 packet을 지나치게 많이 받지 않도록 조절하는 것
 
-2) 혼잡제어 : 송신측의 데이터 전달과 네트워크의 데이터 처리 속도 차이를 해결하기 위한 기법  
+**2) 혼잡제어** : 송신측의 데이터 전달과 네트워크의 데이터 처리 속도 차이를 해결하기 위한 기법  
 
 ### 2. 전송의 전체과정
 
-1) Application layer : 송신 application layer가 socket에 data를 씀 
+**1) Application layer** : 송신 application layer가 socket에 data를 씀 
 
-2) Transport layer : data를 segment에 감싼다. 그리고 network layer에 넘김 
+**2) Transport layer** : data를 segment에 감싼다. 그리고 network layer에 넘김 
 
-3) 하위계층에서 receiving node로 전송됨. 이때, sender의 send buffer에 data를 저장하고, receiver는 receive buffer에 data 저장 
+**3)** 하위계층에서 receiving node로 전송됨. 이때, sender의 send buffer에 data를 저장하고, receiver는 receive buffer에 data 저장 
 
-4) application에서 준비가 되면 이 buffer에 있는 것을 읽음 
+**4)** application에서 준비가 되면 이 buffer에 있는 것을 읽음 
 
-5) 따라서 flow control의 핵심은 이 receiver buffer가 넘치지 않게 하는 것임 
+**5)** 따라서 flow control의 핵심은 이 receiver buffer가 넘치지 않게 하는 것임 
 
-6) 따라서 receiver는 RWND(Receive Window) : receive buffer의 남은 공간을 홍보  
+**6)** 따라서 receiver는 RWND(Receive Window) : receive buffer의 남은 공간을 홍보  
 
 ### 3. 흐름제어(Flow Control)
 
