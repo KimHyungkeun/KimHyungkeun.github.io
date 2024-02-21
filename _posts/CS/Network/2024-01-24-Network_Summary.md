@@ -332,7 +332,12 @@ HTTPS 요청이 아니므로 CA기업이 A서버의 정보를 CA 기업의 개�
 - **요청 속도**
   - 세션은 정보가 서버에 저장되어 있기 때문에 서버 처리가 필요하므로 쿠키에 비해 비교적 느린 속도이다.
 
-# 9. **HTTP 요청 흐름(웹브라우저에서의 요청)**
+# 9. Keep Alive - HTTP 1.1의 keep alive 기능
+- HTTP 기본 구조는 1회성 request와 이에 대한 response로 이루어진다. 따라서, 매번 HTTP request 및 response로 인한 종료시 마다, TCP 프로토콜 단계에서 3-way-handshake 및 4-way-handshake 과정이 필요하다.
+- keep alive 기능은 이러한 불필요한 연결과 연결종료 과정을 줄이기 위해, 설정한 keep alive timeout을 설정하여 동일한 source에서 이루어지는 HTTP request에 대해서 연결을 유지하는 기능을 말한다.
+- 따라서, keep alive timeout 기간 동안에는 TCP 프로토콜 단계에서, 3-way, 4-way handshake를 수행할 필요가 없으므로, 성능 개선이 가능하다.
+
+# 10. **HTTP 요청 흐름(웹브라우저에서의 요청)**
 
 ![Untitled 3](https://github.com/KimHyungkeun/KimHyungkeun.github.io/assets/12759500/519737b0-80ad-4d7b-a5db-3f30947d6ded)
 
