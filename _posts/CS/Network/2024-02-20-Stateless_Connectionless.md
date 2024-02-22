@@ -34,4 +34,4 @@ tags:
 - 따라서 서버 자원을 효율적으로 사용할 수 있다.
 
 # 3. 쿠키와 세션
-- Connectionless와 Stateless를 보완하기 위해 우리는 쿠키(Cookie)와 세션(Session)을 이용한다.
+- Connectionless와 Stateless를 보완하기 위해 쿠키(Cookie)와 세션(Session)을 이용한다.
