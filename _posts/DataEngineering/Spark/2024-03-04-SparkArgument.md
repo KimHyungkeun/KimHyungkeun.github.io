@@ -109,8 +109,8 @@ if __name__ == "__main__":
 
 ```
 ```shell
-# "MyString"이라는 문자열을 넣어서 인자로 넘어갔는지 확인
-./bin/spark-submit --master local ./examples/src/main/python/test.py "MyString"
+# "TestString"이라는 문자열을 넣어서 인자로 넘어갔는지 확인
+./bin/spark-submit --master local ./examples/src/main/python/test.py "TestString"
 
 # 결과 : 성공
 Pi is roughly 3.142420
