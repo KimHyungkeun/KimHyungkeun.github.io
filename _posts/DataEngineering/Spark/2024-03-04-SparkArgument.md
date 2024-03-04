@@ -73,7 +73,7 @@ tags:
 
 - **예제 : test.py라는 파일을 하나 만들어서 spark job으로 submit**
 ```python
-# test.py
+
 from __future__ import print_function
 
 import sys
