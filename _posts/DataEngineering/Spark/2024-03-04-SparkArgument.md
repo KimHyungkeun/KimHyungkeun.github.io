@@ -117,6 +117,8 @@ Pi is roughly 3.142420
 partitions 2
 sys.argv[1]:  TestString
 ```
+![image](https://github.com/KimHyungkeun/KimHyungkeun.github.io/assets/12759500/e700d81d-8a80-4890-85d5-84282f49456e)
+
 
 
 - 출처1 : https://spark.apache.org/docs/1.1.0/submitting-applications.html
