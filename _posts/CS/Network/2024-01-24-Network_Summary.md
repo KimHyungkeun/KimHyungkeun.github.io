@@ -73,7 +73,7 @@ tags:
 
 - PORT를 열고, 프로그램들의 전송을 도움
 
-- TCP는 Data가 잘 전송되고 있는지 확인하고 만약 중간에 에러가 발생하면 이를 알아내서 다시 에러난 부분을 재전송. 반면 UDP는 Data를 보낸 후 아무것도 하지 않습니다.
+- TCP는 Data가 잘 전송되고 있는지 확인하고 만약 중간에 에러가 발생하면 이를 알아내서 다시 에러난 부분을 재전송. 반면 UDP는 Data를 보내는 것 위주로 진행.
 
 - TCP는 연결 지향 프로토콜(Connection oriented Protocol), UDP는 비연결 지향 프로토콜(Connectionless Protocol)이다. 
 
