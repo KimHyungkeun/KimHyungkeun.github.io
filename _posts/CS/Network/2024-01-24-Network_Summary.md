@@ -117,13 +117,11 @@ tags:
 ![Untitled 1](https://github.com/KimHyungkeun/KimHyungkeun.github.io/assets/12759500/2c200f3a-539e-4ece-9441-d39ba09194da)
 
 
-1. 클라이언트가 서버에게 SYN 패킷을 보냄(seq=x)
+- (1) 클라이언트가 서버에게 SYN 패킷을 보냄(seq=x)
 
-2. 서버가 SYN(x)를 받고, 클라이언트로 받았다는 신호인 ACK와 SYN패킷을 보냄
+- (2) 서버가 SYN(x)를 받고, 클라이언트로 받았다는 신호인 ACK와 SYN패킷을 보냄 **(seq=y, ACK=x+1)**
 
-(seq=y, ACK=x+1)
-
-3. 클라이언트는 서버의 응답은 ACK(x+1)와 SYN(y) 패킷을 받고, ACK(y+1)를 서버로 보냄
+- (3) 클라이언트는 서버의 응답은 ACK(x+1)와 SYN(y) 패킷을 받고, ACK(y+1)를 서버로 보냄
 
 ## 2) 4 way handshake
 
