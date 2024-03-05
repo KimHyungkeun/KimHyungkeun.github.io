@@ -110,9 +110,9 @@ tags:
 
 (ex : HTTP, FTP, DNS)
 
-# 2. **TCP 3 & 4 way handshake**
+# 2. TCP 3 & 4 way handshake
 
-**(3 way handshake)**
+## 1) 3 way handshake
 
 ![Untitled 1](https://github.com/KimHyungkeun/KimHyungkeun.github.io/assets/12759500/2c200f3a-539e-4ece-9441-d39ba09194da)
 
@@ -125,26 +125,20 @@ tags:
 
 3. 클라이언트는 서버의 응답은 ACK(x+1)와 SYN(y) 패킷을 받고, ACK(y+1)를 서버로 보냄
 
-**(4 way handshake)**
+## 2) 4 way handshake
+
 
 ![Untitled 2](https://github.com/KimHyungkeun/KimHyungkeun.github.io/assets/12759500/114a88bc-5dbe-4c61-90ab-46fadbf31c2f)
 
 
-1. 클라이언트는 서버에게 연결을 종료한다는 FIN 플래그를 보냄
-
-2. 서버는 FIN을 받고 확인의 증거인 ACK를 클라이언트를 보냄
-
+- 1. 클라이언트는 서버에게 연결을 종료한다는 FIN 플래그를 보냄
+- 2. 서버는 FIN을 받고 확인의 증거인 ACK를 클라이언트를 보냄
 **(데이터전송을 위해 TIMEOUT)**
-
-3. 데이터를 모두 보냈다면, 연결이 종료되었다는 FIN을 보냄
-
-4. 클라이언트는 FIN을 받고, 확인의 증거인 ACK를 서버에게 보냄
-
+- 3. 데이터를 모두 보냈다면, 연결이 종료되었다는 FIN을 보냄
+- 4. 클라이언트는 FIN을 받고, 확인의 증거인 ACK를 서버에게 보냄
 **(보내는 동안은 WAIT)**
-
-(서버는 ACK를 받은 후 소켓을 닫고, TIME_WAIT가 지나면 클라이언트도 닫음)
-
-(4번의 통신이 완료되면 연결이 해제됨)
+- 5. 서버는 ACK를 받은 후 소켓을 닫고, TIME_WAIT가 지나면 클라이언트도 닫음
+- 6. 4번의 통신이 완료되면 연결이 해제됨
 
 # 3. **대칭키 & 공개키**
 
