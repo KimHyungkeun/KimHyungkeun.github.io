@@ -117,7 +117,7 @@ tags:
 
 - MIME 인코딩이나 암호화, 압축, 코드 변환과 같은 동작이 이루어짐
 
-(ex : TLS, AFP, SSH 등)
+(ex : MIME, TLS, AFP, SSH 등)
 
 ## (7) 응용(Applictaion)
 
