@@ -13,7 +13,8 @@ tags:
 
 - Spring Project 구조
     
-    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/97f8f071-477d-4db3-a9c0-4dad109b848c/a5579e14-af59-42ed-8185-88e64340cdc1/Untitled.png)
+    ![Untitled](https://github.com/KimHyungkeun/KimHyungkeun.github.io/assets/12759500/ab418aa9-6979-4fe4-9933-5a6801b3f769)
+
     
     - .gradle : gradle 작동에 있어 필요한 파일이 담김
     - .idea : intelliJ가 구동에 있어 필요한 파일이 담김
@@ -76,7 +77,8 @@ tags:
         
         ```
         
-        ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/97f8f071-477d-4db3-a9c0-4dad109b848c/a8ee2833-99d9-4045-ac08-7739782159cc/Untitled.png)
+        ![Untitled 1](https://github.com/KimHyungkeun/KimHyungkeun.github.io/assets/12759500/c797c290-3da4-454f-bf44-1b7896cffa24)
+
         
         - implementation : 테스트 + 컴파일 + 실행에 모두 사용
         - compileOnly : 이 코드를 컴파일하는 그 시점에서만 사용한다는 의미
@@ -86,7 +88,8 @@ tags:
         - 기본적으로는 mavenCentral( )
         - 하지만, 사내에 따로 Repo가 있다면, 해당 Repo를 가리킬 것
         
-        ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/97f8f071-477d-4db3-a9c0-4dad109b848c/acdc2d12-f948-4f76-88f3-77ecf85bcb7d/Untitled.png)
+        ![Untitled 2](https://github.com/KimHyungkeun/KimHyungkeun.github.io/assets/12759500/47dc268b-fc85-4039-a608-e098aa5a4047)
+
         
 - JAR와 WAR 차이 :
     - JAR (**Java ARchive**)
@@ -124,12 +127,14 @@ tags:
         - 4) 날씨 데이터를 받아오는 코드 수정
         - 5) “날씨 데이터를 받아온다”는 테스트 코드 실행 (성공)
     
-    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/97f8f071-477d-4db3-a9c0-4dad109b848c/d6e5b693-1dc6-43c7-a569-cadf422aeb3a/Untitled.png)
+    ![Untitled 3](https://github.com/KimHyungkeun/KimHyungkeun.github.io/assets/12759500/ead8e8e6-1011-4a65-9e7b-e9f3dddd99a1)
+
     
 
 ## 3. 테스트 코드 종류
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/97f8f071-477d-4db3-a9c0-4dad109b848c/7eed4d1a-2910-4500-af31-5b2b0950d064/Untitled.png)
+![Untitled 4](https://github.com/KimHyungkeun/KimHyungkeun.github.io/assets/12759500/8fdcb750-edf7-4bbe-bf95-9cb073e6da1d)
+
 
 - 예제)
 ```java
