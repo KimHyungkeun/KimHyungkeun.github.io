@@ -31,7 +31,8 @@ tags:
     ⇒ User는 하나의 group에만 속하는 것이 아닌, 여러개의 group에 속할수도 있다
     
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/97f8f071-477d-4db3-a9c0-4dad109b848c/8ae3c86e-a165-4b40-9776-80eb5662e31a/Untitled.png)
+<img width="833" alt="Untitled" src="https://github.com/user-attachments/assets/80fa3fe2-0d6a-46fa-a89b-c9d71de38e6e">
+
 
 ### 2. IAM: Permissions (권한)
 
@@ -51,11 +52,13 @@ more permissions than a user needs
 
 ### 3. IAM Policies inheritance
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/97f8f071-477d-4db3-a9c0-4dad109b848c/821b8945-4381-4e00-a934-427caf7e6c97/Untitled.png)
+<img width="862" alt="Untitled 1" src="https://github.com/user-attachments/assets/a2be9cf5-d671-41c9-a461-273d95bd4115">
+
 
 ### 4. IAM Policies Structure
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/97f8f071-477d-4db3-a9c0-4dad109b848c/81c3f858-af1e-426c-bbb2-45ba2b91014c/Untitled.png)
+<img width="382" alt="Untitled 2" src="https://github.com/user-attachments/assets/05c4c42e-db16-4348-aae7-2dabdcf24469">
+
 
 - 구조
     - **Version**: policy language version, always include “2012-10-17”
@@ -120,24 +123,29 @@ more permissions than a user needs
 - MFA = 사용자가 정한 password + 본인이 가진 security 모듈
 - MFA의 장점 : password가 도난당하거나 해킹당해도, 추가 보안 설정이 있기에 안전
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/97f8f071-477d-4db3-a9c0-4dad109b848c/5059608e-728e-4486-ae59-12207ca4b452/Untitled.png)
+![Untitled 3](https://github.com/user-attachments/assets/881fc1b4-2f09-4628-9304-82a515c96d01)
+
 
 - AWS에서 사용 가능한 MFA 디바이스
     - Virtual MFA device
     
-    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/97f8f071-477d-4db3-a9c0-4dad109b848c/e205e702-52a4-4955-93f2-46ce6107e3fa/Untitled.png)
+    ![Untitled 4](https://github.com/user-attachments/assets/e75d7489-e315-4bd4-9e39-81d0a72e172b)
+
     
     - Universal 2nd Factor (U2F) Security Key
     
-    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/97f8f071-477d-4db3-a9c0-4dad109b848c/e380293d-5269-4fe5-a3d9-7b90bb9a21ba/Untitled.png)
+    ![Untitled 5](https://github.com/user-attachments/assets/eeecc5d7-e2e1-4cb6-8ed5-8be65829a5e8)
+
     
     - Hardware Key Fob MFA Device
     
-    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/97f8f071-477d-4db3-a9c0-4dad109b848c/325fe3d5-d3bf-4bb7-a590-524276e6e3d2/Untitled.png)
+    ![Untitled 6](https://github.com/user-attachments/assets/ec0b971b-5c60-43f5-98be-245d206be179)
+
     
     - Hardware Key Fob MFA Device for AWS GovCloud (US)
     
-    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/97f8f071-477d-4db3-a9c0-4dad109b848c/add9bb16-cce5-4cd0-b987-a6e553da4823/Untitled.png)
+    ![Untitled 7](https://github.com/user-attachments/assets/505e4d0a-84fe-4d98-8363-d0896ac1299d)
+
     
 
 ### 7. How can users access AWS
@@ -152,7 +160,8 @@ more permissions than a user needs
 - Access Key ID ~= username
 - Secret Access Key ~= password
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/97f8f071-477d-4db3-a9c0-4dad109b848c/3dd412d3-d91c-49e1-b58a-81b1a9411c36/Untitled.png)
+![Untitled 8](https://github.com/user-attachments/assets/5f14b369-67ef-413b-b673-6ccd38354761)
+
 
 ### 8. What’s the AWS SDK?
 
@@ -174,13 +183,16 @@ more permissions than a user needs
     
     ⇒ 예시 : AWS CLI는 python용 AWS SDK에 build 된다
     
-    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/97f8f071-477d-4db3-a9c0-4dad109b848c/ca56279f-cf1a-4a76-b580-49ed53b50748/Untitled.png)
+    ![Untitled 9](https://github.com/user-attachments/assets/bf961ad4-41bb-4de4-be6f-d6063c04d21a)
+
     
     - CloudShell 예제
     
-    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/97f8f071-477d-4db3-a9c0-4dad109b848c/a8877b99-5881-4e26-adcb-7d41c084c52d/Untitled.png)
+    ![Untitled 10](https://github.com/user-attachments/assets/520a94ce-bab6-4af2-b3e0-5f77c47d8998)
+
     
-    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/97f8f071-477d-4db3-a9c0-4dad109b848c/6e89b1a2-5aad-463f-849d-50bf1e129368/Untitled.png)
+    ![Untitled 11](https://github.com/user-attachments/assets/dd50fe71-25a3-476c-b551-853b8cb9bee2)
+
     
     ### 9. IAM Roles for Services
     
@@ -204,7 +216,8 @@ more permissions than a user needs
     • a report that lists all your account's users and the status of their various credentials
     ⇒ 모든 account user 리스트와 다양한 crendentail 상태에 대한 리스트에 대한 리포트이다
     
-    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/97f8f071-477d-4db3-a9c0-4dad109b848c/cb6e7041-3ba5-4b66-abb4-1226a28b8c5b/Untitled.png)
+    ![Untitled 12](https://github.com/user-attachments/assets/73945ac9-067b-49af-9c6a-d6aa7080132f)
+
     
     - **IAM Access Advisor (user-level, 한 사용자가 최근 접속했던 service들 리스트)**
         - Access advisor shows the service permissions granted to a user and when those services were last accessed.
@@ -213,7 +226,8 @@ more permissions than a user needs
             
         - You can use this information to revise your policies.
         
-        ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/97f8f071-477d-4db3-a9c0-4dad109b848c/ea6e602c-6b75-442c-8edb-799d4c8c60dc/Untitled.png)
+        ![Untitled 13](https://github.com/user-attachments/assets/bd87f052-ea74-4b85-9633-4198efb6f1c4)
+
         
     
     ### 11. IAM Guidelines & Best Practices
